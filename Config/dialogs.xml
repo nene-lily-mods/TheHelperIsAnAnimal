@@ -1,0 +1,1350 @@
+<configs>
+    <append xpath="/dialogs">
+        <!-- === きつね === -->
+        <dialog id="DialogFox" startstatementid="start">
+            <statement id="start" text="dialog_fox_greeting">
+                <response_entry id="GoToFoxExplainMenu" />
+                <response_entry id="FollowMe" />
+                <response_entry id="Pickup" />
+                <response_entry id="ShowMe" />
+                <response_entry id="StayHere" />
+                <response_entry id="GuardHere" />
+                <response_entry id="Wander" />
+                <response_entry id="Hire" />
+                <response_entry id="done" />
+            </statement>
+
+            <!-- 支援説明メニューの入口 -->
+            <response id="GoToFoxExplainMenu" text="dialog_fox_menu_explain" nextstatementid="FoxExplainBranch">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+            </response>
+
+            <statement id="FoxExplainBranch" text="dialog_fox_menu_explain">
+                <response_entry id="GoToFoxTrialMenu" />
+                <response_entry id="GoToFoxSupportMenu" />
+                <response_entry id="ShowHintRoot" />
+                <response_entry id="start" />
+            </statement>
+
+            <response id="GoToFoxTrialMenu" text="dialog_fox_menu_trials" nextstatementid="FoxTrialBranch"/>
+
+            <statement id="FoxTrialBranch" text="dialog_fox_menu_trials">
+                <response_entry id="StartFoxTrial1" />
+                <response_entry id="GoToFoxTrial2Entry" />
+                <response_entry id="GoToFoxTrial3Entry" />
+                <response_entry id="GoToFoxTrial4Entry" />
+                <response_entry id="FoxExplainBranch" />
+            </statement>
+
+            <!-- Fox Trial 1 Entry -->
+            <response id="StartFoxTrial1" text="dialog_fox_start_trial_1" nextstatementid="FoxTrial1Confirm">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffFoxSupport1"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffFoxTrial1Complete"/>
+            </response>
+
+            <statement id="FoxTrial1Confirm" text="dialog_fox_confirm_start_trial_1">
+                <response_entry id="DoFoxTrial1" />
+                <response_entry id="FoxExplainBranch" />
+            </statement>
+
+            <response id="DoFoxTrial1" text="dialog_fox_start_confirm" nextstatementid="__end__">
+                <action type="GiveQuestSDX, SCore" id="quest_fox_support_trial_1" />
+            </response>
+
+            <!-- Fox Trial 2 Entry -->
+            <response id="GoToFoxTrial2Entry" text="dialog_fox_trial2_entry" nextstatementid="FoxTrial2EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffFoxTrial1Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffFoxTrial2Complete"/>
+            </response>
+
+            <statement id="FoxTrial2EntryConfirm" text="dialog_fox_trial2_entry_text">
+                <response_entry id="StartFoxTrial2" />
+                <response_entry id="ExplainFoxTrial2Requirement" />
+                <response_entry id="FoxTrialBranch" />
+            </statement>
+
+            <response id="StartFoxTrial2" text="dialog_fox_start_trial_2" nextstatementid="FoxTrial2Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="10" />
+            </response>
+
+            <response id="ExplainFoxTrial2Requirement" text="dialog_fox_trial2_require_info" nextstatementid="FoxTrial2Explain"/>
+
+            <statement id="FoxTrial2Explain" text="dialog_fox_trial2_explain">
+                <response_entry id="FoxTrialBranch" />
+            </statement>
+
+            <statement id="FoxTrial2Confirm" text="dialog_fox_confirm_start_trial_2">
+                <response_entry id="DoFoxTrial2" />
+                <response_entry id="FoxTrialBranch" />
+            </statement>
+
+            <response id="DoFoxTrial2" text="dialog_fox_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="10" />
+                <action type="GiveQuestSDX, SCore" id="quest_fox_support_trial_2" />
+            </response>
+
+            <!-- Fox Trial 3 Entry -->
+            <response id="GoToFoxTrial3Entry" text="dialog_fox_trial3_entry" nextstatementid="FoxTrial3EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffFoxTrial2Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffFoxTrial3Complete"/>
+            </response>
+
+            <statement id="FoxTrial3EntryConfirm" text="dialog_fox_trial3_entry_text">
+                <response_entry id="StartFoxTrial3" />
+                <response_entry id="ExplainFoxTrial3Requirement" />
+                <response_entry id="FoxTrialBranch" />
+            </statement>
+
+            <response id="StartFoxTrial3" text="dialog_fox_start_trial_3" nextstatementid="FoxTrial3Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="20" />
+            </response>
+
+            <response id="ExplainFoxTrial3Requirement" text="dialog_fox_trial3_require_info" nextstatementid="FoxTrial3Explain"/>
+
+            <statement id="FoxTrial3Explain" text="dialog_fox_trial3_explain">
+                <response_entry id="FoxTrialBranch" />
+            </statement>
+
+            <statement id="FoxTrial3Confirm" text="dialog_fox_confirm_start_trial_3">
+                <response_entry id="DoFoxTrial3" />
+                <response_entry id="FoxTrialBranch" />
+            </statement>
+
+            <response id="DoFoxTrial3" text="dialog_fox_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="20" />
+                <action type="GiveQuestSDX, SCore" id="quest_fox_support_trial_3" />
+            </response>
+
+            <!-- Fox Trial 4 Entry -->
+            <response id="GoToFoxTrial4Entry" text="dialog_fox_trial4_entry" nextstatementid="FoxTrial4EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffFoxTrial3Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffFoxTrial4Complete"/>
+            </response>
+
+            <statement id="FoxTrial4EntryConfirm" text="dialog_fox_trial4_entry_text">
+                <response_entry id="StartFoxTrial4" />
+                <response_entry id="ExplainFoxTrial4Requirement" />
+                <response_entry id="FoxTrialBranch" />
+            </statement>
+
+            <response id="StartFoxTrial4" text="dialog_fox_start_trial_4" nextstatementid="FoxTrial4Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="30" />
+            </response>
+
+            <response id="ExplainFoxTrial4Requirement" text="dialog_fox_trial4_require_info" nextstatementid="FoxTrial4Explain"/>
+
+            <statement id="FoxTrial4Explain" text="dialog_fox_trial4_explain">
+                <response_entry id="FoxTrialBranch" />
+            </statement>
+
+            <statement id="FoxTrial4Confirm" text="dialog_fox_confirm_start_trial_4">
+                <response_entry id="DoFoxTrial4" />
+                <response_entry id="FoxTrialBranch" />
+            </statement>
+
+            <response id="DoFoxTrial4" text="dialog_fox_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="30" />
+                <action type="GiveQuestSDX, SCore" id="quest_fox_support_trial_4" />
+            </response>
+
+            <response id="GoToFoxSupportMenu" text="dialog_fox_menu_support" nextstatementid="FoxSupportBranch"/>
+
+            <statement id="FoxSupportBranch" text="dialog_fox_menu_support">
+                <response_entry id="ShowFoxSupport1" />
+                <response_entry id="ShowFoxSupport2" />
+                <response_entry id="ShowFoxSupport3" />
+                <response_entry id="ShowFoxSupport4" />
+                <response_entry id="FoxExplainBranch" />
+            </statement>
+
+            <!-- Support Lv1 -->
+            <response id="ShowFoxSupport1" text="dialog_fox_explain_support1" nextstatementid="FoxSupport1Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffFoxSupport1" />
+            </response>
+            <statement id="FoxSupport1Text" text="dialog_fox_support1_text">
+                <response_entry id="FoxExplainBranch" />
+            </statement>
+
+            <!-- Support Lv2 -->
+            <response id="ShowFoxSupport2" text="dialog_fox_explain_support2" nextstatementid="FoxSupport2Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffFoxSupport2" />
+            </response>
+            <statement id="FoxSupport2Text" text="dialog_fox_support2_text">
+                <response_entry id="FoxExplainBranch" />
+            </statement>
+
+            <!-- Support Lv3 -->
+            <response id="ShowFoxSupport3" text="dialog_fox_explain_support3" nextstatementid="FoxSupport3Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffFoxSupport3" />
+            </response>
+            <statement id="FoxSupport3Text" text="dialog_fox_support3_text">
+                <response_entry id="FoxExplainBranch" />
+            </statement>
+
+            <!-- Support Lv4 -->
+            <response id="ShowFoxSupport4" text="dialog_fox_explain_support4" nextstatementid="FoxSupport4Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffFoxSupport4" />
+            </response>
+            <statement id="FoxSupport4Text" text="dialog_fox_support4_text">
+                <response_entry id="FoxExplainBranch" />
+            </statement>
+
+            <!-- ヒント -->
+            <response id="ShowHintRoot" text="dialog_fox_hint_root" nextstatementid="FoxHintRootBranch" />
+
+            <statement id="FoxHintRootBranch" text="dialog_fox_hint_root_text">
+                <response_entry id="ShowHintTicket" />
+                <response_entry id="ShowHintPoisonZombie" />
+                <response_entry id="ShowHintRareEnemy" />
+            </statement>
+
+            <response id="ShowHintTicket" text="dialog_fox_hint_ticket" nextstatementid="FoxHintTicket" />
+            <response id="ShowHintRareEnemy" text="dialog_fox_hint_rare_enemy" nextstatementid="FoxHintRareEnemy" />
+            <response id="ShowHintPoisonZombie" text="dialog_fox_hint_poison_zombie" nextstatementid="FoxHintPoisonZombie" />
+
+            <statement id="FoxHintRareEnemy" text="dialog_fox_enemy_hint_text">
+                <response_entry id="FoxExplainBranch" />
+            </statement>
+
+            <statement id="FoxHintPoisonZombie" text="dialog_fox_hint_poison_zombie_text">
+                <response_entry id="FoxExplainBranch" />
+            </statement>
+
+            <statement id="FoxHintTicket" text="dialog_fox_hint_ticket_text">
+                <response_entry id="FoxExplainBranch" />
+            </statement>
+
+            <response id="FollowMe" text="dialog_fox_followme">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+            </response>
+
+            <response id="ShowMe" text="dialog_fox_showpack">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+            </response>
+
+            <response id="StayHere" text="dialog_fox_stayhere">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+            </response>
+
+            <response id="GuardHere" text="dialog_fox_guardhere">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+            </response>
+
+            <response id="Wander" text="dialog_fox_wander">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+            </response>
+
+            <response id="Pickup" text="dialog_fox_pickup">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="PickUpNPC, SCore" />
+            </response>
+
+            <response id="Hire" text="dialog_fox_hire">
+                <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not" />
+                <action type="OpenDialogSDX, SCore" id="Hire" />
+            </response>
+
+            <response id="done" text="dialog_trader_response_nevermind" />
+        </dialog>
+
+        <!-- === にわとり === -->
+        <dialog id="DialogCoco" startstatementid="start">
+            <statement id="start" text="dialog_coco_greeting">
+                <response_entry id="RequestKitchen" />
+                <response_entry id="FollowMe" />
+                <response_entry id="Pickup" />
+                <response_entry id="ShowMe" />
+                <response_entry id="StayHere" />
+                <response_entry id="GuardHere" />
+                <response_entry id="Wander" />
+                <response_entry id="Hire" />
+                <response_entry id="done" />
+            </statement>
+
+            <response id="RequestKitchen" text="dialog_coco_request_kitchen" nextstatementid="kitchen_request">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+            </response>
+
+            <response id="FollowMe" text="dialog_coco_followme">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+            </response>
+
+            <response id="ShowMe" text="dialog_coco_showpack">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+            </response>
+
+            <response id="StayHere" text="dialog_coco_stayhere">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+            </response>
+
+            <response id="Wander" text="dialog_coco_wander">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+            </response>
+
+            <response id="Loot" text="dialog_coco_loot">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+            </response>
+
+            <response id="GuardHere" text="dialog_coco_guardhere">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+            </response>
+
+            <response id="Dismiss" text="dialog_coco_dismiss">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+            </response>
+
+            <response id="Pickup" text="dialog_coco_pickup" ref_text="dialog_coco_pickup_ref">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+                <action type="PickUpNPC, SCore" />
+            </response>
+
+            <response id="Hire" text="dialog_coco_hire">
+                <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not" />
+                <action type="OpenDialogSDX, SCore" id="Hire" />
+            </response>
+
+            <statement id="kitchen_request" text="dialog_coco_kitchen_request">
+                <response_entry id="RequestFood" />
+                <response_entry id="GoToKitchenQuestMenu" />
+                <response_entry id="GoToKitchenUpgradeMenu" />
+                <response_entry id="done" />
+            </statement>
+
+            <response id="RequestFood" text="dialog_coco_requestfood" nextstatementid="cook_request">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+            </response>
+
+            <statement id="cook_request" text="dialog_coco_cook_request">
+                <response_entry id="CookBoiledEgg" />
+                <response_entry id="CookOmelette" />
+                <response_entry id="CookSoup" />
+                <response_entry id="CookToast" />
+                <response_entry id="CookGoldenOmelette" />
+                <response_entry id="done" />
+            </statement>
+
+            <!-- ゆでたまご 選択肢（分岐の起点） -->
+            <response id="CookBoiledEgg" text="dialog_coco_cook_boiledegg" nextstatementid="CocoCookBoiledEggConfirm" />
+
+            <!-- 分岐用ステートメント -->
+            <statement id="CocoCookBoiledEggConfirm" text="dialog_coco_confirm_boiledegg">
+                <response_entry id="DoCookBoiledEgg" />
+                <response_entry id="ShowBoiledEggRecipe" />
+                <response_entry id="cook_request" />
+            </statement>
+
+            <!-- 材料があるときだけ表示される本処理 -->
+            <response id="DoCookBoiledEgg" text="dialog_coco_cook_confirm" nextstatementid="start">
+                <requirement type="HasItemSDX, SCore" id="foodEgg" value="1" />
+                <action type="GiveToNPC, SCore" id="foodEgg" value="1" />
+                <action type="AddItemSDX, SCore" id="foodCocoBoiledEgg" value="1" />
+                <action type="PlaySoundSDX, SCore" id="npc_ding1" />
+                <action type="ShowToolTipSDX, SCore" id="A fresh boiled egg just for you!" />
+            </response>
+
+            <!-- 材料がないときの説明 -->
+            <response id="ShowBoiledEggRecipe" text="dialog_coco_recipe_boiledegg" nextstatementid="cook_request" />
+
+
+            <!-- 卵焼き 選択肢（分岐の起点） -->
+            <response id="CookOmelette" text="dialog_coco_cook_omelette" nextstatementid="CocoCookOmeletteConfirm" />
+
+            <!-- 分岐用ステートメント -->
+            <statement id="CocoCookOmeletteConfirm" text="dialog_coco_confirm_omelette">
+                <response_entry id="DoCookOmelette" />
+                <response_entry id="ShowOmeletteRecipe" />
+                <response_entry id="cook_request" />
+            </statement>
+
+            <!-- 材料があるときだけ表示される本処理 -->
+            <response id="DoCookOmelette" text="dialog_coco_cook_confirm" nextstatementid="start">
+                <requirement type="HasItemSDX, SCore" id="resourceSpecialEgg" value="1" />
+                <requirement type="HasItemSDX, SCore" id="resourceAnimalFat" value="1" />
+                <action type="GiveToNPC, SCore" id="resourceSpecialEgg" value="1" />
+                <action type="GiveToNPC, SCore" id="resourceAnimalFat" value="1" />
+                <action type="AddItemSDX, SCore" id="foodCocoEggOmelette" value="1" />
+                <action type="PlaySoundSDX, SCore" id="npc_ding1" />
+                <action type="ShowToolTipSDX, SCore" id="Here’s your tamagoyaki!" />
+            </response>
+
+            <!-- 材料がないときの説明 -->
+            <response id="ShowOmeletteRecipe" text="dialog_coco_recipe_omelette" nextstatementid="cook_request" />
+
+            <!-- 卵スープ 選択肢（分岐の起点） -->
+            <response id="CookSoup" text="dialog_coco_cook_soup" nextstatementid="CocoCookSoupConfirm" />
+
+            <!-- 分岐用ステートメント -->
+            <statement id="CocoCookSoupConfirm" text="dialog_coco_confirm_soup">
+                <response_entry id="DoCookSoup" />
+                <response_entry id="ShowSoupRecipe" />
+                <response_entry id="cook_request" />
+            </statement>
+
+            <!-- 材料があるときだけ表示される本処理 -->
+            <response id="DoCookSoup" text="dialog_coco_cook_confirm" nextstatementid="start">
+                <requirement type="HasItemSDX, SCore" id="resourceSpecialEgg" value="1" />
+                <requirement type="HasItemSDX, SCore" id="resourceSoupBase" value="1" />
+                <requirement type="HasItemSDX, SCore" id="foodCropMushrooms" value="1" />
+                <action type="GiveToNPC, SCore" id="resourceSpecialEgg" value="1" />
+                <action type="GiveToNPC, SCore" id="resourceSoupBase" value="1" />
+                <action type="GiveToNPC, SCore" id="foodCropMushrooms" value="1" />
+                <action type="AddItemSDX, SCore" id="foodCocoEggSoup" value="1" />
+                <action type="PlaySoundSDX, SCore" id="npc_ding1" />
+                <action type="ShowToolTipSDX, SCore" id="A warm bowl of soup!" />
+            </response>
+
+            <!-- 材料がないときの説明 -->
+            <response id="ShowSoupRecipe" text="dialog_coco_recipe_soup" nextstatementid="cook_request" />
+
+            <!-- フレンチトースト 選択肢（分岐の起点） -->
+            <response id="CookToast" text="dialog_coco_cook_toast" nextstatementid="CocoCookToastConfirm" />
+
+            <!-- 分岐用ステートメント -->
+            <statement id="CocoCookToastConfirm" text="dialog_coco_confirm_toast">
+                <response_entry id="DoCookToast" />
+                <response_entry id="ShowToastRecipe" />
+                <response_entry id="cook_request" />
+            </statement>
+
+            <!-- 材料があるときだけ表示される本処理 -->
+            <response id="DoCookToast" text="dialog_coco_cook_confirm" nextstatementid="start">
+                <requirement type="HasItemSDX, SCore" id="resourceSpecialEgg" value="1" />
+                <requirement type="HasItemSDX, SCore" id="resourceSpecialFlour" value="1" />
+                <requirement type="HasItemSDX, SCore" id="foodHoney" value="1" />
+                <action type="GiveToNPC, SCore" id="resourceSpecialEgg" value="1" />
+                <action type="GiveToNPC, SCore" id="resourceSpecialFlour" value="1" />
+                <action type="GiveToNPC, SCore" id="foodHoney" value="1" />
+                <action type="AddItemSDX, SCore" id="foodCocoFrenchToast" value="1" />
+                <action type="PlaySoundSDX, SCore" id="npc_ding1" />
+                <action type="ShowToolTipSDX, SCore" id="Enjoy your French Toast!" />
+            </response>
+
+            <!-- 材料がないときの説明 -->
+            <response id="ShowToastRecipe" text="dialog_coco_recipe_toast" nextstatementid="cook_request" />
+
+
+            <!-- 黄金のオムレツ 選択肢（分岐の起点） -->
+            <response id="CookGoldenOmelette" text="dialog_coco_cook_golden" nextstatementid="CocoCookGoldenConfirm" />
+
+            <!-- 分岐用ステートメント -->
+            <statement id="CocoCookGoldenConfirm" text="dialog_coco_confirm_golden">
+                <response_entry id="DoCookGoldenOmelette" />
+                <response_entry id="ShowGoldenRecipe" />
+                <response_entry id="cook_request" />
+            </statement>
+
+            <!-- 材料があるときだけ表示される本処理 -->
+            <response id="DoCookGoldenOmelette" text="dialog_coco_cook_confirm" nextstatementid="start">
+                <requirement type="HasItemSDX, SCore" id="resourceSpecialEgg" value="1" />
+                <requirement type="HasItemSDX, SCore" id="resourceGoldenButter" value="1" />
+                <requirement type="HasItemSDX, SCore" id="foodCropGraceCorn" value="1" />
+                <action type="GiveToNPC, SCore" id="resourceSpecialEgg" value="1" />
+                <action type="GiveToNPC, SCore" id="resourceGoldenButter" value="1" />
+                <action type="GiveToNPC, SCore" id="foodCropGraceCorn" value="1" />
+                <action type="AddItemSDX, SCore" id="foodCocoGoldenOmelette" value="1" />
+                <action type="PlaySoundSDX, SCore" id="npc_ding1" />
+                <action type="ShowToolTipSDX, SCore" id="Behold, the golden omelette!" />
+            </response>
+
+            <!-- 材料がないときの説明 -->
+            <response id="ShowGoldenRecipe" text="dialog_coco_recipe_golden" nextstatementid="cook_request" />
+
+            <!-- クエスト -->
+            <response id="GoToKitchenQuestMenu" text="dialog_coco_quest_select" nextstatementid="KitchenQuestBranch"/>
+
+            <statement id="KitchenQuestBranch" text="dialog_coco_quest_select">
+                <response_entry id="StartBirdnestQuest" />
+                <response_entry id="StartSoupStoveQuest" />
+                <response_entry id="StartFlourSackQuest" />
+                <response_entry id="StartGoldenFridgeQuest" />
+                <response_entry id="done" />
+            </statement>
+
+            <response id="StartBirdnestQuest" text="dialog_coco_quest_birdnest" nextstatementid="KitchenQuest1Confirm">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffChickenTrial1Complete"/>
+            </response>
+
+            <statement id="KitchenQuest1Confirm" text="dialog_coco_confirm_start_kitchen1">
+                <response_entry id="DoStartBirdnestQuest" />
+                <response_entry id="KitchenQuestBranch" />
+            </statement>
+
+            <response id="DoStartBirdnestQuest" text="dialog_coco_start_confirm" nextstatementid="__end__">
+                <action type="GiveQuestSDX, SCore" id="quest_specialbirdnest_unlock" />
+            </response>
+
+            <response id="StartSoupStoveQuest" text="dialog_coco_quest_soupstove" nextstatementid="KitchenQuest2Confirm">
+                <requirement type="HasBuffSDX, SCore" value="buffChickenTrial1Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffChickenTrial2Complete"/>
+            </response>
+
+            <statement id="KitchenQuest2Confirm" text="dialog_coco_confirm_start_kitchen2">
+                <response_entry id="DoStartSoupStoveQuest"/>
+                <response_entry id="KitchenQuestBranch"/>
+            </statement>
+
+            <response id="DoStartSoupStoveQuest" text="dialog_coco_start_confirm" nextstatementid="__end__">
+                <action type="GiveQuestSDX, SCore" id="quest_soupstove_unlock"/>
+            </response>
+
+            <response id="StartFlourSackQuest" text="dialog_coco_quest_floursack" nextstatementid="KitchenQuest3Confirm">
+                <requirement type="HasBuffSDX, SCore" value="buffChickenTrial2Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffChickenTrial3Complete"/>
+            </response>
+
+            <statement id="KitchenQuest3Confirm" text="dialog_coco_confirm_start_kitchen3">
+                <response_entry id="DoStartFlourSackQuest"/>
+                <response_entry id="KitchenQuestBranch"/>
+            </statement>
+
+            <response id="DoStartFlourSackQuest" text="dialog_coco_start_confirm" nextstatementid="__end__">
+                <action type="GiveQuestSDX, SCore" id="quest_floursack_unlock"/>
+            </response>
+
+            <response id="StartGoldenFridgeQuest" text="dialog_coco_quest_goldenfridge" nextstatementid="KitchenQuest4Confirm">
+                <requirement type="HasBuffSDX, SCore" value="buffChickenTrial3Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffChickenTrial4Complete"/>
+            </response>
+
+            <statement id="KitchenQuest4Confirm" text="dialog_coco_confirm_start_kitchen4">
+                <response_entry id="DoStartGoldenFridgeQuest"/>
+                <response_entry id="KitchenQuestBranch"/>
+            </statement>
+
+            <response id="DoStartGoldenFridgeQuest" text="dialog_coco_start_confirm" nextstatementid="__end__">
+                <action type="GiveQuestSDX, SCore" id="quest_goldenfridge_unlock"/>
+            </response>
+
+            <response id="GoToKitchenUpgradeMenu" text="dialog_coco_upgrade_select" nextstatementid="KitchenUpgradeBranch"/>
+
+            <statement id="KitchenUpgradeBranch" text="dialog_coco_upgrade_select">
+                <response_entry id="GrowNest" />
+                <response_entry id="UpgradeSoupStove" />
+                <response_entry id="UpgradeFlourSack" />
+                <response_entry id="UpgradeGoldenFridge" />
+                <response_entry id="done" />
+            </statement>
+
+            <response id="GrowNest" text="dialog_coco_grow_nest" nextstatementid="start">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <requirement type="HasItemSDX, SCore" id="toolNestWarmer" value="1" />
+                <action type="GiveToNPC, SCore" id="toolNestWarmer" value="1" />
+                <action type="AddItemSDX, SCore" id="cntSpecialBirdnestLv2" value="1" />
+                <action type="PlaySoundSDX, SCore" id="npc_ding1" />
+                <action type="ShowToolTipSDX, SCore" id="Your nest has grown stronger!" />
+            </response>
+
+            <response id="UpgradeSoupStove" text="dialog_coco_upgrade_soupstove" nextstatementid="start">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <requirement type="HasItemSDX, SCore" id="toolGoldenLadle" value="1"/>
+                <action type="GiveToNPC, SCore" id="toolGoldenLadle" value="1"/>
+                <action type="AddItemSDX, SCore" id="cntSoupStoveLv2" value="1"/>
+                <action type="PlaySoundSDX, SCore" id="npc_ding1"/>
+                <action type="ShowToolTipSDX, SCore" id="Enjoy your upgraded stove!" />
+            </response>
+
+            <response id="UpgradeFlourSack" text="dialog_coco_upgrade_floursack" nextstatementid="start">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <requirement type="HasItemSDX, SCore" id="toolGoldenSifter" value="1"/>
+                <action type="GiveToNPC, SCore" id="toolGoldenSifter" value="1"/>
+                <action type="AddItemSDX, SCore" id="cntFlourSackLv2" value="1"/>
+                <action type="PlaySoundSDX, SCore" id="npc_ding1"/>
+                <action type="ShowToolTipSDX, SCore" id="Your flour sack has been upgraded!" />
+            </response>
+
+            <response id="UpgradeGoldenFridge" text="dialog_coco_upgrade_goldenfridge" nextstatementid="start">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <requirement type="HasItemSDX, SCore" id="toolGoldenCoolant" value="1"/>
+                <action type="GiveToNPC, SCore" id="toolGoldenCoolant" value="1"/>
+                <action type="AddItemSDX, SCore" id="cntGoldenFridgeLv2" value="1"/>
+                <action type="PlaySoundSDX, SCore" id="npc_ding1"/>
+                <action type="ShowToolTipSDX, SCore" id="Your fridge has been upgraded!" />
+            </response>
+
+            <response id="done" text="dialog_trader_response_nevermind" />
+        </dialog>
+
+        <!-- === うさぎ === -->
+        <dialog id="DialogLapin" startstatementid="start">
+            <statement id="start" text="dialog_lapin_greeting">
+                <response_entry id="GoToLapinMenu" />
+                <response_entry id="FollowMe" />
+                <response_entry id="Pickup" />
+                <response_entry id="ShowMe" />
+                <response_entry id="StayHere" />
+                <response_entry id="GuardHere" />
+                <response_entry id="Wander" />
+                <response_entry id="Hire" />
+                <response_entry id="done" />
+            </statement>
+
+            <!-- 🛠 Lapin専用メニュー -->
+            <response id="GoToLapinMenu" text="dialog_lapin_menu_main" nextstatementid="LapinMenuBranch">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+            </response>
+
+            <statement id="LapinMenuBranch" text="dialog_lapin_menu_main">
+                <response_entry id="GoToLapinTrialMenu" />
+                <response_entry id="GoToLapinSupportMenu" />
+                <response_entry id="GoToLapinExchangeMenu" />
+                <response_entry id="start" />
+            </statement>
+
+            <!-- クエストメニュー -->
+            <response id="GoToLapinTrialMenu" text="dialog_lapin_menu_trials" nextstatementid="LapinTrialBranch"/>
+
+            <statement id="LapinTrialBranch" text="dialog_lapin_menu_trials">
+                <response_entry id="StartRabbitTrial1" />
+                <response_entry id="GoToRabbitTrial2Entry" />
+                <response_entry id="GoToRabbitTrial3Entry" />
+                <response_entry id="GoToRabbitTrial4Entry" />
+                <response_entry id="LapinMenuBranch" />
+            </statement>
+
+            <!-- Rabbit Trial 1 Entry -->
+            <response id="StartRabbitTrial1" text="dialog_rabbit_start_trial_1" nextstatementid="RabbitTrial1Confirm">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffRabbitSupport1"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffRabbitTrial1Complete"/>
+            </response>
+
+            <statement id="RabbitTrial1Confirm" text="dialog_rabbit_confirm_start_trial_1">
+                <response_entry id="DoRabbitTrial1" />
+                <response_entry id="LapinTrialBranch" />
+            </statement>
+
+            <response id="DoRabbitTrial1" text="dialog_rabbit_start_confirm" nextstatementid="__end__">
+                <action type="GiveQuestSDX, SCore" id="quest_rabbit_support_trial_1" />
+            </response>
+
+            <!-- Rabbit Trial 2 Entry -->
+            <response id="GoToRabbitTrial2Entry" text="dialog_rabbit_trial2_entry" nextstatementid="RabbitTrial2EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffRabbitTrial1Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffRabbitTrial2Complete"/>
+            </response>
+
+            <statement id="RabbitTrial2EntryConfirm" text="dialog_rabbit_trial2_entry_text">
+                <response_entry id="StartRabbitTrial2" />
+                <response_entry id="ExplainRabbitTrial2Requirement" />
+                <response_entry id="LapinTrialBranch" />
+            </statement>
+
+            <response id="StartRabbitTrial2" text="dialog_rabbit_start_trial_2" nextstatementid="RabbitTrial2Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="10" />
+            </response>
+
+            <response id="ExplainRabbitTrial2Requirement" text="dialog_rabbit_trial2_require_info" nextstatementid="RabbitTrial2Explain" />
+
+            <statement id="RabbitTrial2Explain" text="dialog_rabbit_trial2_explain">
+                <response_entry id="LapinTrialBranch" />
+            </statement>
+
+            <statement id="RabbitTrial2Confirm" text="dialog_rabbit_confirm_start_trial_2">
+                <response_entry id="DoRabbitTrial2" />
+                <response_entry id="LapinTrialBranch" />
+            </statement>
+
+            <response id="DoRabbitTrial2" text="dialog_rabbit_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="10" />
+                <action type="GiveQuestSDX, SCore" id="quest_rabbit_support_trial_2" />
+            </response>
+
+            <!-- Rabbit Trial 3 Entry -->
+            <response id="GoToRabbitTrial3Entry" text="dialog_rabbit_trial3_entry" nextstatementid="RabbitTrial3EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffRabbitTrial2Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffRabbitTrial3Complete"/>
+            </response>
+
+            <statement id="RabbitTrial3EntryConfirm" text="dialog_rabbit_trial3_entry_text">
+                <response_entry id="StartRabbitTrial3" />
+                <response_entry id="ExplainRabbitTrial3Requirement" />
+                <response_entry id="LapinTrialBranch" />
+            </statement>
+
+            <response id="StartRabbitTrial3" text="dialog_rabbit_start_trial_3" nextstatementid="RabbitTrial3Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="20" />
+            </response>
+
+            <response id="ExplainRabbitTrial3Requirement" text="dialog_rabbit_trial3_require_info" nextstatementid="RabbitTrial3Explain" />
+
+            <statement id="RabbitTrial3Explain" text="dialog_rabbit_trial3_explain">
+                <response_entry id="LapinTrialBranch" />
+            </statement>
+
+            <statement id="RabbitTrial3Confirm" text="dialog_rabbit_confirm_start_trial_3">
+                <response_entry id="DoRabbitTrial3" />
+                <response_entry id="LapinTrialBranch" />
+            </statement>
+
+            <response id="DoRabbitTrial3" text="dialog_rabbit_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="20" />
+                <action type="GiveQuestSDX, SCore" id="quest_rabbit_support_trial_3" />
+            </response>
+
+            <!-- Rabbit Trial 4 Entry -->
+            <response id="GoToRabbitTrial4Entry" text="dialog_rabbit_trial4_entry" nextstatementid="RabbitTrial4EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffRabbitTrial3Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffRabbitTrial4Complete"/>
+            </response>
+
+            <statement id="RabbitTrial4EntryConfirm" text="dialog_rabbit_trial4_entry_text">
+                <response_entry id="StartRabbitTrial4" />
+                <response_entry id="ExplainRabbitTrial4Requirement" />
+                <response_entry id="LapinTrialBranch" />
+            </statement>
+
+            <response id="StartRabbitTrial4" text="dialog_rabbit_start_trial_4" nextstatementid="RabbitTrial4Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="30" />
+            </response>
+
+            <response id="ExplainRabbitTrial4Requirement" text="dialog_rabbit_trial4_require_info" nextstatementid="RabbitTrial4Explain" />
+
+            <statement id="RabbitTrial4Explain" text="dialog_rabbit_trial4_explain">
+                <response_entry id="LapinTrialBranch" />
+            </statement>
+
+            <statement id="RabbitTrial4Confirm" text="dialog_rabbit_confirm_start_trial_4">
+                <response_entry id="DoRabbitTrial4" />
+                <response_entry id="LapinTrialBranch" />
+            </statement>
+
+            <response id="DoRabbitTrial4" text="dialog_rabbit_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="30" />
+                <action type="GiveQuestSDX, SCore" id="quest_rabbit_support_trial_4" />
+            </response>
+
+            <!-- サポート説明メニュー -->
+            <response id="GoToLapinSupportMenu" text="dialog_lapin_menu_support" nextstatementid="LapinSupportBranch" />
+            <statement id="LapinSupportBranch" text="dialog_lapin_menu_support">
+                <response_entry id="ShowLapinSupport1" />
+                <response_entry id="ShowLapinSupport2" />
+                <response_entry id="ShowLapinSupport3" />
+                <response_entry id="ShowLapinSupport4" />
+                <response_entry id="LapinMenuBranch" />
+            </statement>
+
+            <response id="ShowLapinSupport1" text="dialog_lapin_explain_support1" nextstatementid="LapinSupport1Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffRabbitSupport1" />
+            </response>
+            <statement id="LapinSupport1Text" text="dialog_lapin_support1_text">
+                <response_entry id="LapinSupportBranch" />
+            </statement>
+
+            <response id="ShowLapinSupport2" text="dialog_lapin_explain_support2" nextstatementid="LapinSupport2Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffRabbitSupport2" />
+            </response>
+            <statement id="LapinSupport2Text" text="dialog_lapin_support2_text">
+                <response_entry id="LapinSupportBranch" />
+            </statement>
+
+            <response id="ShowLapinSupport3" text="dialog_lapin_explain_support3" nextstatementid="LapinSupport3Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffRabbitSupport3" />
+            </response>
+            <statement id="LapinSupport3Text" text="dialog_lapin_support3_text">
+                <response_entry id="LapinSupportBranch" />
+            </statement>
+
+            <response id="ShowLapinSupport4" text="dialog_lapin_explain_support4" nextstatementid="LapinSupport4Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffRabbitSupport4" />
+            </response>
+            <statement id="LapinSupport4Text" text="dialog_lapin_support4_text">
+                <response_entry id="LapinSupportBranch" />
+            </statement>
+
+            <!-- アイテム交換メニュー -->
+            <response id="GoToLapinExchangeMenu" text="dialog_lapin_exchange_menu" nextstatementid="LapinExchangeBranch" />
+            <statement id="LapinExchangeBranch" text="dialog_lapin_exchange_menu">
+                <response_entry id="ExchangeModLv1" />
+                <response_entry id="ExchangeModLv2" />
+                <response_entry id="ExchangeModLv3" />
+                <response_entry id="ExchangeModLv4" />
+                <response_entry id="LapinMenuBranch" />
+            </statement>
+
+            <response id="ExchangeModLv1" text="dialog_lapin_mod_lv1" nextstatementid="LapinModLv1Confirm">
+                <!-- Lapin Exchange Lv1:上位バフを取得すると下位バフは消えるため、どのサポートLvでも条件を満たせるように全バフを列挙 -->
+                <requirement type="HasBuffSDX, SCore" value="buffRabbitSupport1,buffRabbitSupport2,buffRabbitSupport3,buffRabbitSupport4" />
+            </response>
+
+            <statement id="LapinModLv1Confirm" text="dialog_lapin_confirm_mod_lv1">
+                <response_entry id="DoExchangeModLv1" />
+                <response_entry id="ShowModLv1Recipe" />
+                <response_entry id="LapinExchangeBranch" />
+            </statement>
+
+            <response id="DoExchangeModLv1" text="dialog_lapin_exchange_confirm" nextstatementid="LapinExchangeBranch">
+                <requirement type="HasItemSDX, SCore" id="resourceMechanicalParts" value="10" />
+                <requirement type="HasItemSDX, SCore" id="resourceForgedIron" value="5" />
+                <action type="GiveToNPC, SCore" id="resourceMechanicalParts" value="10" />
+                <action type="GiveToNPC, SCore" id="resourceForgedIron" value="5" />
+                <action type="AddItemSDX, SCore" id="modLapinPedalBooster" value="1" />
+                <action type="PlaySoundSDX, SCore" id="npc_ding1" />
+                <action type="ShowToolTipSDX, SCore" id="Here you go! Upgrade your bike!" />
+            </response>
+
+            <response id="ShowModLv1Recipe" text="dialog_lapin_recipe_mod_lv1" nextstatementid="LapinExchangeBranch" />
+
+
+            <response id="ExchangeModLv2" text="dialog_lapin_mod_lv2" nextstatementid="LapinModLv2Confirm">
+                <requirement type="HasBuffSDX, SCore" value="buffRabbitSupport2,buffRabbitSupport3,buffRabbitSupport4" />
+            </response>
+
+            <statement id="LapinModLv2Confirm" text="dialog_lapin_confirm_mod_lv2">
+                <response_entry id="DoExchangeModLv2" />
+                <response_entry id="ShowModLv2Recipe" />
+                <response_entry id="LapinExchangeBranch" />
+            </statement>
+
+            <response id="DoExchangeModLv2" text="dialog_lapin_exchange_confirm" nextstatementid="LapinExchangeBranch">
+                <requirement type="HasItemSDX, SCore" id="resourceMechanicalParts" value="15" />
+                <requirement type="HasItemSDX, SCore" id="resourceForgedIron" value="10" />
+                <action type="GiveToNPC, SCore" id="resourceMechanicalParts" value="15" />
+                <action type="GiveToNPC, SCore" id="resourceForgedIron" value="10" />
+                <action type="AddItemSDX, SCore" id="modLapinWrenchBooster" value="1" />
+                <action type="PlaySoundSDX, SCore" id="npc_ding1" />
+                <action type="ShowToolTipSDX, SCore" id="Here you go! Boost your salvage skills!" />
+            </response>
+
+            <response id="ShowModLv2Recipe" text="dialog_lapin_recipe_mod_lv2" nextstatementid="LapinExchangeBranch" />
+
+            <response id="ExchangeModLv3" text="dialog_lapin_mod_lv3" nextstatementid="LapinModLv3Confirm">
+                <requirement type="HasBuffSDX, SCore" value="buffRabbitSupport3,buffRabbitSupport4" />
+            </response>
+
+            <statement id="LapinModLv3Confirm" text="dialog_lapin_confirm_mod_lv3">
+                <response_entry id="DoExchangeModLv3" />
+                <response_entry id="ShowModLv3Recipe" />
+                <response_entry id="LapinExchangeBranch" />
+            </statement>
+
+            <response id="DoExchangeModLv3" text="dialog_lapin_exchange_confirm" nextstatementid="LapinExchangeBranch">
+                <requirement type="HasItemSDX, SCore" id="resourceMechanicalParts" value="20" />
+                <requirement type="HasItemSDX, SCore" id="resourceForgedIron" value="15" />
+                <action type="GiveToNPC, SCore" id="resourceMechanicalParts" value="20" />
+                <action type="GiveToNPC, SCore" id="resourceForgedIron" value="15" />
+                <action type="AddItemSDX, SCore" id="modLapinMultiLinkBooster" value="1" />
+                <action type="PlaySoundSDX, SCore" id="npc_ding1" />
+                <action type="ShowToolTipSDX, SCore" id="Here you go! Link up and go fast!" />
+            </response>
+
+            <response id="ShowModLv3Recipe" text="dialog_lapin_recipe_mod_lv3" nextstatementid="LapinExchangeBranch" />
+
+            <response id="ExchangeModLv4" text="dialog_lapin_mod_lv4" nextstatementid="LapinModLv4Confirm">
+                <requirement type="HasBuffSDX, SCore" value="buffRabbitSupport4" />
+            </response>
+
+            <statement id="LapinModLv4Confirm" text="dialog_lapin_confirm_mod_lv4">
+                <response_entry id="DoExchangeModLv4" />
+                <response_entry id="ShowModLv4Recipe" />
+                <response_entry id="LapinExchangeBranch" />
+            </statement>
+
+            <response id="DoExchangeModLv4" text="dialog_lapin_exchange_confirm" nextstatementid="LapinExchangeBranch">
+                <requirement type="HasItemSDX, SCore" id="resourceMechanicalParts" value="30" />
+                <requirement type="HasItemSDX, SCore" id="resourceForgedIron" value="20" />
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="10" />
+                <action type="GiveToNPC, SCore" id="resourceMechanicalParts" value="30" />
+                <action type="GiveToNPC, SCore" id="resourceForgedIron" value="20" />
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="10" />
+                <action type="AddItemSDX, SCore" id="modLapinTurboBooster" value="1" />
+                <action type="PlaySoundSDX, SCore" id="npc_ding1" />
+                <action type="ShowToolTipSDX, SCore" id="Enjoy the turbo ride!" />
+            </response>
+
+            <response id="ShowModLv4Recipe" text="dialog_lapin_recipe_mod_lv4" nextstatementid="LapinExchangeBranch" />
+
+            <!-- 共通操作 -->
+            <response id="FollowMe" text="dialog_lapin_followme">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+            </response>
+            <response id="Pickup" text="dialog_lapin_pickup">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="PickUpNPC, SCore" />
+            </response>
+            <response id="ShowMe" text="dialog_lapin_showpack">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+            </response>
+            <response id="StayHere" text="dialog_lapin_stayhere">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+            </response>
+            <response id="GuardHere" text="dialog_lapin_guardhere">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+            </response>
+            <response id="Wander" text="dialog_lapin_wander">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+            </response>
+            <response id="Hire" text="dialog_lapin_hire">
+                <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+                <action type="OpenDialogSDX, SCore" id="Hire"/>
+            </response>
+            <response id="done" text="dialog_trader_response_nevermind" />
+        </dialog>
+
+        <!-- === くま === -->
+        <dialog id="DialogHoney" startstatementid="start">
+            <statement id="start" text="dialog_honey_greeting">
+                <response_entry id="GoToHoneyMenu" />
+                <response_entry id="FollowMe" />
+                <response_entry id="Pickup" />
+                <response_entry id="ShowMe" />
+                <response_entry id="StayHere" />
+                <response_entry id="GuardHere" />
+                <response_entry id="Wander" />
+                <response_entry id="Hire" />
+                <response_entry id="done" />
+            </statement>
+
+            <response id="GoToHoneyMenu" text="dialog_honey_menu_main" nextstatementid="HoneyMenuBranch">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+            </response>
+
+            <statement id="HoneyMenuBranch" text="dialog_honey_menu_main">
+                <response_entry id="GoToHoneyTrialMenu" />
+                <response_entry id="GoToHoneySupportMenu" />
+                <response_entry id="GoToHoneyUtilityMenu" />
+                <response_entry id="start" />
+            </statement>
+
+            <!-- 🐻 クエストメニュー -->
+            <response id="GoToHoneyTrialMenu" text="dialog_honey_menu_trials" nextstatementid="HoneyTrialBranch" />
+            <statement id="HoneyTrialBranch" text="dialog_honey_menu_trials">
+                <response_entry id="StartBearTrial1" />
+                <response_entry id="GoToBearTrial2Entry" />
+                <response_entry id="GoToBearTrial3Entry" />
+                <response_entry id="GoToBearTrial4Entry" />
+                <response_entry id="HoneyMenuBranch" />
+            </statement>
+
+            <response id="StartBearTrial1" text="dialog_bear_start_trial_1" nextstatementid="BearTrial1Confirm">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffBearSupport1"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffBearTrial1Complete"/>
+            </response>
+            <statement id="BearTrial1Confirm" text="dialog_bear_confirm_start_trial_1">
+                <response_entry id="DoBearTrial1" />
+                <response_entry id="HoneyTrialBranch" />
+            </statement>
+            <response id="DoBearTrial1" text="dialog_bear_start_confirm" nextstatementid="__end__">
+                <action type="GiveQuestSDX, SCore" id="quest_bear_support_trial_1" />
+            </response>
+
+            <response id="GoToBearTrial2Entry" text="dialog_bear_trial2_entry" nextstatementid="BearTrial2EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffBearTrial1Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffBearTrial2Complete"/>
+            </response>
+            <statement id="BearTrial2EntryConfirm" text="dialog_bear_trial2_entry_text">
+                <response_entry id="StartBearTrial2" />
+                <response_entry id="ExplainBearTrial2Requirement" />
+                <response_entry id="HoneyTrialBranch" />
+            </statement>
+            <response id="StartBearTrial2" text="dialog_bear_start_trial_2" nextstatementid="BearTrial2Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="10" />
+            </response>
+            <response id="ExplainBearTrial2Requirement" text="dialog_bear_trial2_require_info" nextstatementid="BearTrial2Explain" />
+            <statement id="BearTrial2Explain" text="dialog_bear_trial2_explain">
+                <response_entry id="HoneyTrialBranch" />
+            </statement>
+            <statement id="BearTrial2Confirm" text="dialog_bear_confirm_start_trial_2">
+                <response_entry id="DoBearTrial2" />
+                <response_entry id="HoneyTrialBranch" />
+            </statement>
+            <response id="DoBearTrial2" text="dialog_bear_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="10" />
+                <action type="AddItemSDX, SCore" id="itemBeeManual" value="1" />
+                <action type="GiveQuestSDX, SCore" id="quest_bear_support_trial_2" />
+            </response>
+            <response id="GoToBearTrial3Entry" text="dialog_bear_trial3_entry" nextstatementid="BearTrial3EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffBearTrial2Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffBearTrial3Complete"/>
+            </response>
+            <statement id="BearTrial3EntryConfirm" text="dialog_bear_trial3_entry_text">
+                <response_entry id="StartBearTrial3" />
+                <response_entry id="ExplainBearTrial3Requirement" />
+                <response_entry id="HoneyTrialBranch" />
+            </statement>
+            <response id="StartBearTrial3" text="dialog_bear_start_trial_3" nextstatementid="BearTrial3Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="20" />
+            </response>
+            <response id="ExplainBearTrial3Requirement" text="dialog_bear_trial3_require_info" nextstatementid="BearTrial3Explain" />
+            <statement id="BearTrial3Explain" text="dialog_bear_trial3_explain">
+                <response_entry id="HoneyTrialBranch" />
+            </statement>
+            <statement id="BearTrial3Confirm" text="dialog_bear_confirm_start_trial_3">
+                <response_entry id="DoBearTrial3" />
+                <response_entry id="HoneyTrialBranch" />
+            </statement>
+            <response id="DoBearTrial3" text="dialog_bear_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="20" />
+                <action type="GiveQuestSDX, SCore" id="quest_bear_support_trial_3" />
+            </response>
+
+            <response id="GoToBearTrial4Entry" text="dialog_bear_trial4_entry" nextstatementid="BearTrial4EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffBearTrial3Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffBearTrial4Complete"/>
+            </response>
+            <statement id="BearTrial4EntryConfirm" text="dialog_bear_trial4_entry_text">
+                <response_entry id="StartBearTrial4" />
+                <response_entry id="ExplainBearTrial4Requirement" />
+                <response_entry id="HoneyTrialBranch" />
+            </statement>
+            <response id="StartBearTrial4" text="dialog_bear_start_trial_4" nextstatementid="BearTrial4Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="30" />
+            </response>
+            <response id="ExplainBearTrial4Requirement" text="dialog_bear_trial4_require_info" nextstatementid="BearTrial4Explain" />
+            <statement id="BearTrial4Explain" text="dialog_bear_trial4_explain">
+                <response_entry id="HoneyTrialBranch" />
+            </statement>
+            <statement id="BearTrial4Confirm" text="dialog_bear_confirm_start_trial_4">
+                <response_entry id="DoBearTrial4" />
+                <response_entry id="HoneyTrialBranch" />
+            </statement>
+            <response id="DoBearTrial4" text="dialog_bear_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="30" />
+                <action type="GiveQuestSDX, SCore" id="quest_bear_support_trial_4" />
+            </response>
+
+            <!-- 🐻 サポート説明 -->
+            <response id="GoToHoneySupportMenu" text="dialog_honey_menu_support" nextstatementid="HoneySupportBranch" />
+            <statement id="HoneySupportBranch" text="dialog_honey_menu_support">
+                <response_entry id="ShowHoneySupport1" />
+                <response_entry id="ShowHoneySupport2" />
+                <response_entry id="ShowHoneySupport3" />
+                <response_entry id="ShowHoneySupport4" />
+                <response_entry id="HoneyMenuBranch" />
+            </statement>
+
+            <response id="ShowHoneySupport1" text="dialog_honey_explain_support1" nextstatementid="HoneySupport1Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffBearSupport1" />
+            </response>
+            <statement id="HoneySupport1Text" text="dialog_honey_support1_text">
+                <response_entry id="HoneySupportBranch" />
+            </statement>
+
+            <response id="ShowHoneySupport2" text="dialog_honey_explain_support2" nextstatementid="HoneySupport2Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffBearSupport2" />
+            </response>
+            <statement id="HoneySupport2Text" text="dialog_honey_support2_text">
+                <response_entry id="HoneySupportBranch" />
+            </statement>
+
+            <response id="ShowHoneySupport3" text="dialog_honey_explain_support3" nextstatementid="HoneySupport3Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffBearSupport3" />
+            </response>
+            <statement id="HoneySupport3Text" text="dialog_honey_support3_text">
+                <response_entry id="HoneySupportBranch" />
+            </statement>
+
+            <response id="ShowHoneySupport4" text="dialog_honey_explain_support4" nextstatementid="HoneySupport4Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffBearSupport4" />
+            </response>
+            <statement id="HoneySupport4Text" text="dialog_honey_support4_text">
+                <response_entry id="HoneySupportBranch" />
+            </statement>
+
+            <!-- 🐻 ユーティリティメニュー -->
+            <response id="GoToHoneyUtilityMenu" text="dialog_honey_menu_util" nextstatementid="HoneyUtilityBranch" />
+            <statement id="HoneyUtilityBranch" text="dialog_honey_menu_util">
+                <response_entry id="HoneyMenuBranch" />
+                <response_entry id="UnlockPoisonMenu" />
+                <response_entry id="PoisonBombExchangeMenu" />
+            </statement>
+
+            <!-- 🔓 解放処理 -->
+            <response id="UnlockPoisonMenu" text="dialog_honey_unlock_poison_menu" nextstatementid="HoneyUnlockPoisonConfirm">
+                <!-- Ancient Poison Formula required -->
+                <requirement type="HasItemSDX, SCore" id="itemPoisonRecipeFound" value="1"/>
+                <requirement type="HasCVarSDX, SCore" id="honeyPoisonMenuUnlocked" operator="lt" value="1" requirementtype="Hide" />
+            </response>
+            <statement id="HoneyUnlockPoisonConfirm" text="dialog_honey_confirm_unlock_poison_menu">                <!-- このレシピがあれば毒爆弾が作れるよ -->
+                <response_entry id="DoUnlockPoisonMenu" />
+                <response_entry id="HoneyUtilityBranch" />
+            </statement>
+            <response id="DoUnlockPoisonMenu" text="dialog_honey_unlock_confirm" nextstatementid="HoneyUtilityBranch">
+                <action type="GiveToNPC, SCore" id="itemPoisonRecipeFound" value="1"/>
+                <action type="AddCVar, SCore" id="honeyPoisonMenuUnlocked" value="1" operator="set" />
+            </response>
+
+            <!-- 🧪 交換メニュー -->
+            <response id="PoisonBombExchangeMenu" text="dialog_honey_poison_bomb_exchange_menu" nextstatementid="HoneyPoisonBombExchange">
+                <requirement type="HasCVarSDX, SCore" id="honeyPoisonMenuUnlocked" operator="gte" value="1" requirementtype="Hide" />
+            </response>
+            <statement id="HoneyPoisonBombExchange" text="dialog_honey_exchange_prompt">
+                <response_entry id="DoPoisonBombExchange" />
+                <response_entry id="HoneyUtilityBranch" />
+            </statement>
+            <response id="DoPoisonBombExchange" text="dialog_honey_confirm_exchange" nextstatementid="HoneyUtilityBranch">
+                <requirement type="HasItemSDX, SCore" id="foodHoney" value="10"/>
+                <action type="GiveToNPC, SCore" id="foodHoney" value="10"/>
+                <action type="AddItemSDX, SCore" id="thrownAmmoPoisonBomb" value="10"/>
+                <action type="PlaySoundSDX, SCore" id="use_bandage"/>
+                <action type="ShowToolTipSDX, SCore" id="Be careful with these!" />
+            </response>
+            <response id="ReturnToHoneyMenu" text="dialog_honey_return_menu" nextstatementid="HoneyMenuBranch" />
+
+            <!-- 共通操作 -->
+            <response id="FollowMe" text="dialog_honey_followme">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+            </response>
+            <response id="Pickup" text="dialog_honey_pickup">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="PickUpNPC, SCore" />
+            </response>
+            <response id="ShowMe" text="dialog_honey_showpack">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+            </response>
+            <response id="StayHere" text="dialog_honey_stayhere">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+            </response>
+            <response id="GuardHere" text="dialog_honey_guardhere">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+            </response>
+            <response id="Wander" text="dialog_honey_wander">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+            </response>
+            <response id="Hire" text="dialog_honey_hire">
+                <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not" />
+                <action type="OpenDialogSDX, SCore" id="Hire" />
+            </response>
+            <response id="done" text="dialog_trader_response_nevermind" />
+        </dialog>
+
+        <dialog id="DialogGrumble" startstatementid="start">
+            <statement id="start" text="dialog_grumble_greeting">
+                <response_entry id="GoToGrumbleMenu" />
+                <response_entry id="FollowMe" />
+                <response_entry id="Pickup" />
+                <response_entry id="ShowMe" />
+                <response_entry id="StayHere" />
+                <response_entry id="GuardHere" />
+                <response_entry id="Wander" />
+                <response_entry id="Hire" />
+                <response_entry id="done" />
+            </statement>
+
+            <!-- 🛠 Grumble専用メニュー -->
+            <response id="GoToGrumbleMenu" text="dialog_grumble_menu_main" nextstatementid="GrumbleMenuBranch">
+                <requirement type="Leader, SCore" requirementtype="Hide" />
+            </response>
+
+            <statement id="GrumbleMenuBranch" text="dialog_grumble_menu_main">
+                <response_entry id="GoToGrumbleTrialMenu" />
+                <response_entry id="GoToGrumbleSupportMenu" />
+                <response_entry id="GoToGrumbleExchangeMenu" />
+                <response_entry id="start" />
+            </statement>
+
+            <!-- クエストメニュー -->
+            <response id="GoToGrumbleTrialMenu" text="dialog_grumble_menu_trials" nextstatementid="GrumbleTrialBranch"/>
+
+            <statement id="GrumbleTrialBranch" text="dialog_grumble_menu_trials">
+                <response_entry id="StartBoarTrial1" />
+                <response_entry id="GoToBoarTrial2Entry" />
+                <response_entry id="GoToBoarTrial3Entry" />
+                <response_entry id="GoToBoarTrial4Entry" />
+                <response_entry id="GrumbleMenuBranch" />
+            </statement>
+
+            <!-- Boar Trial 1 Entry -->
+            <response id="StartBoarTrial1" text="dialog_boar_start_trial_1" nextstatementid="BoarTrial1Confirm">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffBoarSupport1"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffBoarTrial1Complete"/>
+            </response>
+
+            <statement id="BoarTrial1Confirm" text="dialog_boar_confirm_start_trial_1">
+                <response_entry id="DoBoarTrial1" />
+                <response_entry id="GrumbleTrialBranch" />
+            </statement>
+
+            <response id="DoBoarTrial1" text="dialog_boar_start_confirm" nextstatementid="__end__">
+                <action type="GiveQuestSDX, SCore" id="quest_boar_support_trial_1" />
+            </response>
+
+            <!-- Boar Trial 2 Entry -->
+            <response id="GoToBoarTrial2Entry" text="dialog_boar_trial2_entry" nextstatementid="BoarTrial2EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffBoarTrial1Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffBoarTrial2Complete"/>
+            </response>
+
+            <statement id="BoarTrial2EntryConfirm" text="dialog_boar_trial2_entry_text">
+                <response_entry id="StartBoarTrial2" />
+                <response_entry id="ExplainBoarTrial2Requirement" />
+                <response_entry id="GrumbleTrialBranch" />
+            </statement>
+
+            <response id="StartBoarTrial2" text="dialog_boar_start_trial_2" nextstatementid="BoarTrial2Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="10" />
+            </response>
+
+            <response id="ExplainBoarTrial2Requirement" text="dialog_boar_trial2_require_info" nextstatementid="BoarTrial2Explain" />
+
+            <statement id="BoarTrial2Explain" text="dialog_boar_trial2_explain">
+                <response_entry id="GrumbleTrialBranch" />
+            </statement>
+
+            <statement id="BoarTrial2Confirm" text="dialog_boar_confirm_start_trial_2">
+                <response_entry id="DoBoarTrial2" />
+                <response_entry id="GrumbleTrialBranch" />
+            </statement>
+
+            <response id="DoBoarTrial2" text="dialog_boar_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="10" />
+                <action type="GiveQuestSDX, SCore" id="quest_boar_support_trial_2" />
+            </response>
+
+            <!-- Boar Trial 3 Entry -->
+            <response id="GoToBoarTrial3Entry" text="dialog_boar_trial3_entry" nextstatementid="BoarTrial3EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffBoarTrial2Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffBoarTrial3Complete"/>
+            </response>
+
+            <statement id="BoarTrial3EntryConfirm" text="dialog_boar_trial3_entry_text">
+                <response_entry id="StartBoarTrial3" />
+                <response_entry id="ExplainBoarTrial3Requirement" />
+                <response_entry id="GrumbleTrialBranch" />
+            </statement>
+
+            <response id="StartBoarTrial3" text="dialog_boar_start_trial_3" nextstatementid="BoarTrial3Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="20" />
+            </response>
+
+            <response id="ExplainBoarTrial3Requirement" text="dialog_boar_trial3_require_info" nextstatementid="BoarTrial3Explain" />
+
+            <statement id="BoarTrial3Explain" text="dialog_boar_trial3_explain">
+                <response_entry id="GrumbleTrialBranch" />
+            </statement>
+
+            <statement id="BoarTrial3Confirm" text="dialog_boar_confirm_start_trial_3">
+                <response_entry id="DoBoarTrial3" />
+                <response_entry id="GrumbleTrialBranch" />
+            </statement>
+
+            <response id="DoBoarTrial3" text="dialog_boar_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="20" />
+                <action type="GiveQuestSDX, SCore" id="quest_boar_support_trial_3" />
+            </response>
+
+            <!-- Boar Trial 4 Entry -->
+            <response id="GoToBoarTrial4Entry" text="dialog_boar_trial4_entry" nextstatementid="BoarTrial4EntryConfirm">
+                <requirement type="HasBuffSDX, SCore" value="buffBoarTrial3Complete"/>
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="!buffBoarTrial4Complete"/>
+            </response>
+
+            <statement id="BoarTrial4EntryConfirm" text="dialog_boar_trial4_entry_text">
+                <response_entry id="StartBoarTrial4" />
+                <response_entry id="ExplainBoarTrial4Requirement" />
+                <response_entry id="GrumbleTrialBranch" />
+            </statement>
+
+            <response id="StartBoarTrial4" text="dialog_boar_start_trial_4" nextstatementid="BoarTrial4Confirm">
+                <requirement type="HasItemSDX, SCore" id="npcTrialTicket" value="30" />
+            </response>
+
+            <response id="ExplainBoarTrial4Requirement" text="dialog_boar_trial4_require_info" nextstatementid="BoarTrial4Explain" />
+
+            <statement id="BoarTrial4Explain" text="dialog_boar_trial4_explain">
+                <response_entry id="GrumbleTrialBranch" />
+            </statement>
+
+            <statement id="BoarTrial4Confirm" text="dialog_boar_confirm_start_trial_4">
+                <response_entry id="DoBoarTrial4" />
+                <response_entry id="GrumbleTrialBranch" />
+            </statement>
+
+            <response id="DoBoarTrial4" text="dialog_boar_start_confirm" nextstatementid="__end__">
+                <action type="GiveToNPC, SCore" id="npcTrialTicket" value="30" />
+                <action type="GiveQuestSDX, SCore" id="quest_boar_support_trial_4" />
+            </response>
+
+            <!-- サポート説明メニュー -->
+            <response id="GoToGrumbleSupportMenu" text="dialog_grumble_menu_support" nextstatementid="GrumbleSupportBranch" />
+            <statement id="GrumbleSupportBranch" text="dialog_grumble_menu_support">
+                <response_entry id="ShowGrumbleSupport1" />
+                <response_entry id="ShowGrumbleSupport2" />
+                <response_entry id="ShowGrumbleSupport3" />
+                <response_entry id="ShowGrumbleSupport4" />
+                <response_entry id="GrumbleMenuBranch" />
+            </statement>
+
+            <response id="ShowGrumbleSupport1" text="dialog_grumble_explain_support1" nextstatementid="GrumbleSupport1Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffBoarSupport1" />
+            </response>
+            <statement id="GrumbleSupport1Text" text="dialog_grumble_support1_text">
+                <response_entry id="GrumbleSupportBranch" />
+            </statement>
+
+            <response id="ShowGrumbleSupport2" text="dialog_grumble_explain_support2" nextstatementid="GrumbleSupport2Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffBoarSupport2" />
+            </response>
+            <statement id="GrumbleSupport2Text" text="dialog_grumble_support2_text">
+                <response_entry id="GrumbleSupportBranch" />
+            </statement>
+
+            <response id="ShowGrumbleSupport3" text="dialog_grumble_explain_support3" nextstatementid="GrumbleSupport3Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffBoarSupport3" />
+            </response>
+            <statement id="GrumbleSupport3Text" text="dialog_grumble_support3_text">
+                <response_entry id="GrumbleSupportBranch" />
+            </statement>
+
+            <response id="ShowGrumbleSupport4" text="dialog_grumble_explain_support4" nextstatementid="GrumbleSupport4Text">
+                <requirement type="HasBuffSDX, SCore" requirementtype="Hide" value="buffBoarSupport4" />
+            </response>
+            <statement id="GrumbleSupport4Text" text="dialog_grumble_support4_text">
+                <response_entry id="GrumbleSupportBranch" />
+            </statement>
+
+            <!-- 共通操作 -->
+            <response id="FollowMe" text="dialog_grumble_followme">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+            </response>
+            <response id="Pickup" text="dialog_grumble_pickup">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="PickUpNPC, SCore" />
+            </response>
+            <response id="ShowMe" text="dialog_grumble_showpack">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+            </response>
+            <response id="StayHere" text="dialog_grumble_stayhere">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+            </response>
+            <response id="GuardHere" text="dialog_grumble_guardhere">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+            </response>
+            <response id="Wander" text="dialog_grumble_wander">
+                <requirement type="Leader, SCore" requirementtype="Hide"/>
+                <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+            </response>
+            <response id="Hire" text="dialog_grumble_hire">
+                <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+                <action type="OpenDialogSDX, SCore" id="Hire"/>
+            </response>
+            <response id="done" text="dialog_trader_response_nevermind" />
+        </dialog>
+    </append>
+</configs>

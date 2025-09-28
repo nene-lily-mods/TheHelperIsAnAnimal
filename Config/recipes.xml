@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<configs>
+    <append xpath="/recipes">
+
+        <recipe name="cntFoxLetterDesk" count="1">
+            <ingredient name="resourceWood" count="30"/>
+        </recipe>
+
+        <recipe name="cntCompanionDesk" count="1" tags="learnable,fox_support_lv1_recipes">
+            <ingredient name="resourceForgedIron" count="15"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceDuctTape" count="5"/>
+            <ingredient name="resourceNail" count="20"/>
+            <ingredient name="resourceWood" count="50"/>
+        </recipe>
+
+        <recipe name="reviveStoneSnowtail" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceRockSmall" count="50"/>
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="reviveStoneCoco" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceRockSmall" count="50"/>
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="reviveStoneLapin" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceRockSmall" count="50"/>
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="reviveStoneHoney" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceRockSmall" count="50"/>
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="reviveStoneGrumble" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceRockSmall" count="50"/>
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <!-- ===== きつね関連 ===== -->
+        <recipe name="itemFoxSupportActivator1" count="1" tags="learnable,fox_support_lv1_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="itemFoxSupportActivator2" count="1" tags="learnable,fox_support_lv2_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="15"/>
+        </recipe>
+
+        <recipe name="itemFoxSupportActivator3" count="1" tags="learnable,fox_support_lv3_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="20"/>
+        </recipe>
+
+        <recipe name="itemFoxSupportActivator4" count="1" tags="learnable,fox_support_lv4_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="25"/>
+        </recipe>
+
+        <recipe name="modFoxClawCharm" count="1" 
+                tags="learnable,fox_support_lv4_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="20"/>
+            <ingredient name="resourceFoxFang" count="1"/>
+            <ingredient name="resourceMysticSteel" count="30"/>
+        </recipe>
+
+        <recipe name="modFoxClawCharmEX" count="1" 
+                tags="learnable,fox_support_lv4_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="30"/>
+            <ingredient name="resourceFoxFang" count="10"/>
+            <ingredient name="resourceFoxSoulCore" count="5"/>
+            <ingredient name="modFoxClawCharm" count="1"/>
+        </recipe>
+
+        <!-- ===== 料理人関連 ===== -->
+        <recipe name="letter_welcome_cook" count="1" tags="learnable,fox_support_lv1_recipes" craft_area="fox_letter_craft">
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="cntSpecialBirdnest" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceWood" count="40"/>
+            <ingredient name="resourceFeather" count="10"/>
+            <ingredient name="resourceCloth" count="20"/>
+        </recipe>
+
+        <recipe name="cntSoupStove" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceForgedIron" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="5"/>
+            <ingredient name="resourceElectricParts" count="5"/>
+            <ingredient name="resourceMetalPipe" count="5"/>
+            <ingredient name="toolCookingPot" count="1"/>
+        </recipe>
+
+        <recipe name="cntFlourSack" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceCloth" count="20"/>
+            <ingredient name="resourceDuctTape" count="5"/>
+            <ingredient name="resourceSewingKit" count="5"/>
+            <ingredient name="bucketEmpty" count="1"/>
+            <ingredient name="foodShamSandwich" count="5"/>
+        </recipe>
+
+        <recipe name="cntGoldenFridge" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceForgedSteel" count="20"/>
+            <ingredient name="resourceMechanicalParts" count="15"/>
+            <ingredient name="resourceElectricParts" count="15"/>
+            <ingredient name="resourceSilverNugget" count="10"/>
+            <ingredient name="resourceGoldNugget" count="5"/>
+        </recipe>
+
+        <recipe name="toolNestWarmer" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceMysticSteel" count="10"/>
+        </recipe>
+
+        <recipe name="toolGoldenLadle" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceMysticSteel" count="15"/>
+        </recipe>
+
+        <recipe name="toolGoldenSifter" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceMysticSteel" count="20"/>
+        </recipe>
+
+        <recipe name="toolGoldenCoolant" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceMysticSteel" count="25"/>
+        </recipe>
+
+        <!-- ===== 職人関連 ===== -->
+        <recipe name="letter_welcome_tinkerer" count="1" tags="learnable,fox_support_lv1_recipes" craft_area="fox_letter_craft">
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="itemRabbitSupportActivator1" count="1" tags="learnable,rabbit_support_lv1_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="itemRabbitSupportActivator2" count="1" tags="learnable,rabbit_support_lv2_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="15"/>
+        </recipe>
+
+        <recipe name="itemRabbitSupportActivator3" count="1" tags="learnable,rabbit_support_lv3_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="20"/>
+        </recipe>
+
+        <recipe name="itemRabbitSupportActivator4" count="1" tags="learnable,rabbit_support_lv4_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="25"/>
+        </recipe>
+
+        <recipe name="cntLapinBuilderBench" count="1" tags="learnable,rabbit_support_lv4_recipes" craft_area="fox_companion_craft">
+            <ingredient name="resourceWood" count="40"/>
+            <ingredient name="resourceMysticSteel" count="50"/>
+            <ingredient name="npcTrialTicket" count="20"/>
+        </recipe>
+
+        <recipe name="resourceCobblestones" count="5" craft_area="lapin_builder_bench">
+            <ingredient name="resourceClayLump" count="1"/>
+            <ingredient name="resourceRockSmall" count="1"/>
+        </recipe>
+
+        <recipe name="resourceConcreteMix" count="3" craft_area="lapin_builder_bench">
+            <ingredient name="resourceCrushedSand" count="1"/>
+            <ingredient name="resourceRockSmall" count="1"/>
+            <ingredient name="resourceCement" count="1"/>
+        </recipe>
+
+        <recipe name="resourceForgedSteel" count="3" craft_area="lapin_builder_bench">
+            <ingredient name="resourceScrapIron" count="20"/>
+            <ingredient name="resourceClayLump" count="10"/>
+        </recipe>
+
+        <recipe name="mysticSteelShapes:VariantHelper" count="1" craft_area="lapin_builder_bench">
+            <ingredient name="resourceMysticSteel" count="10"/>
+        </recipe>
+
+        <!-- ===== 医療係関連 ===== -->
+        <recipe name="letter_welcome_medic" count="1" tags="learnable,fox_support_lv1_recipes" craft_area="fox_letter_craft">
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="cntBearCouchRecovery" count="1" tags="learnable,bear_support_lv2_recipes" craft_area="fox_companion_craft">
+            <ingredient name="resourceCloth" count="20"/>
+            <ingredient name="resourceDuctTape" count="5"/>
+            <ingredient name="resourceSpring" count="3"/>
+            <ingredient name="npcTrialTicket" count="5"/>
+        </recipe>
+
+        <recipe name="cntBearHerbMat" count="1" tags="learnable,bear_support_lv3_recipes" craft_area="fox_companion_craft">
+            <ingredient name="resourceBrokenGlass" count="20"/>
+            <ingredient name="resourceMysticSteel" count="5"/>
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="cntBeeHiveBox" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceWood" count="30"/>
+            <ingredient name="resourceFlowerBlend" count="10"/>
+        </recipe>
+
+        <recipe name="resourceFlowerBlend" count="1" tags="learnable" craft_area="fox_companion_craft">
+            <ingredient name="resourceCropChrysanthemumPlant" count="2"/>
+            <ingredient name="resourceCropGoldenrodPlant" count="2"/>
+        </recipe>
+
+        <recipe name="foodHoney" count="1" material_based="true" craft_area="bee_forge">
+            <ingredient name="unit_nectar" count="5"/>
+        </recipe>
+
+        <recipe name="cntBearEmergencyKit" count="1" tags="learnable,bear_support_lv4_recipes" craft_area="fox_companion_craft">
+            <ingredient name="resourceWood" count="30"/>
+            <ingredient name="resourceMysticSteel" count="50"/>
+            <ingredient name="npcTrialTicket" count="20"/>
+        </recipe>
+
+        <recipe name="itemBearReviveDrug" count="1" tags="learnable,bear_support_lv4_recipes" craft_area="bear_emergency_kit">
+            <ingredient name="drugPainkillers" count="2"/>
+            <ingredient name="drugVitamins" count="2"/>
+            <ingredient name="drugAntibiotics" count="2"/>
+            <ingredient name="resourceCropAloeLeaf" count="5"/>
+            <ingredient name="foodHoney" count="2"/>
+        </recipe>
+
+        <recipe name="itemBearEmergencyDrug" count="1" tags="learnable,bear_support_lv4_recipes" craft_area="bear_emergency_kit">
+            <ingredient name="medicalFirstAidKit" count="5"/>
+            <ingredient name="medicalBloodBag" count="2"/>
+            <ingredient name="drugAntibiotics" count="2"/>
+            <ingredient name="drugSteroids" count="2"/>
+            <ingredient name="foodHoney" count="5"/>
+        </recipe>
+
+        <recipe name="medicalFirstAidKit" count="1" craft_area="bear_emergency_kit">
+            <ingredient name="medicalFirstAidBandage" count="10"/>
+        </recipe>
+
+        <recipe name="itemBearSupportActivator1" count="1" tags="learnable,bear_support_lv1_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="itemBearSupportActivator2" count="1" tags="learnable,bear_support_lv2_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="15"/>
+        </recipe>
+
+        <recipe name="itemBearSupportActivator3" count="1" tags="learnable,bear_support_lv3_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="20"/>
+        </recipe>
+
+        <recipe name="itemBearSupportActivator4" count="1" tags="learnable,bear_support_lv4_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="25"/>
+        </recipe>
+
+        <recipe name="modBearPoisonWard" count="1" tags="learnable,bear_support_lv4_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="20"/>
+            <ingredient name="foodHoney" count="20"/>
+            <ingredient name="resourceMysticSteel" count="30"/>
+        </recipe>
+
+        <!-- ===== 鍛冶屋関連 ===== -->
+        <recipe name="letter_welcome_forgeguard" count="1" tags="learnable,fox_support_lv1_recipes" craft_area="fox_letter_craft">
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="cntMysticForge" count="1" tags="learnable,boar_support_lv1_recipes" craft_area="fox_companion_craft">
+            <ingredient name="resourceForgedSteel" count="20"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceElectricParts" count="10"/>
+            <ingredient name="npcTrialTicket" count="10"/>
+            <ingredient name="carBattery" count="1"/>
+        </recipe>
+
+        <recipe name="resourceMysticSteel" material_based="true" count="1" tags="learnable,boar_support_lv1_recipes,MysticForgeCrafting" craft_area="mystic_forge">
+            <ingredient name="unit_mysticOre" count="10"/>
+            <ingredient name="unit_clay" count="20"/>
+        </recipe>
+
+        <recipe name="trapBigHead" count="1" tags="learnable,boar_support_lv2_recipes" craft_area="fox_companion_craft">
+            <ingredient name="resourceMysticSteel" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceElectricParts" count="10"/>
+        </recipe>
+
+        <recipe name="gunMysticHeadshot" count="1" tags="learnable,boar_support_lv3_recipes" craft_area="fox_companion_craft">
+            <ingredient name="resourceMysticSteel" count="50"/>
+            <ingredient name="gunHandgunT1PistolParts" count="5"/>
+            <ingredient name="resourceForgedSteel" count="10"/>
+            <ingredient name="resourceDuctTape" count="5"/>
+            <ingredient name="resourceSpring" count="5"/>
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="gunBotPoisonSledge" count="1" tags="learnable,boar_support_lv4_recipes" craft_area="fox_companion_craft">
+            <ingredient name="resourceMysticSteel" count="50"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceElectricParts" count="10"/>
+            <ingredient name="npcTrialTicket" count="30"/>
+            <ingredient name="carBattery" count="1"/>
+        </recipe>
+
+        <recipe name="npcTrialTicket" count="5">
+            <ingredient name="itemBoarKillProof" count="1"/>
+        </recipe>
+
+        <recipe name="itemBoarSupportActivator1" count="1" tags="learnable,boar_support_lv1_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="10"/>
+        </recipe>
+
+        <recipe name="itemBoarSupportActivator2" count="1" tags="learnable,boar_support_lv2_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="15"/>
+        </recipe>
+
+        <recipe name="itemBoarSupportActivator3" count="1" tags="learnable,boar_support_lv3_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="20"/>
+        </recipe>
+
+        <recipe name="itemBoarSupportActivator4" count="1" tags="learnable,boar_support_lv4_recipes" craft_area="fox_companion_craft">
+            <ingredient name="npcTrialTicket" count="25"/>
+        </recipe>
+    </append>
+</configs>

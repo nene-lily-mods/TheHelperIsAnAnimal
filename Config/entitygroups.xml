@@ -1,0 +1,54 @@
+<configs>
+    <append xpath="/entitygroups">
+        <entitygroup name="foxGuardianGroupCommon">
+            <entity name="animalFoxWolfGuardian" prob="1.0"/>
+        </entitygroup>
+
+        <entitygroup name="foxGuardianGroupRare">
+            <entity name="animalFoxWolfGuardian" prob="0.9"/>
+            <entity name="none" prob="99.1"/>
+        </entitygroup>
+
+        <entitygroup name="foxGuardianGroupUltraRare">
+            <entity name="animalFoxWolfGuardian" prob="0.5"/>
+            <entity name="none" prob="99.5"/>
+        </entitygroup>
+
+        <entitygroup name="toxicZombiesWeak">
+            <entity name="zombieToxicArleneMinor" prob="0.5"/>
+            <entity name="zombieToxicBikerMinor" prob="0.5"/>
+        </entitygroup>
+
+        <entitygroup name="toxicZombiesElite">
+            <entity name="zombieToxicJoeElite" prob="0.34"/>
+            <entity name="zombieToxicMarleneElite" prob="0.33"/>
+            <entity name="zombieToxicSteveElite" prob="0.33"/>
+        </entitygroup>
+
+        <entitygroup name="toxicZombiesBoss">
+            <entity name="zombieToxicSoldierBoss" prob="0.34"/>
+            <entity name="zombieToxicWightBoss" prob="0.33"/>
+            <entity name="zombieToxicHazmatRadiatedBoss" prob="0.33"/>
+        </entitygroup>
+
+        <entitygroup name="toxicZombiesAllMix">
+            <entity name="zombieToxicArleneMinor" prob="0.1"/>
+            <entity name="zombieToxicBikerMinor" prob="0.1"/>
+            <entity name="zombieToxicJoeElite" prob="0.15"/>
+            <entity name="zombieToxicMarleneElite" prob="0.15"/>
+            <entity name="zombieToxicSteveElite" prob="0.15"/>
+            <entity name="zombieToxicSoldierBoss" prob="0.15"/>
+            <entity name="zombieToxicWightBoss" prob="0.1"/>
+            <entity name="zombieToxicHazmatRadiatedBoss" prob="0.1"/>
+        </entitygroup>
+
+        <entitygroup name="toxicZombiesWastelandBalanced">
+            <entity name="zombieToxicJoeElite" prob="0.2"/>
+            <entity name="zombieToxicMarleneElite" prob="0.2"/>
+            <entity name="zombieToxicSteveElite" prob="0.2"/>
+            <entity name="zombieToxicSoldierBoss" prob="0.13"/>
+            <entity name="zombieToxicWightBoss" prob="0.13"/>
+            <entity name="zombieToxicHazmatRadiatedBoss" prob="0.14"/>
+        </entitygroup>
+    </append>
+</configs>  

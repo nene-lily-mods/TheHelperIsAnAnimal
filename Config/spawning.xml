@@ -1,0 +1,58 @@
+<configs>
+  <!-- Fox Guardian 出現設定：バイオーム＋時間帯ごとに設定 -->
+
+  <!-- 荒地：夜（やや出現しやすい） -->
+  <append xpath="/spawning/biome[@name='wasteland']">
+    <spawn id="foxGuardianWastelandNight" maxcount="1" respawndelay="3" time="Night" 
+           entitygroup="foxGuardianGroupCommon"/>
+  </append>
+
+  <!-- 荒地：昼（少しレア） -->
+  <append xpath="/spawning/biome[@name='wasteland']">
+    <spawn id="foxGuardianWastelandDay" maxcount="1" respawndelay="3" time="Day" 
+           entitygroup="foxGuardianGroupRare"/>
+  </append>
+
+  <!-- 雪原：夜（レア） -->
+  <append xpath="/spawning/biome[@name='snow']">
+    <spawn id="foxGuardianSnowNight" maxcount="1" respawndelay="1" time="Night" 
+           entitygroup="foxGuardianGroupRare"/>
+  </append>
+
+  <!-- 砂漠：夜（レア） -->
+  <append xpath="/spawning/biome[@name='desert']">
+    <spawn id="foxGuardianDesertNight" maxcount="1" respawndelay="4" time="Night" 
+           entitygroup="foxGuardianGroupRare"/>
+  </append>
+
+  <!-- 焼け森：夜（超レア） -->
+  <append xpath="/spawning/biome[@name='burnt_forest']">
+    <spawn id="foxGuardianBurntForestNight" maxcount="1" respawndelay="5" time="Night" 
+           entitygroup="foxGuardianGroupUltraRare"/>
+  </append>
+
+  <append xpath="/spawning/biome[@name='pine_forest']">
+    <spawn id="toxicZombiesPineNight" maxcount="5" respawndelay="2" time="Night" 
+           entitygroup="toxicZombiesWeak"/>
+  </append>
+
+  <append xpath="/spawning/biome[@name='burnt_forest']">
+    <spawn id="toxicZombiesBurntNight" maxcount="6" respawndelay="2" time="Night" 
+           entitygroup="toxicZombiesElite"/>
+  </append>
+
+  <append xpath="/spawning/biome[@name='desert']">
+    <spawn id="toxicZombiesDesertNight" maxcount="6" respawndelay="2" time="Night" 
+           entitygroup="toxicZombiesElite"/>
+  </append>
+
+  <append xpath="/spawning/biome[@name='snow']">
+    <spawn id="toxicZombiesSnowNight" maxcount="7" respawndelay="3" time="Night" 
+           entitygroup="toxicZombiesBoss"/>
+  </append>
+
+  <append xpath="/spawning/biome[@name='wasteland']">
+    <spawn id="toxicZombiesWastelandNight" maxcount="8" respawndelay="2" time="Night" 
+           entitygroup="toxicZombiesWastelandBalanced"/>
+  </append>
+</configs>

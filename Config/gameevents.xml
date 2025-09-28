@@ -1,0 +1,204 @@
+<configs>
+    <append xpath="/gameevents">
+        <action_sequence name="boar_kill_proof">
+            <property name="category" value="custom" />
+            <property name="target_type" value="Entity" />
+
+            <action class="AddItems">
+                <property name="added_items" value="itemBoarKillProof" />
+                <property name="added_item_counts" value="1" />
+            </action>
+
+            <action class="PlaySound">
+                <property name="sound" value="event_itempickup" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="boar_gun_kill_proof">
+            <property name="category" value="custom" />
+            <property name="target_type" value="Entity" />
+            <action class="AddItems">
+                <property name="added_items" value="itemBoarKillProof" />
+                <property name="added_item_counts" value="1" />
+            </action>
+            <action class="PlaySound">
+                <property name="sound" value="event_itempickup" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="event_revive_snowtail">
+            <property name="category" value="custom" />
+            <property name="target_type" value="Block" />
+
+            <action class="AddBuff">
+                <property name="buff_name" value="buffSummonSnowtailRevive" />
+            </action>
+            <action class="AddItems">
+                <property name="added_items" value="foodRawMeat" />
+                <property name="added_item_counts" value="20" />
+            </action>
+            <action class="PlaySound">
+                <property name="sound" value="twitch_bobble" />
+            </action>
+            <action class="BlockReplace">
+                <property name="block_from" value="reviveStoneSnowtail"/>
+                <property name="block_to" value="terrDirt"/>
+                <property name="allow_terrain" value="true"/>
+            </action>
+            <action class="BeltTooltip">
+                <property name="text_key" value="npc_revive_warning" />
+                <property name="sound" value="zombie_awake" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_group" value="SleeperGSList" />
+                <property name="spawn_count" value="6" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="true" />
+                <property name="min_distance" value="10" />
+                <property name="max_distance" value="20" />
+                <property name="spawn_type" value="WanderingHorde" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="event_revive_coco">
+            <property name="category" value="custom" />
+            <property name="target_type" value="Block" />
+
+            <action class="AddBuff">
+                <property name="buff_name" value="buffSummonCocoRevive" />
+            </action>
+            <action class="AddItems">
+                <property name="added_items" value="meleeWpnBladeT0BoneKnife" />
+                <property name="added_item_counts" value="1" />
+            </action>
+            <action class="PlaySound">
+                <property name="sound" value="twitch_bobble" />
+            </action>
+            <action class="BlockReplace">
+                <property name="block_from" value="reviveStoneCoco"/>
+                <property name="block_to" value="terrDirt"/>
+                <property name="allow_terrain" value="true"/>
+            </action>
+            <action class="BeltTooltip">
+                <property name="text_key" value="npc_revive_warning" />
+                <property name="sound" value="zombie_awake" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_group" value="SleeperGSList" />
+                <property name="spawn_count" value="6" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="true" />
+                <property name="min_distance" value="10" />
+                <property name="max_distance" value="20" />
+                <property name="spawn_type" value="WanderingHorde" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="event_revive_lapin">
+            <property name="category" value="custom" />
+            <property name="target_type" value="Block" />
+
+            <action class="AddBuff">
+                <property name="buff_name" value="buffSummonLapinRevive" />
+            </action>
+            <action class="AddItems">
+                <property name="added_items" value="meleeToolRepairT0StoneAxe" />
+                <property name="added_item_counts" value="1" />
+            </action>
+            <action class="PlaySound">
+                <property name="sound" value="twitch_bobble" />
+            </action>
+            <action class="BlockReplace">
+                <property name="block_from" value="reviveStoneLapin"/>
+                <property name="block_to" value="terrDirt"/>
+                <property name="allow_terrain" value="true"/>
+            </action>
+            <action class="BeltTooltip">
+                <property name="text_key" value="npc_revive_warning" />
+                <property name="sound" value="zombie_awake" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_group" value="SleeperGSList" />
+                <property name="spawn_count" value="6" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="true" />
+                <property name="min_distance" value="10" />
+                <property name="max_distance" value="20" />
+                <property name="spawn_type" value="WanderingHorde" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="event_revive_honey">
+            <property name="category" value="custom" />
+            <property name="target_type" value="Block" />
+
+            <action class="AddBuff">
+                <property name="buff_name" value="buffSummonHoneyRevive" />
+            </action>
+            <action class="AddItems">
+                <property name="added_items" value="foodHoney" />
+                <property name="added_item_counts" value="1" />
+            </action>
+            <action class="PlaySound">
+                <property name="sound" value="twitch_bobble" />
+            </action>
+            <action class="BlockReplace">
+                <property name="block_from" value="reviveStoneHoney"/>
+                <property name="block_to" value="terrDirt"/>
+                <property name="allow_terrain" value="true"/>
+            </action>
+            <action class="BeltTooltip">
+                <property name="text_key" value="npc_revive_warning" />
+                <property name="sound" value="zombie_awake" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_group" value="SleeperGSList" />
+                <property name="spawn_count" value="6" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="true" />
+                <property name="min_distance" value="10" />
+                <property name="max_distance" value="20" />
+                <property name="spawn_type" value="WanderingHorde" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="event_revive_grumble">
+            <property name="category" value="custom" />
+            <property name="target_type" value="Block" />
+
+            <action class="AddBuff">
+                <property name="buff_name" value="buffSummonGrumbleRevive" />
+            </action>
+            <action class="AddItems">
+                <property name="added_items" value="meleeToolPickT1IronPickaxe" />
+                <property name="added_item_counts" value="1" />
+            </action>
+            <action class="PlaySound">
+                <property name="sound" value="twitch_bobble" />
+            </action>
+            <action class="BlockReplace">
+                <property name="block_from" value="reviveStoneGrumble"/>
+                <property name="block_to" value="terrDirt"/>
+                <property name="allow_terrain" value="true"/>
+            </action>
+            <action class="BeltTooltip">
+                <property name="text_key" value="npc_revive_warning" />
+                <property name="sound" value="zombie_awake" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_group" value="SleeperGSList" />
+                <property name="spawn_count" value="6" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="true" />
+                <property name="min_distance" value="10" />
+                <property name="max_distance" value="20" />
+                <property name="spawn_type" value="WanderingHorde" />
+            </action>
+        </action_sequence>
+    </append>
+</configs>

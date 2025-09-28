@@ -1,0 +1,1219 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<configs>
+	<append xpath="/items">
+		<!-- ===== 共通・アクティベーター ===== -->
+		<item name="npcTrialTicket">
+			<property name="Extends" value="oldCash"/>
+			<property name="CustomIcon" value="ticket_icon_yellow"/>
+			<property name="Meshfile" value="#Other/Resources/bundle.mesh"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="HoldType" value="21"/>
+			<property name="Group" value="Resources"/>
+			<property name="DescriptionKey" value="npcTrialTicketDesc"/>
+			<property name="Tags" value="npcTrialTicket"/>
+		</item>
+
+		<item name="itemFoxSupportActivator1">
+			<property name="CustomIcon" value="FoxCharm"/>
+			<property name="CustomIconTint" value="99FFFF"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemFoxSupportActivator1Desc"/>
+
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffFoxSupport1"/>
+			</effect_group>
+		</item>
+
+		<item name="itemFoxSupportActivator2">
+			<property name="CustomIcon" value="FoxCharm"/>
+			<property name="CustomIconTint" value="FFCC66"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemFoxSupportActivator2Desc"/>
+
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffFoxSupport1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffFoxSupport2"/>
+			</effect_group>
+		</item>
+
+		<item name="itemFoxSupportActivator3">
+			<property name="CustomIcon" value="FoxCharm"/>
+			<property name="CustomIconTint" value="FF9999"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemFoxSupportActivator3Desc"/>
+
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffFoxSupport2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffFoxSupport3"/>
+			</effect_group>
+		</item>
+
+		<item name="itemFoxSupportActivator4">
+			<property name="CustomIcon" value="FoxCharm"/>
+			<property name="CustomIconTint" value="66CCFF"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemFoxSupportActivator4Desc"/>
+
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffFoxSupport3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffFoxSupport4"/>
+			</effect_group>
+		</item>
+
+		<item name="itemRabbitSupportActivator1">
+			<property name="CustomIcon" value="RabbitCharm"/>
+			<property name="CustomIconTint" value="99FFFF"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemRabbitSupportActivator1Desc"/>
+
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffRabbitSupport1"/>
+			</effect_group>
+		</item>
+
+		<item name="itemRabbitSupportActivator2">
+			<property name="CustomIcon" value="RabbitCharm"/>
+			<property name="CustomIconTint" value="FFCC66"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemRabbitSupportActivator2Desc"/>
+
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffRabbitSupport1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffRabbitSupport2"/>
+			</effect_group>
+		</item>
+
+		<item name="itemRabbitSupportActivator3">
+			<property name="CustomIcon" value="RabbitCharm"/>
+			<property name="CustomIconTint" value="FF9999"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemRabbitSupportActivator3Desc"/>
+
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffRabbitSupport2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffRabbitSupport3"/>
+			</effect_group>
+		</item>
+
+		<item name="itemRabbitSupportActivator4">
+			<property name="CustomIcon" value="RabbitCharm"/>
+			<property name="CustomIconTint" value="66CCFF"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemRabbitSupportActivator4Desc"/>
+
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffRabbitSupport3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffRabbitSupport4"/>
+			</effect_group>
+		</item>
+
+		<item name="itemBearSupportActivator1">
+			<property name="CustomIcon" value="MedicCharm"/>
+			<property name="CustomIconTint" value="99FFFF"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemBearSupportActivator1Desc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBearSupport1"/>
+			</effect_group>
+		</item>
+
+		<item name="itemBearSupportActivator2">
+			<property name="CustomIcon" value="MedicCharm"/>
+			<property name="CustomIconTint" value="FFCC66"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemBearSupportActivator2Desc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffBearSupport1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBearSupport2"/>
+			</effect_group>
+		</item>
+
+		<item name="itemBearSupportActivator3">
+			<property name="CustomIcon" value="MedicCharm"/>
+			<property name="CustomIconTint" value="FF9999"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemBearSupportActivator3Desc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffBearSupport2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBearSupport3"/>
+			</effect_group>
+		</item>
+
+		<item name="itemBearSupportActivator4">
+			<property name="CustomIcon" value="MedicCharm"/>
+			<property name="CustomIconTint" value="66CCFF"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemBearSupportActivator4Desc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffBearSupport3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBearSupport4"/>
+			</effect_group>
+		</item>
+
+		<item name="itemBoarSupportActivator1">
+			<property name="CustomIcon" value="ForgeCharm"/>
+			<property name="CustomIconTint" value="99FFFF"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemBoarSupportActivator1Desc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBoarSupport1"/>
+			</effect_group>
+		</item>
+
+		<item name="itemBoarSupportActivator2">
+			<property name="CustomIcon" value="ForgeCharm"/>
+			<property name="CustomIconTint" value="FFCC66"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemBoarSupportActivator2Desc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffBoarSupport1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBoarSupport2"/>
+			</effect_group>
+		</item>
+
+		<item name="itemBoarSupportActivator3">
+			<property name="CustomIcon" value="ForgeCharm"/>
+			<property name="CustomIconTint" value="FF9999"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemBoarSupportActivator3Desc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffBoarSupport2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBoarSupport3"/>
+			</effect_group>
+		</item>
+
+		<item name="itemBoarSupportActivator4">
+			<property name="CustomIcon" value="ForgeCharm"/>
+			<property name="CustomIconTint" value="66CCFF"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="HoldType" value="21"/>
+			<property name="Use_time" value="1"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="itemBoarSupportActivator4Desc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffBoarSupport3"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBoarSupport4"/>
+			</effect_group>
+		</item>
+
+		<item name="resourceMysticOre">
+			<property name="Extends" value="resourceSilverNugget"/>
+			<property name="Tags" value="gems,lapinSpecial"/>
+			<property name="CustomIcon" value="mysticOre"/>
+			<property name="Material" value="MresourceMysticOre"/>
+			<property name="Weight" value="1"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Stacknumber" value="6000"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DescriptionKey" value="resourceMysticOreDesc"/>
+			<property name="SoundPickup" value="nuggets_grab"/>
+			<property name="SoundPlace" value="nuggets_place"/>
+		</item>
+
+		<item name="unit_mysticOre">
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="mysticOre"/>
+			<property name="Material" value="MresourceMysticOre"/>
+			<property name="Stacknumber" value="30000"/>
+			<property name="Weight" value="1"/>
+			<property name="Group" value="Resources"/>
+			<property name="ResourceUnit" value="true"/>
+			<property name="MeltTimePerUnit" value="0.5"/>
+			<property name="UserHidden" value="true"/>
+			<property name="CraftingIngredientTime" value=".5"/>
+			<property name="CreativeMode" value="None"/>
+		</item>
+
+		<item name="resourceMysticSteel">
+			<property name="Extends" value="resourceForgedSteel"/>
+			<property name="CustomIcon" value="resourceForgedSteel"/>
+			<property name="CustomIconTint" value="3399FF"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceForgedSteel"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="1000"/>
+			<property name="CraftingIngredientTime" value="2"/>
+			<property name="RepairTime" value="1"/>
+			<property name="RepairAmount" value="400"/>
+			<property name="SoundPickup" value="forgedmetal_grab"/>
+			<property name="SoundPlace" value="forgedmetal_place"/>
+			<property name="DescriptionKey" value="resourceMysticSteelDesc"/>
+		</item>
+
+		<!-- ===== きつね関連 ===== -->
+		<item name="letter_welcome_fox">
+			<property name="Extends" value="questMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="letter_welcome_foxDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_welcome_fox"/>
+			</property>
+		</item>
+
+		<item name="resourceFoxSoulCore">
+			<property name="Extends" value="resourceScrapPolymers"/>
+			<property name="CustomIcon" value="fox_soul_core"/>
+			<property name="Material" value="MresourceScrapPolymers"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab" />
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
+			<property name="Stacknumber" value="100"/>
+			<property name="DescriptionKey" value="resourceFoxSoulCoreDesc"/>
+			<property name="EconomicValue" value="150"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="polymers_grab"/>
+			<property name="SoundPlace" value="polymers_place"/>
+		</item>
+
+		<item name="resourceFoxFang">
+			<property name="Extends" value="resourceScrapIron"/>
+			<property name="CustomIcon" value="fox_fang"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="EconomicValue" value="40"/>
+			<property name="DescriptionKey" value="resourceFoxFangDesc"/>
+			<property name="Group" value="Resources"/>
+			<property name="SoundPickup" value="scrapiron_grab"/>
+			<property name="SoundPlace" value="scrapiron_place"/>
+		</item>
+
+		<!-- ===== 料理係関連 ===== -->
+		<item name="chickenPickUpNPC">
+			<property name="Extends" value="foxPickUpNPC"/>
+			<property name="CustomIcon" value="chicken_pickup_NPC"/>
+			<property name="DescriptionKey" value="chickenPickUpNPCDesc"/>
+		</item>
+
+		<item name="letter_welcome_cook">
+			<property name="Extends" value="questMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="letter_welcome_cookDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_welcome_cook"/>
+			</property>
+		</item>
+
+		<item name="letter_specialbirdnest">
+			<property name="Extends" value="questMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="letter_specialbirdnestDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="HoldType" value="7"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="Items/Misc/questMasterPrefab.prefab"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_specialbirdnest_unlock"/>
+			</property>
+		</item>
+
+		<item name="letter_soupstove">
+			<property name="Extends" value="questMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="letter_soupstoveDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="HoldType" value="7"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="Items/Misc/questMasterPrefab.prefab"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_soupstove_unlock"/>
+			</property>
+		</item>
+
+		<item name="letter_floursack">
+			<property name="Extends" value="questMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="letter_floursackDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="HoldType" value="7"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="Items/Misc/questMasterPrefab.prefab"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_floursack_unlock"/>
+			</property>
+		</item>
+
+		<item name="letter_goldenfridge">
+			<property name="Extends" value="questMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="letter_goldenfridgeDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="HoldType" value="7"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Meshfile" value="Items/Misc/questMasterPrefab.prefab"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_goldenfridge_unlock"/>
+			</property>
+		</item>
+
+		<!-- レベル0：特製ゆで卵 -->
+		<item name="foodCocoBoiledEgg">
+			<property name="CustomIcon" value="iconCocoBoiledEgg"/>
+			<property name="DisplayNameKey" value="foodCocoBoiledEgg"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="SoundPickup" value="egg_boiled_grab"/>
+			<property name="SoundPlace" value="egg_boiled_place"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="CocoFoodEffects">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="6"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+
+		</item>
+
+		<!-- レベル1：卵焼き -->
+		<item name="foodCocoEggOmelette">
+			<property name="CustomIcon" value="iconCocoEggOmelette"/>
+			<property name="DisplayNameKey" value="foodCocoEggOmelette"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="70"/>
+			<property name="SoundPickup" value="egg_boiled_grab"/>
+			<property name="SoundPlace" value="egg_boiled_place"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="CocoFoodEffects">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCocoLootBoostDuration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCocoLootBoost"/>
+			</effect_group>
+		</item>
+
+		<!-- レベル2：卵スープ -->
+		<item name="foodCocoEggSoup">
+			<property name="CustomIcon" value="iconCocoEggSoup"/>
+			<property name="DisplayNameKey" value="foodCocoEggSoup"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodWater"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="90"/>
+			<property name="SoundPickup" value="egg_boiled_grab"/>
+			<property name="SoundPlace" value="egg_boiled_place"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Sound_start" value="player_drinking"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="CocoFoodEffects">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="15"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCocoEggSoupBoostDuration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCocoEggSoupBoost"/>
+			</effect_group>
+		</item>
+
+		<!-- レベル3：フレンチトースト -->
+		<item name="foodCocoFrenchToast">
+			<property name="CustomIcon" value="iconCocoFrenchToast"/>
+			<property name="DisplayNameKey" value="foodCocoFrenchToast"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="120"/>
+			<property name="SoundPickup" value="egg_boiled_grab"/>
+			<property name="SoundPlace" value="egg_boiled_place"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="CocoFoodEffects">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+				<display_value name="dCureInfection" value=".05"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCocoFrenchToastBoostDuration" operation="add" value="300"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCocoFrenchToastBoost"/>
+			</effect_group>
+		</item>
+
+		<!-- レベル4：金のオムレツ -->
+		<item name="foodCocoGoldenOmelette">
+			<property name="CustomIcon" value="iconCocoGoldenOmelette"/>
+			<property name="DisplayNameKey" value="foodCocoGoldenOmelette"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="food"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="200"/>
+			<property name="SoundPickup" value="egg_boiled_grab"/>
+			<property name="SoundPlace" value="egg_boiled_place"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="2.0"/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<effect_group tiered="false" name="CocoFoodEffects">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="35"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="30"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCocoGoldenOmeletteDuration" operation="add" value="1800"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCocoGoldenOmeletteDuration" operation="set" value="1980">
+					<requirement name="CVarCompare" cvar="$buffCocoGoldenOmeletteDuration" operation="GT" value="1980"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffCocoGoldenOmelette"/>
+			</effect_group>
+		</item>
+
+		<!-- 特製たまご -->
+		<item name="resourceSpecialEgg">
+			<property name="Extends" value="resourceScrapPolymers"/>
+			<property name="CustomIcon" value="resourceSpecialEggIcon"/>
+			<property name="Material" value="Morganic"/>
+			<property name="ItemClass" value="Resource"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DescriptionKey" value="resourceSpecialEggDesc"/>
+		</item>
+
+		<!-- スープの素 -->
+		<item name="resourceSoupBase">
+			<property name="Extends" value="resourceScrapPolymers"/>
+			<property name="CustomIcon" value="resourceSoupBaseIcon"/>
+			<property name="Material" value="Morganic"/>
+			<property name="ItemClass" value="Resource"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DescriptionKey" value="resourceSoupBaseDesc"/>
+		</item>
+
+		<!-- 特製小麦粉 -->
+		<item name="resourceSpecialFlour">
+			<property name="Extends" value="resourceScrapPolymers"/>
+			<property name="CustomIcon" value="resourceSpecialFlourIcon"/>
+			<property name="Material" value="Morganic"/>
+			<property name="ItemClass" value="Resource"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="EconomicValue" value="30"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DescriptionKey" value="resourceSpecialFlourDesc"/>
+		</item>
+
+		<!-- 黄金のバター -->
+		<item name="resourceGoldenButter">
+			<property name="Extends" value="resourceScrapPolymers"/>
+			<property name="CustomIcon" value="resourceGoldenButterIcon"/>
+			<property name="Material" value="Morganic"/>
+			<property name="ItemClass" value="Resource"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DescriptionKey" value="resourceGoldenButterDesc"/>
+		</item>
+
+		<item name="toolNestWarmer">
+			<property name="Extends" value="resourceScrapPolymers"/>
+			<property name="CustomIcon" value="toolNestWarmerIcon"/>
+			<property name="Material" value="Morganic"/>
+			<property name="ItemClass" value="Resource"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DescriptionKey" value="toolNestWarmerDesc"/>
+		</item>
+
+		<item name="toolGoldenLadle">
+			<property name="Extends" value="resourceScrapPolymers"/>
+			<property name="CustomIcon" value="toolGoldenLadleIcon"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="ItemClass" value="Resource"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="300"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DescriptionKey" value="toolGoldenLadleDesc"/>
+		</item>
+
+		<item name="toolGoldenSifter">
+			<property name="Extends" value="resourceScrapPolymers"/>
+			<property name="CustomIcon" value="toolGoldenSifterIcon"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="ItemClass" value="Resource"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="300"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DescriptionKey" value="toolGoldenSifterDesc"/>
+		</item>
+
+		<item name="toolGoldenCoolant">
+			<property name="Extends" value="resourceScrapPolymers"/>
+			<property name="CustomIcon" value="toolGoldenCoolantIcon"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="ItemClass" value="Resource"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="300"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="DescriptionKey" value="toolGoldenCoolantDesc"/>
+		</item>
+
+		<item name="schematic_specialbirdnest">
+			<property name="Extends" value="schematicNoQualityRecipeMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="HoldType" value="21"/>
+			<property name="Unlocks" value="cntSpecialBirdnest"/>
+			<property name="Group" value="Books"/>
+			<property name="Tags" value="cook,nest"/>
+			<property name="DescriptionKey" value="schematic_specialbirdnestDesc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntSpecialBirdnest" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolNestWarmer" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="schematic_soupstove">
+			<property name="Extends" value="schematicNoQualityRecipeMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="HoldType" value="21"/>
+			<property name="Unlocks" value="cntSoupStove"/>
+			<property name="Group" value="Books"/>
+			<property name="Tags" value="cook,nest"/>
+			<property name="DescriptionKey" value="schematic_soupstoveDesc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntSoupStove" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolGoldenLadle" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="schematic_floursack">
+			<property name="Extends" value="schematicNoQualityRecipeMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="HoldType" value="21"/>
+			<property name="Unlocks" value="cntFlourSack"/>
+			<property name="Group" value="Books"/>
+			<property name="Tags" value="cook,nest"/>
+			<property name="DescriptionKey" value="schematic_floursackDesc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntFlourSack" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolGoldenSifter" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="schematic_goldenfridge">
+			<property name="Extends" value="schematicNoQualityRecipeMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="HoldType" value="21"/>
+			<property name="Unlocks" value="cntGoldenFridge"/>
+			<property name="Group" value="Books"/>
+			<property name="Tags" value="cook,nest"/>
+			<property name="DescriptionKey" value="schematic_goldenfridgeDesc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntGoldenFridge" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolGoldenCoolant" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<!-- ===== 職人関連 ===== -->
+		<item name="rabbitPickUpNPC">
+			<property name="Extends" value="foxPickUpNPC"/>
+			<property name="CustomIcon" value="rabbit_pickup_NPC"/>
+			<property name="DescriptionKey" value="rabbitPickUpNPCDesc"/>
+		</item>
+
+		<item name="letter_welcome_tinkerer">
+			<property name="Extends" value="questMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="letter_welcome_tinkererDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_welcome_tinkerer"/>
+			</property>
+		</item>
+
+		<!-- ===== 医療係関連 ===== -->
+		<item name="bearPickUpNPC">
+			<property name="Extends" value="foxPickUpNPC"/>
+			<property name="CustomIcon" value="bear_pickup_NPC"/>
+			<property name="DescriptionKey" value="bearPickUpNPCDesc"/>
+		</item>
+
+		<item name="letter_welcome_medic">
+			<property name="Extends" value="questMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="letter_welcome_medicDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_welcome_medic"/>
+			</property>
+		</item>
+
+		<item name="itemBeeManual">
+			<property name="Extends" value="schematicNoQualityRecipeMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="HoldType" value="7"/>
+			<property name="Unlocks" value="resourceFlowerBlend,cntBeeHiveBox"/>
+			<property name="Group" value="Books"/>
+			<property name="Tags" value="fox,npc,medic,disabled"/>
+			<property name="DescriptionKey" value="itemBeeManualDesc"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Consume" value="true"/>
+				<property name="Sound_start" value="recipe_unlocked"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceFlowerBlend" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntBeeHiveBox" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBeeManualRead"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+
+		<item name="resourceFlowerBlend">
+			<property name="CustomIcon" value="resourceFlowerBlend"/>
+			<property name="Material" value="MnectarEssence"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Stacknumber" value="1000"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="Weight" value="1"/>
+			<property name="Group" value="Resources"/>
+		</item>
+
+		<item name="unit_nectar">
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="unit_nectar"/>
+			<property name="Material" value="MnectarEssence"/>
+			<property name="Stacknumber" value="30000"/>
+			<property name="Weight" value="1"/>
+			<property name="Group" value="Resources"/>
+			<property name="ResourceUnit" value="true"/>
+			<property name="MeltTimePerUnit" value="0.5"/>
+			<property name="UserHidden" value="true"/>
+			<property name="CraftingIngredientTime" value=".5"/>
+			<property name="CreativeMode" value="None"/>
+		</item>
+
+		<item name="itemPoisonRecipeFound">
+			<property name="Extends" value="resourcePaper"/>
+			<property name="CustomIcon" value="itemPoisonRecipeFound"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="HoldType" value="7"/>
+			<property name="Group" value="SpecialItems"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Tags" value="quest,honey,poison"/>
+			<property name="DescriptionKey" value="itemPoisonRecipeFoundDesc"/>
+		</item>
+
+		<item name="itemBearEmergencyDrug">
+			<property name="CustomIcon" value="itemBearEmergencyDrug"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="Group" value="Medical"/>
+			<property name="DescriptionKey" value="itemBearEmergencyDrugDesc"/>
+			<property name="SoundPickup" value="drug_painkillers_grab"/>
+			<property name="SoundPlace" value="drug_painkillers_place"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Sound_start" value="player_painkillers"/>
+				<property name="Delay" value="1.0"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBearEmergencyReady">
+					<requirement name="NotHasBuff" buff="buffBearEmergencyCooldown"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+
+		<item name="thrownAmmoPoisonBomb">
+			<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert,explosivesSkill"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="TintColor" value="191,37,13"/>
+			<property name="DisplayType" value="ammoGrenadeContact"/>
+			<property name="Class" value="ItemClassTimeBomb"/>
+			<property name="HoldType" value="57"/>
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Grenade/GrenadePrefab.prefab"/>
+			<property name="CustomIcon" value="thrownGrenadeContact"/>
+			<property name="CustomIconTint" value="66FF66"/>
+			<property name="DropScale" value="2.5"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="75"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
+			<property name="Weight" value="0"/>
+			<property name="Explosion.BlockDamage" value="10"/>
+			<property name="Explosion.EntityDamage" value="341"/>
+			<property name="Explosion.ParticleIndex" value="13"/>
+			<property name="Explosion.RadiusBlocks" value="4"/>
+			<property name="Explosion.RadiusEntities" value="5"/>
+			<property name="Explosion.DamageBonus.earth" value="0"/>
+			<property name="Explosion.DamageBonus.water" value="0"/>
+			<property name="Explosion.BlastPower" value="75"/>
+			<property name="FuseTime" value="6"/>
+			<property name="FusePrimeOnActivate" value="true"/>
+			<property name="ExplodeOnHit" value="true"/>
+			<property name="StickPercent" value=".5"/>
+			<property name="UnlockedBy" value="craftingExplosives"/>
+			<property name="Group" value="Ammo/Weapons,Ammo"/>
+			<property name="SoundUnholster" value="grenade_unholster"/>
+			<property name="SoundPickup" value="grenade_grab"/>
+			<property name="SoundPlace" value="grenade_place"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value="1.25"/>
+				<property name="Sound_start" value="grenade_throw"/>
+				<property name="Gravity" value="-5"/>
+				<property name="triggerEffectTriggerPullDualsense" value="ShotgunTrigger"/>
+				<property name="triggerEffectTriggerPullXbox" value="ShotgunTrigger"/>
+				<property name="triggerEffectShootDualsense" value="ShotgunShoot"/>
+				<property name="triggerEffectShootXbox" value="PistolShoot"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Activate"/>
+				<property name="Delay" value="1"/>
+				<property name="Sound_start" value="grenade_pullpin"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1"/>
+			</property>
+			<property name="ThrowableDecoy" value="true"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onProjectileImpact" action="ModifyCVar" target="positionAOE" range="5" cvar="$buffPoisonBombDuration" operation="set" value="10"/>
+				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="5" buff="buffPoisonedTarget">
+					<requirement name="CVarCompare" target="other" cvar="_underwater" operation="LT" value="1"/>
+				</triggered_effect>
+				<display_value name="dExRadius" value="3"/>
+				<display_value name="dExBlockDamage" value="5"/>
+				<display_value name="dExEntityDamage" value="253"/>
+				<display_value name="dFuseTime" value="4"/>
+				<triggered_effect trigger="onSelfWaterSubmerge" action="ResetHeldItem"/>
+			</effect_group>
+		</item>
+
+		<item name="itemBearReviveDrug">
+			<property name="CustomIcon" value="itemBearReviveDrug"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="Group" value="Medical"/>
+			<property name="DescriptionKey" value="itemBearReviveDrugDesc"/>
+			<property name="SoundPickup" value="drug_painkillers_grab"/>
+			<property name="SoundPlace" value="drug_painkillers_place"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Sound_start" value="player_painkillers"/>
+				<property name="Delay" value="1.0"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="twitch_insta_regen"/>
+			</effect_group>
+		</item>
+
+		<!-- ===== 鍛冶守衛関連 ===== -->
+		<item name="boarPickUpNPC">
+			<property name="Extends" value="foxPickUpNPC" />
+			<property name="CustomIcon" value="boar_pickup_NPC"/>
+			<property name="DescriptionKey" value="boarPickUpNPCDesc"/>
+		</item>
+
+		<item name="letter_welcome_forgeguard">
+			<property name="Extends" value="questMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="DescriptionKey" value="letter_welcome_forgeguardDesc"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_welcome_forgeguard"/>
+			</property>
+		</item>
+
+		<item name="itemBoarKillProof">
+			<property name="Extends" value="resourcePaper"/>
+			<property name="CustomIcon" value="itemBoarKillProof"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="HoldType" value="7"/>
+			<property name="Group" value="SpecialItems"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="DescriptionKey" value="itemBoarKillProofDesc"/>
+		</item>
+
+		<item name="gunBotPoisonSledge">
+			<property name="Extends" value="gunBotT1JunkSledge"/>
+			<property name="CustomIcon" value="gunBotT1JunkSledge"/>
+			<property name="CustomIconTint" value="100,200,100"/>
+			<property name="TintColor" value="100,200,100"/>
+			<property name="DescriptionKey" value="gunBotPoisonSledgeDesc"/>
+			<property name="HoldType" value="73"/>
+			<property name="Material" value="MJunkTurretParts"/>
+			<property name="ShowQuality" value="false"/>
+			<property class="Action1">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="junkTurretPoisonSledge"/>
+			</property>
+
+			<effect_group name="poisonSledgeEffects" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="10.0" tags="perkTurrets"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="20" tags="turretMelee"/>
+			</effect_group>
+
+			<effect_group name="Poison Buff Effect">
+				<requirement name="ItemHasTags" tags="turretMelee"/>
+				<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffPoisonedTarget" duration="10"/>
+			</effect_group>
+
+			<effect_group name="Light Pushback">
+				<requirement name="ItemHasTags" tags="turretMelee"/>
+				<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration=".2" force="150"/>
+			</effect_group>
+		</item>
+
+		<item name="gunMysticHeadshot">
+			<property name="Tags" value="gunMysticHeadshot,weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,barrelAttachments,sideAttachments,smallTopAttachments,magazine,firingMode,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill"/>
+			<property name="DisplayType" value="rangedGun"/>
+			<property name="HoldType" value="1"/>
+			<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Pistol/PistolPrefab.prefab"/>
+			<property name="Material" value="MHandGunParts"/>
+			<property name="TintColor" value="50, 150, 255"/>
+			<property name="CustomIcon" value="gunHandgunT1Pistol"/>
+			<property name="CustomIconTint" value="50, 150, 255"/>
+			<property name="DescriptionKey" value="gunMysticHeadshotDesc"/>
+			<property name="Weight" value="1"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="Attachments" value="meleeToolFlashlight02"/>
+			<property name="CrosshairOnAim" value="true"/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Sound_Sight_In" value="pistol_sight_in"/>
+			<property name="Sound_Sight_Out" value="pistol_sight_out"/>
+			<property name="LightSource" value="lightSource"/>
+			<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+			<property name="AttachmentFlashlight" value="flashlight02"/>
+			<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="LightValue" value=".45"/>
+			<property name="SoundUnholster" value="weapon_unholster"/>
+			<property name="SoundHolster" value="weapon_holster"/>
+			<property name="SoundPickup" value="pistol_grab"/>
+			<property name="SoundPlace" value="pistol_place"/>
+
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="Magazine_items" value="ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP"/>
+				<property name="Sound_start" value="Pistol_Fire"/>
+				<property name="Sound_loop" value="Pistol_Fire"/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="pistol_reload"/>
+				<property name="AutoReload" value="false"/>
+				<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+				<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+				<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+				<property name="triggerEffectShootDualsense" value="PistolShoot"/>
+				<property name="triggerEffectShootXbox" value="PistolShoot"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+				<property name="SightsCameraOffset" value="0,.0008,0"/>
+				<property name="zoomTriggerEffectPullDualsense" value="PistolZoom"/>
+				<property name="zoomTriggerEffectPullXb" value="PistolZoom"/>
+			</property>
+			<effect_group name="gunHandgunT1Pistol">
+				<passive_effect name="MaxRange" operation="base_set" value="50" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="17" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="180" tags="perkGunslinger"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkGunslinger"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="15" tags="perkGunslinger"/>
+				<passive_effect name="ModSlots" operation="base_set" value="2,2,2,3,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkGunslinger"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkGunslinger"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkGunslinger"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkGunslinger"/>
+
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.5" tags="perkGunslinger"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.5" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkGunslinger"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkGunslinger"/>
+
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".7" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".8" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.25" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".25" tags="perkGunslinger"/>
+
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.0" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value=".95" tags="perkGunslinger"/>
+
+				<passive_effect name="DegradationMax" operation="base_set" value="300,400" tier="1,6" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/>
+			</effect_group>
+			<effect_group name="gunMysticHeadshot">
+				<passive_effect name="EntityDamage" operation="base_set" value="5"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="300" tags="head"/>
+			</effect_group>
+		</item>
+	</append>
+
+	<append xpath="//item[@name='meleeToolRepairT0StoneAxe' or @name='meleeToolRepairT1ClawHammer' or @name='meleeToolRepairT3Nailgun']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">
+,resourceMysticSteel
+	</append>
+
+	<set xpath="/items/item[@name='gunBotT2JunkTurret']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoJunkTurretRegular,ammoJunkTurretShell,ammoJunkTurretAP,ammoTurretExploding</set>
+</configs>

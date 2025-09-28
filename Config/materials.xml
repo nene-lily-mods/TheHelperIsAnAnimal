@@ -1,0 +1,46 @@
+<configs>
+
+    <append xpath="/materials">
+        <material id="MresourceMysticOre">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="forge_category" value="mysticOre"/>
+            <property name="Experience" value="20"/>
+        </material>
+
+        <material id="MmysticSteel">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="forge_category" value="mysticOre"/>
+            <property name="Hardness" type="float" value="1.2"/>
+            <property name="stepsound" value="metal"/>
+            <property name="stability_glue" value="400"/>
+            <property name="Mass" type="int" value="25"/>
+            <property name="explosionresistance" value="0.85"/>
+            <property name="MaxDamage" value="15000"/>
+            <property name="Experience" value="8"/>
+        </material>
+
+        <material id="MmysticSteel_shapes">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="forge_category" value="mysticOre"/>
+            <property name="Hardness" type="float" value="1.2"/>
+            <property name="stepsound" value="metal"/>
+            <property name="stability_glue" value="400"/>
+            <property name="Mass" type="int" value="25"/>
+            <property name="explosionresistance" value="0.85"/>
+            <property name="MaxDamage" value="15000"/>
+            <property name="Experience" value="8"/>
+        </material>
+
+        <material id="MnectarEssence">
+            <property name="forge_category" value="nectar"/>
+            <property name="damage_category" value="plant"/>
+            <property name="surface_category" value="cloth"/>
+            <property name="stepsound" value="cloth"/>
+            <property name="Hardness" type="float" value="0.2"/>
+            <property name="Mass" type="int" value="1"/>
+        </material>
+    </append>
+</configs>

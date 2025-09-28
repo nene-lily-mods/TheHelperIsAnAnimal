@@ -1,0 +1,336 @@
+<configs>
+  <set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">
+    drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,itemNPCModMode,itemNPCModStop,letter_welcome_fox
+  </set>
+  <set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">
+    drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,itemNPCModMode,itemNPCModStop,letter_welcome_fox
+  </set>
+  <set xpath="//entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">  drinkJarBoiledWater=2,foodCanChili,medicalFirstAidBandage,meleeToolTorch,noteDuke01,itemNPCModMode,itemNPCModStop,letter_welcome_fox
+  </set>
+
+  <append xpath="/entity_classes">
+    <!-- ============================================ -->
+    <!-- ▼ Friendly NPC（MyNPCMod - 仲間になる系）▼ -->
+    <!-- ============================================ -->
+    <!-- === きつね === -->
+    <entity_class name="npcMyFoxCompanion" extends="npcAnimalFox">
+      <property name="DamageMultiplier" value="0"/>
+      <property name="DeadBodyHitPoints" value="0"/>
+      <property name="NameKey" value="npcMyFoxCompanion"/>
+      <property name="Names" value="Snowtail"/>
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="npc,ally,companion"/>
+      <property name="Hirable" value="true" />
+      <property name="HireCurrency" value="foodRawMeat" />
+      <property name="HireCost" value="20" />
+      <property name="IsQuestGiver" value="true"/>
+      <property name="NPCID" value="NPC_Fox"/>
+      <property name="dialog_id" value="DialogFox"/>
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+        <passive_effect name="HealthChangeOT" operation="base_set" value="0.5"/>
+      </effect_group>
+    </entity_class>
+
+    <!-- === いのしし === -->
+    <entity_class name="npcForgeguardBoar" extends="npcAnimalMeleeTemplate">
+      <property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="npc,ally,companion"/>
+      <property name="Faction" value="whiteriver"/>
+      <property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+      <property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
+      <property name="LookAtAngle" value="0"/>
+      <property name="HasRagdoll" value="true"/>
+      <property name="HasDeathAnim" value="true"/>
+      <property name="RootMotion" value="true"/>
+      <property name="Faction" value="companionanimals"/>
+      <property name="Names" value="Grumble" />
+      <property name="DisplayNameKey" value="npcForgeguardBoarName"/>
+      <property name="NameKey" value="npcForgeguardBoar"/>
+      <property name="PhysicsBody" value="boar"/>
+      <property name="IsEntityAnimal" value="true"/>
+      <property name="IsEnemyEntity" value="false"/>
+      <property name="Prefab" value="@:Entities/Animals/Boar/animalBoarPrefab.prefab"/>
+      <property name="PrefabCombined" value="true"/>
+      <property name="Mesh" value=""/>
+      <property name="PickUpItem" value="boarPickUpNPC" />
+      <property name="HandItem" value="meleeHandAnimalFox"/>
+      <property name="DeadBodyHitPoints" value="200"/>
+      <property name="SizeScale" value="0.8"/>
+      <property name="Weight" value="5"/>
+      <property name="Hirable" value="true" />
+      <property name="HireCurrency" value="meleeToolPickT1IronPickaxe" />
+      <property name="HireCost" value="1" />
+      <property name="IsQuestGiver" value="true"/>
+      <property name="NPCID" value="NPC_Grumble"/>
+      <property name="dialog_id" value="DialogGrumble"/>
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+        <passive_effect name="HealthChangeOT" operation="base_set" value="0.5"/>
+      </effect_group>
+    </entity_class>
+
+    <!-- === 小くま === -->
+    <entity_class name="npcMedicBear" extends="npcAnimalMeleeTemplate">
+      <property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot "/>
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="npc,ally,companion"/>
+      <property name="Faction" value="whiteriver"/>
+      <property name="MapIcon" value="ui_game_symbol_tracking_bear"/>
+      <property name="TrackerIcon" value="ui_game_symbol_tracking_bear"/>
+      <property name="LookAtAngle" value="0"/>
+      <property name="HasRagdoll" value="true"/>
+      <property name="HasDeathAnim" value="true"/>
+      <property name="RootMotion" value="true"/>
+      <property name="Faction" value="companionanimals"/>
+      <property name="Names" value="Honey" />
+      <property name="DisplayNameKey" value="npcMedicBearName"/>
+      <property name="NameKey" value="npcMedicBear"/>
+      <property name="PhysicsBody" value="bear"/>
+      <property name="IsEntityAnimal" value="true"/>
+      <property name="IsEnemyEntity" value="false"/>
+      <property name="Prefab" value="@:Entities/Animals/Bear/animalBearGrizzlyPrefab.prefab"/>
+      <property name="PrefabCombined" value="true"/>
+      <property name="Mesh" value=""/>
+      <property name="PickUpItem" value="bearPickUpNPC" />
+      <property name="HandItem" value="meleeHandAnimalFox"/>
+      <property name="DeadBodyHitPoints" value="150"/>
+      <property name="SizeScale" value="0.5"/>
+      <property name="Mass" value="300"/>
+      <property name="Weight" value="4"/>
+      <property name="Hirable" value="true" />
+      <property name="HireCurrency" value="foodHoney" />
+      <property name="HireCost" value="1" />
+      <property name="IsQuestGiver" value="true"/>
+      <property name="NPCID" value="NPC_Honey"/>
+      <property name="dialog_id" value="DialogHoney"/>
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+        <passive_effect name="DamageModifier" operation="perc_set" value="0.3"/>
+        <passive_effect name="HealthChangeOT" operation="base_set" value="0.5"/>
+      </effect_group>
+      <property name="SoundHurt" value="bearpain"/>
+      <property name="SoundDeath" value="beardeath"/>
+      <property name="SoundAttack" value="bearattack"/>
+      <property name="SoundSense" value="bearsense"/>
+      <property name="SoundGiveUp" value="beargiveup"/>
+    </entity_class>
+
+    <!-- === うさぎ === -->
+    <entity_class name="npcTinkererRabbit" extends="npcAnimalMeleeTemplate">
+      <property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot"/>
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="npc,ally,companion"/>
+      <property name="Faction" value="companionanimals"/>
+      <property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
+      <property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
+      <property name="LookAtAngle" value="0"/>
+      <property name="HasRagdoll" value="true"/>
+      <property name="HasDeathAnim" value="true"/>
+      <property name="RootMotion" value="true"/>
+      <property name="NameKey" value="npcTinkererRabbit"/>
+      <property name="Names" value="Lapin" />
+      <property name="PhysicsBody" value="rabbit"/>
+      <property name="IsEntityAnimal" value="true"/>
+      <property name="IsEnemyEntity" value="false"/>
+      <property name="Prefab" value="@:Entities/Animals/Rabbit/animalRabbitPrefab.prefab"/>
+      <property name="PrefabCombined" value="true"/>
+      <property name="ModelType" value="Standard"/>
+      <property name="AvatarController" value="AvatarAnimalController"/>
+      <property name="Parent" value="Animals"/>
+      <property name="Mesh" value=""/>
+      <property name="PickUpItem" value="rabbitPickUpNPC"/>
+      <property name="HandItem" value="meleeHandAnimalFox"/>
+      <property name="DeadBodyHitPoints" value="200"/>
+      <property name="SizeScale" value="1.2"/>
+      <property name="SoundRandom" value=""/>
+      <property name="SoundAlert" value=""/>
+      <property name="SoundHurt" value="rabbitpain"/>
+      <property name="SoundDeath" value="rabbitdeath"/>
+      <property name="SoundAttack" value=""/>
+      <property name="SoundSense" value=""/>
+      <property name="SoundGiveUp" value=""/>
+      <property name="HireCurrency" value="meleeToolRepairT0StoneAxe"/>
+      <property name="HireCost" value="1"/>
+      <property name="IsQuestGiver" value="true"/>
+      <property name="Mass" value="33"/>
+      <property name="Weight" value="11"/>
+      <property name="NPCID" value="NPC_Lapin"/>
+      <property name="dialog_id" value="DialogLapin"/>
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+        <passive_effect name="HealthChangeOT" operation="base_set" value="0.5"/>
+      </effect_group>
+    </entity_class>
+
+    <!-- === にわとり === -->
+    <entity_class name="npcCookChicken" extends="npcAnimalMeleeTemplate">
+      <property name="AIPackages" value="NPCModCore, NPCModAnimalMeleeAdvanced, NPCModAnimalHired, NPCModNPCLoot"/>
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="npc,ally,companion"/>
+      <property name="Faction" value="companionanimals"/>
+      <property name="LookAtAngle" value="0"/>
+      <property name="HasRagdoll" value="true"/>
+      <property name="HasDeathAnim" value="true"/>
+      <property name="RootMotion" value="true"/>
+      <property name="Names" value="Coco" />
+      <property name="PhysicsBody" value="chicken"/>
+      <property name="IsEntityAnimal" value="true"/>
+      <property name="IsEnemyEntity" value="false"/>
+      <property name="Mesh" value=""/>
+      <property name="Prefab" value="@:Entities/Animals/Bird/animalBirdChickenPrefab.prefab"/>
+      <property name="PrefabCombined" value="true"/>
+      <property name="ModelType" value="Standard"/>
+      <property name="AvatarController" value="AvatarAnimalController"/>
+      <property name="Parent" value="Animals"/>
+      <property name="PickUpItem" value="chickenPickUpNPC"/>
+      <property name="DeadBodyHitPoints" value="200"/>
+      <property name="SizeScale" value="1.2"/>
+      <property name="Weight" value="5"/>
+      <property name="Mass" value="36"/>
+      <property name="SoundHurt" value="chickenpain"/>
+      <property name="SoundDeath" value="chickendeath"/>
+      <property name="HireCurrency" value="meleeWpnBladeT0BoneKnife"/>
+      <property name="HireCost" value="1"/>
+      <property name="IsQuestGiver" value="true"/>
+      <property name="NPCID" value="NPC_Coco"/>
+      <property name="dialog_id" value="DialogCoco"/>
+
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1000"/>
+        <passive_effect name="DamageModifier" operation="perc_set" value="0.3"/>
+        <passive_effect name="HealthChangeOT" operation="base_set" value="0.5"/>
+      </effect_group>
+    </entity_class>
+
+    <!-- =========================================== -->
+    <!-- ▼ Enemy NPC（MyNPCMod - 試練用の敵など）▼ -->
+    <!-- =========================================== -->
+    <!-- === 特殊な敵 === -->
+    <entity_class name="zombieToxicArlene" extends="zombieArleneFeral">
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="zombie,toxic,walker"/>
+      <property name="Buffs" value="buffZombiePoisonClaws"/>
+    </entity_class>
+
+    <entity_class name="zombieToxicArleneMinor" extends="zombieArlene">
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="zombie,toxic,walker"/>
+      <property name="Buffs" value="buffToxicZombieMinor"/>
+    </entity_class>
+
+    <entity_class name="zombieToxicBikerMinor" extends="zombieBiker">
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="zombie,toxic,biker"/>
+      <property name="Buffs" value="buffToxicZombieMinor"/>
+    </entity_class>
+
+    <entity_class name="zombieToxicJoeElite" extends="zombieJoeFeral">
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="zombie,toxic,brute"/>
+      <property name="Buffs" value="buffToxicZombieElite"/>
+    </entity_class>
+
+    <entity_class name="zombieToxicMarleneElite" extends="zombieMarleneFeral">
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="zombie,toxic,nurse"/>
+      <property name="Buffs" value="buffToxicZombieElite"/>
+    </entity_class>
+
+    <entity_class name="zombieToxicSteveElite" extends="zombieSteveFeral">
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="zombie,toxic,creepy"/>
+      <property name="Buffs" value="buffToxicZombieElite"/>
+    </entity_class>
+
+    <entity_class name="zombieToxicSoldierBoss" extends="zombieSoldierRadiated">
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="zombie,toxic,boss"/>
+      <property name="Buffs" value="buffToxicZombieBoss"/>
+    </entity_class>
+
+    <entity_class name="zombieToxicWightBoss" extends="zombieWightRadiated">
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="zombie,toxic,boss"/>
+      <property name="Buffs" value="buffToxicZombieBoss"/>
+    </entity_class>
+
+    <entity_class name="zombieToxicHazmatRadiatedBoss" extends="zombieMaleHazmatRadiated">
+      <property name="UserSpawnType" value="Menu"/>
+      <property name="Tags" value="zombie,toxic,boss"/>
+      <property name="Buffs" value="buffToxicZombieBoss"/>
+    </entity_class>
+
+    <!-- === レア素材用の敵 === -->
+    <entity_class name="animalFoxWolfGuardian" extends="animalDireWolf">
+      <property name="NameKey" value="animalFoxWolfGuardianName"/>
+      <property name="Names" value="FoxGuardian"/>
+      <property name="UserSpawnType" value="Menu"/>
+
+      <property name="SizeScale" value="1.6"/>
+      <property name="SoundAlert" value="wolfdirealert"/>
+      <property name="SoundAttack" value="wolfdireattack"/>
+      <property name="SoundDeath" value="wolfdiredeath"/>
+      <property name="Prefab" value="@:Entities/Animals/DireWolf/animalDireWolfPrefab.prefab"/>
+
+      <property name="ExperienceGain" value="4000"/>
+      <property name="LootDropEntityClass" value="EntityLootContainerFoxGuardian"/>
+      <property name="LootDropProb" value="1"/>
+
+      <effect_group name="CustomFoxWolfGuardianStats">
+        <passive_effect name="HealthMax" operation="base_set" value="5000"/>
+        <passive_effect name="RunSpeed" operation="base_set" value="0.9"/>
+        <passive_effect name="DamageModifier" operation="base_add" value="0.3"/>
+      </effect_group>
+    </entity_class>
+
+    <!-- =========================================== -->
+    <!-- ▼ その他　▼ -->
+    <!-- =========================================== -->
+    <!-- === カスタムタレット === -->
+    <entity_class name="junkTurretPoisonSledge">
+      <property name="Extends" value="junkTurretSledge"/>
+      <property name="Class" value="EntityTurret"/>
+      <property name="Tags" value="turret,turretMelee,deployed,noMedBuffs"/>
+      <property name="Parent" value="NPC"/>
+      <property name="Prefab" value="@:Other/Items/Weapons/Melee/Junk Sledge/junkSledge_Prefab.prefab"/>
+      <property name="ModelType" value="Standard"/>
+      <property name="SurfaceCategory" value="metal"/>
+      <property name="IgnoreTrigger" value="true"/>
+      <property name="IsEnemyEntity" value="false"/>
+      <property name="WakeUpTime" value="0.5"/>
+      <property name="FallAsleepTime" value="10"/>
+
+      <property name="EntityDamage" value="10"/>
+      <property name="BlockDamage" value="15"/>
+      <property name="CooldownTime" value="1.2"/>
+      <property name="TargetingSound" value="turret_retarget_lp"/>
+      <property name="OverheatSound" value="turret_overheat_lp"/>
+      <property name="WakeUpSound" value="turret_windup"/>
+      <property name="FireSound" value="junksledge_fire"/>
+      <property name="IdleSound" value="junksledge_Idle"/>
+      <property name="MapIcon" value="ui_game_symbol_map_player_arrow"/>
+      <property name="NavObject" value="junk_sledge"/>
+      <property name="TrackerIcon" value="ui_game_symbol_assemble"/>
+    </entity_class>
+
+  </append>
+
+  <!-- 🟥 FOX GUARDIAN 専用 赤バッグ -->
+  <append xpath="/entity_classes">
+    <entity_class name="EntityLootContainerFoxGuardian" extends="EntityLootContainerBoss">
+      <property name="Class" value="EntityLootContainer"/>
+      <property name="UserSpawnType" value="Console"/>
+      <property name="Mesh" value="@:Entities/LootContainers/zpackRedPrefab.prefab"/>
+      <property name="ModelType" value="Custom"/>
+      <property name="Prefab" value="Backpack"/>
+      <property name="Parent" value="Backpack"/>
+      <property name="IsEnemyEntity" value="false"/>
+      <property name="TimeStayAfterDeath" value="1200"/>
+      <property name="LootListOnDeath" value="foxWolfGuardianLoot"/>
+      <property name="Faction" value="none"/>
+    </entity_class>
+  </append>
+
+</configs>

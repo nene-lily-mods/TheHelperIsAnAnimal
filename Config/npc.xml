@@ -1,0 +1,13 @@
+<configs>
+    <insertAfter xpath="/npc/npc_info[@id='NPCjunkDrone']">
+        <npc_info id="NPC_Fox" name="Fox" name_key="npc_fox" faction="Player" portrait="fox_pickup_NPC" greeting_type="nearby" stance="Like" voice_set="" trader_id="1" dialog_id="DialogFox" localization_id="npcMyFoxCompanion" />
+
+        <npc_info id="NPC_Coco" name="Coco" name_key="npc_coco" faction="Player" portrait="chicken_pickup_NPC" greeting_type="nearby" stance="Like" voice_set="" trader_id="1" dialog_id="DialogCoco" localization_id="npcCookChicken" />
+
+        <npc_info id="NPC_Lapin" name="Lapin" name_key="npc_lapin" faction="Player" portrait="rabbit_pickup_NPC" greeting_type="nearby" stance="Like" voice_set="" trader_id="1" dialog_id="DialogLapin" localization_id="npcTinkererRabbit" />
+
+        <npc_info id="NPC_Honey" name="Honey" name_key="npc_honey" faction="Player" portrait="bear_pickup_NPC" greeting_type="nearby" stance="Like" voice_set="" trader_id="1" dialog_id="DialogHoney" localization_id="npcMedicBear" />
+
+        <npc_info id="NPC_Grumble" name="Grumble" name_key="npc_grumble" faction="Player" portrait="boar_pickup_NPC" greeting_type="nearby" stance="Like" voice_set="" trader_id="1" dialog_id="DialogGrumble" localization_id="npcForgeguardBoar" />
+    </insertAfter>
+</configs>

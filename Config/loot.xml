@@ -1,0 +1,20 @@
+<configs>
+    <append xpath="/lootcontainers">
+        <lootgroup name="groupFoxGuardianLoot" count="all">
+            <item name="resourceFoxFang" count="1" loot_prob_template="guaranteed"/>
+            <item name="resourceFoxSoulCore" count="1" loot_prob_template="low" force_prob="true"/>
+        </lootgroup>
+
+        <lootcontainer name="foxWolfGuardianLoot" 
+                       size="6,1" open_time="1" 
+                       sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" 
+                       loot_quality_template="qualPlus1Template" ignore_loot_abundance="true">
+            <item group="groupFoxGuardianLoot"/>
+        </lootcontainer>
+
+        <lootcontainer name="treasure_poison_recipe" count="1" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" destroy_on_close="empty">
+            <item name="itemPoisonRecipeFound" count="1"/>
+        </lootcontainer>
+    </append>
+
+</configs>

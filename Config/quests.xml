@@ -1,0 +1,652 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<configs>
+	<!-- ===== きつね関連 ===== -->
+	<append xpath="/quests">
+		<quest id="quest_welcome_fox">
+			<property name="name_key" value="quest_welcome_fox_title"/>
+			<property name="subtitle_key" value="quest_welcome_fox_subtitle"/>
+			<property name="description_key" value="quest_welcome_foxDesc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_welcome_fox_offer"/>
+
+			<objective type="Craft" id="cntFoxLetterDesk" value="1" phase="1"/>
+			<objective type="BlockPlace" id="cntFoxLetterDesk" value="1" phase="2"/>
+
+			<reward type="Exp" value="500"/>
+			<reward type="Item" id="foodRawMeat" value="20"/>
+			<reward type="Recipe" id="reviveStoneSnowtail"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffSummonSnowtail"/>
+				<property name="on_complete" value="true"/>
+				<property name="phase" value="1"/>
+			</action>
+		</quest>
+
+		<quest id="quest_fox_support_trial_1">
+			<property name="name_key" value="quest_fox_support_trial_1_title"/>
+			<property name="subtitle_key" value="quest_fox_support_trial_1_subtitle"/>
+			<property name="description_key" value="quest_fox_support_trial_1Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<action type="SpawnEnemy" id="animalSnake" value="5" phase="1"/>
+			<objective type="EntityKill" id="animalSnake" value="1" phase="2"/>
+
+			<reward type="Item" id="itemFoxSupportActivator1" value="1"/>
+			<reward type="Exp" value="1000"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffFoxTrial1Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_fox_support_trial_2">
+			<property name="name_key" value="quest_fox_support_trial_2_title"/>
+			<property name="subtitle_key" value="quest_fox_support_trial_2_subtitle"/>
+			<property name="description_key" value="quest_fox_support_trial_2Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<action type="SpawnEnemy" id="animalZombieDog" value="2" phase="1"/>
+			<objective type="EntityKill" id="animalZombieDog" value="1" phase="2"/>
+
+			<reward type="Item" id="itemFoxSupportActivator2" value="1"/>
+			<reward type="Exp" value="1500"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffFoxTrial2Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_fox_support_trial_3">
+			<property name="name_key" value="quest_fox_support_trial_3_title"/>
+			<property name="subtitle_key" value="quest_fox_support_trial_3_subtitle"/>
+			<property name="description_key" value="quest_fox_support_trial_3Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<action type="SpawnEnemy" id="animalZombieBear" value="1" phase="1"/>
+
+			<objective type="EntityKill" id="animalZombieBear" value="1" phase="2"/>
+
+			<reward type="Item" id="itemFoxSupportActivator3" value="1"/>
+			<reward type="Exp" value="2000"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffFoxTrial3Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_fox_support_trial_4">
+			<property name="name_key" value="quest_fox_support_trial_4_title"/>
+			<property name="subtitle_key" value="quest_fox_support_trial_4_subtitle"/>
+			<property name="description_key" value="quest_fox_support_trial_4Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<action type="SpawnEnemy" id="animalFoxWolfGuardian" value="1" phase="1"/>
+
+			<objective type="EntityKill" id="animalFoxWolfGuardian" value="1" phase="2"/>
+
+			<property name="completion_key" value="quest_fox_support_trial_4_completion"/>
+
+			<reward type="Item" id="itemFoxSupportActivator4" value="1"/>
+			<reward type="Exp" value="4000"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffFoxTrial4Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<!-- ===== 料理係関連 ===== -->
+		<quest id="quest_welcome_cook">
+			<property name="name_key" value="quest_welcome_cook_title"/>
+			<property name="subtitle_key" value="quest_welcome_cook_subtitle"/>
+			<property name="description_key" value="quest_welcome_cookDesc"/>
+			<property name="offer_key" value="quest_welcome_cookDesc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<objective type="Craft" id="meleeWpnBladeT0BoneKnife" value="1" phase="1"/>
+			<reward type="Exp" value="500"/>
+			<reward type="Recipe" id="reviveStoneCoco"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffSummonCoco"/>
+				<property name="on_complete" value="true"/>
+				<property name="phase" value="1"/>
+			</action>
+		</quest>
+
+		<quest id="quest_specialbirdnest_unlock">
+			<property name="name_key" value="quest_specialbirdnest_title"/>
+			<property name="subtitle_key" value="quest_specialbirdnest_subtitle"/>
+			<property name="description_key" value="quest_specialbirdnestDesc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+
+			<objective type="FetchKeep" id="resourceFeather" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="40" phase="1"/>
+			<objective type="FetchKeep" id="resourceCloth" value="20" phase="1"/>
+
+			<reward type="Item" id="schematic_specialbirdnest" value="1"/>
+			<reward type="Exp" value="200"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffChickenTrial1Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_soupstove_unlock">
+			<property name="name_key" value="quest_soupstove_title"/>
+			<property name="subtitle_key" value="quest_soupstove_subtitle"/>
+			<property name="description_key" value="quest_soupstoveDesc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+
+			<objective type="FetchKeep" id="resourceForgedIron" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceMechanicalParts" value="5" phase="1"/>
+			<objective type="FetchKeep" id="resourceElectricParts" value="5" phase="1"/>
+			<objective type="FetchKeep" id="resourceMetalPipe" value="5" phase="1"/>
+			<objective type="FetchKeep" id="toolCookingPot" value="1" phase="1"/>
+
+			<reward type="Exp" value="200"/>
+			<reward type="Item" id="schematic_soupstove" value="1"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffChickenTrial2Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_floursack_unlock">
+			<property name="name_key" value="quest_floursack_title"/>
+			<property name="subtitle_key" value="quest_floursack_subtitle"/>
+			<property name="description_key" value="quest_floursackDesc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+
+			<objective type="FetchKeep" id="resourceCloth" value="20" phase="1"/>
+			<objective type="FetchKeep" id="resourceDuctTape" value="5" phase="1"/>
+			<objective type="FetchKeep" id="resourceSewingKit" value="5" phase="1"/>
+			<objective type="FetchKeep" id="bucketEmpty" value="1" phase="1"/>
+			<objective type="FetchKeep" id="foodShamSandwich" value="5" phase="1"/>
+
+			<reward type="Exp" value="200"/>
+			<reward type="Item" id="schematic_floursack" value="1"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffChickenTrial3Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_goldenfridge_unlock">
+			<property name="name_key" value="quest_goldenfridge_title"/>
+			<property name="subtitle_key" value="quest_goldenfridge_subtitle"/>
+			<property name="description_key" value="quest_goldenfridgeDesc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+
+			<objective type="FetchKeep" id="resourceForgedSteel" value="20" phase="1"/>
+			<objective type="FetchKeep" id="resourceMechanicalParts" value="15" phase="1"/>
+			<objective type="FetchKeep" id="resourceElectricParts" value="15" phase="1"/>
+			<objective type="FetchKeep" id="resourceSilverNugget" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceGoldNugget" value="5" phase="1"/>
+
+			<reward type="Exp" value="200"/>
+			<reward type="Item" id="schematic_goldenfridge" value="1"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffChickenTrial4Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<!-- ===== 職人関連 ===== -->
+		<quest id="quest_welcome_tinkerer">
+			<property name="name_key" value="quest_welcome_tinkerer_title"/>
+			<property name="subtitle_key" value="quest_welcome_tinkerer_subtitle"/>
+			<property name="description_key" value="quest_welcome_tinkererDesc"/>
+			<property name="offer_key" value="quest_welcome_tinkererDesc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<objective type="Craft" id="meleeToolRepairT0StoneAxe" value="1" phase="1"/>
+			<reward type="Exp" value="500"/>
+			<reward type="Recipe" id="reviveStoneLapin"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffSummonLapin"/>
+				<property name="on_complete" value="true"/>
+				<property name="phase" value="1"/>
+			</action>
+		</quest>
+
+		<quest id="quest_rabbit_support_trial_1">
+			<property name="name_key" value="quest_rabbit_support_trial_1_title"/>
+			<property name="subtitle_key" value="quest_rabbit_support_trial_1_subtitle"/>
+			<property name="description_key" value="quest_rabbit_support_trial_1Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<objective type="Craft" id="meleeToolSalvageT1Wrench" value="1" phase="1"/>
+
+			<reward type="Item" id="itemRabbitSupportActivator1" value="1"/>
+			<reward type="Exp" value="1000"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffRabbitTrial1Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_rabbit_support_trial_2">
+			<property name="name_key" value="quest_rabbit_support_trial_2_title"/>
+			<property name="subtitle_key" value="quest_rabbit_support_trial_2_subtitle"/>
+			<property name="description_key" value="quest_rabbit_support_trial_2Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<objective type="FetchKeep" id="carBattery" value="1" phase="1"/>
+			<objective type="FetchKeep" id="smallEngine" value="1" phase="1"/>
+
+			<reward type="Item" id="itemRabbitSupportActivator2" value="1"/>
+			<reward type="Exp" value="1500"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffRabbitTrial2Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_rabbit_support_trial_3">
+			<property name="name_key" value="quest_rabbit_support_trial_3_title"/>
+			<property name="subtitle_key" value="quest_rabbit_support_trial_3_subtitle"/>
+			<property name="description_key" value="quest_rabbit_support_trial_3Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<objective type="Craft" id="vehicleMinibikeChassis" value="1" phase="1"/>
+			<objective type="Craft" id="vehicleMinibikeHandlebars" value="1" phase="1"/>
+
+			<reward type="Item" id="itemRabbitSupportActivator3" value="1"/>
+			<reward type="Exp" value="2000"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffRabbitTrial3Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_rabbit_support_trial_4">
+			<property name="name_key" value="quest_rabbit_support_trial_4_title"/>
+			<property name="subtitle_key" value="quest_rabbit_support_trial_4_subtitle"/>
+			<property name="description_key" value="quest_rabbit_support_trial_4Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<objective type="Craft" id="vehicleMinibikePlaceable" value="1" phase="1"/>
+
+			<reward type="Item" id="itemRabbitSupportActivator4" value="1"/>
+			<reward type="Exp" value="2500"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffRabbitTrial4Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<!-- ===== 医療係関連 ===== -->
+		<quest id="quest_welcome_medic">
+			<property name="name_key" value="quest_welcome_medic_title"/>
+			<property name="subtitle_key" value="quest_welcome_medic_subtitle"/>
+			<property name="description_key" value="quest_welcome_medicDesc"/>
+			<property name="offer_key" value="quest_welcome_medicDesc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+
+			<objective type="FetchKeep" id="foodHoney" value="1" phase="1"/>
+
+			<reward type="Exp" value="500"/>
+			<reward type="Recipe" id="reviveStoneHoney"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffSummonHoney"/>
+				<property name="on_complete" value="true"/>
+				<property name="phase" value="1"/>
+			</action>
+		</quest>
+
+		<quest id="quest_bear_support_trial_1">
+			<property name="name_key" value="quest_bear_support_trial_1_title"/>
+			<property name="subtitle_key" value="quest_bear_support_trial_1_subtitle"/>
+			<property name="description_key" value="quest_bear_support_trial_1Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<objective type="BlockDestroySDX, SCore" id="treeStump" value="1" phase="1"/>
+
+			<reward type="Item" id="itemBearSupportActivator1" value="1"/>
+			<reward type="Exp" value="1000"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffBearTrial1Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_bear_support_trial_2">
+			<property name="name_key" value="quest_bear_support_trial_2_title"/>
+			<property name="subtitle_key" value="quest_bear_support_trial_2_subtitle"/>
+			<property name="description_key" value="quest_bear_support_trial_2Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<objective type="FetchKeep" id="resourceWood" value="30" phase="1"/>
+			<objective type="FetchKeep" id="resourceCropChrysanthemumPlant" value="20" phase="1"/>
+			<objective type="FetchKeep" id="resourceCropGoldenrodPlant" value="20" phase="1"/>
+			<objective type="Craft" id="resourceFlowerBlend" value="20" phase="2"/>
+			<objective type="Craft" id="cntBeeHiveBox" value="1" phase="2"/>
+			<objective type="BlockPlace" id="cntBeeHiveBox" value="1" phase="3"/>
+			<objective type="Craft" id="foodHoney" value="1" phase="4"/>
+
+			<reward type="Item" id="itemBearSupportActivator2" value="1"/>
+			<reward type="Exp" value="1500"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffBearTrial2Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_bear_support_trial_3">
+			<property name="name_key" value="quest_bear_support_trial_3_title"/>
+			<property name="subtitle_key" value="quest_bear_support_trial_3_subtitle"/>
+			<property name="description_key" value="quest_bear_support_trial_3Desc"/>
+			<property name="icon" value="ui_game_symbol_treasure"/>
+			<property name="category_key" value="quest"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="TreasureChest" phase="1">
+				<property name="block" value="cntTreasurePoisonChest"/>
+				<property name="alt_block" value="cntTreasurePoisonChestInsecure"/>
+				<property name="default_radius" value="5"/>
+				<property name="distance" value="500-750"/>
+				<property name="nav_object" value="treasure"/>
+				<property name="direct_nav_object" value="treasure_direct"/>
+				<property name="blocks_per_reduction" value="10"/>
+				<property name="radius_reduction_sound" value="ui_radius_shrink"/>
+			</objective>
+			<objective type="FetchKeep" id="itemPoisonRecipeFound" value="1" phase="2"/>
+			<action type="SpawnGSEnemy">
+				<property name="gamestage_list" value="SleeperGSList"/>
+				<property name="count" value="5-7"/>
+				<property name="on_complete" value="true"/>
+			</action>
+			<reward type="Exp" value="2000"/>
+			<reward type="Item" id="itemBearSupportActivator3" value="1"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffBearTrial3Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_bear_support_trial_4">
+			<property name="name_key" value="quest_bear_support_trial_4_title"/>
+			<property name="subtitle_key" value="quest_bear_support_trial_4_subtitle"/>
+			<property name="description_key" value="quest_bear_support_trial_4Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<action type="SpawnEnemy" id="zombieToxicArleneMinor" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="zombieToxicJoeElite" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="zombieToxicSteveElite" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="zombieToxicWightBoss" value="1" phase="1"/>
+
+			<objective type="EntityKill" id="zombieToxicArleneMinor" value="1" phase="2"/>
+			<objective type="EntityKill" id="zombieToxicJoeElite" value="1" phase="2"/>
+			<objective type="EntityKill" id="zombieToxicSteveElite" value="1" phase="2"/>
+			<objective type="EntityKill" id="zombieToxicWightBoss" value="1" phase="2"/>
+
+			<reward type="Item" id="itemBearSupportActivator4" value="1"/>
+			<reward type="Exp" value="2500"/>
+
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffBearTrial4Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<!-- ===== 鍛冶屋関連 ===== -->
+		<quest id="quest_welcome_forgeguard">
+			<property name="name_key" value="quest_welcome_forgeguard_title"/>
+			<property name="subtitle_key" value="quest_welcome_forgeguard_subtitle"/>
+			<property name="description_key" value="quest_welcome_forgeguardDesc"/>
+			<property name="offer_key" value="quest_welcome_forgeguardDesc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+
+			<objective type="Craft" id="meleeToolPickT1IronPickaxe" value="1"/>
+
+			<reward type="Exp" value="500"/>
+			<reward type="Recipe" id="reviveStoneGrumble"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffSummonGrumble"/>
+				<property name="on_complete" value="true"/>
+				<property name="phase" value="1"/>
+			</action>
+		</quest>
+
+		<quest id="quest_boar_support_trial_1">
+			<property name="name_key" value="quest_boar_support_trial_1_title"/>
+			<property name="subtitle_key" value="quest_boar_support_trial_1_subtitle"/>
+			<property name="description_key" value="quest_boar_support_trial_1Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<objective type="FetchKeep" id="resourceMysticOre" value="100"/>
+
+			<reward type="Item" id="itemBoarSupportActivator1" value="1"/>
+			<reward type="Exp" value="1000"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffBoarTrial1Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_boar_support_trial_2">
+			<property name="name_key" value="quest_boar_support_trial_2_title"/>
+			<property name="subtitle_key" value="quest_boar_support_trial_2_subtitle"/>
+			<property name="description_key" value="quest_boar_support_trial_2Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<objective type="Craft" id="resourceMysticSteel" value="10"/>
+
+			<reward type="Item" id="itemBoarSupportActivator2" value="1"/>
+			<reward type="Exp" value="1000"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffBoarTrial2Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_boar_support_trial_3">
+			<property name="name_key" value="quest_boar_support_trial_3_title"/>
+			<property name="subtitle_key" value="quest_boar_support_trial_3_subtitle"/>
+			<property name="description_key" value="quest_boar_support_trial_3Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffTracBoarKill" />
+				<property name="on_complete" value="false"/>
+				<property name="phase" value="1" />
+			</action>
+
+			<objective type="BlockPlace" id="trapBigHead" value="1" phase="2"/>
+
+			<action type="SpawnGSEnemy">
+				<property name="gamestage_list" value="SleeperGSList"/>
+				<property name="count" value="5-7"/>
+				<property name="phase" value="3" />
+			</action>
+			<objective type="FetchKeep" id="itemBoarKillProof" value="3" phase="3"/>
+
+			<reward type="Item" id="itemBoarSupportActivator3" value="1"/>
+			<reward type="Exp" value="1000"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffBoarTrial3Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+
+		<quest id="quest_boar_support_trial_4">
+			<property name="name_key" value="quest_boar_support_trial_4_title"/>
+			<property name="subtitle_key" value="quest_boar_support_trial_4_subtitle"/>
+			<property name="description_key" value="quest_boar_support_trial_4Desc"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="false"/>
+
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffTracBoarGunKill" />
+				<property name="on_complete" value="false"/>
+				<property name="phase" value="1" />
+			</action>
+
+			<objective type="FetchKeep" id="itemBoarKillProof" value="5" phase="2"/>
+
+			<reward type="Item" id="itemBoarSupportActivator4" value="1"/>
+			<reward type="Exp" value="2000"/>
+			<action type="GiveBuffSDX, SCore">
+				<property name="value" value="buffBoarTrial4Complete"/>
+				<property name="on_complete" value="true"/>
+			</action>
+		</quest>
+	</append>
+
+	<!-- ===== バニラクエ報酬追加 ===== -->
+	<append xpath="/quests/quest[@id='tier1_buried_supplies']">
+		<reward type="Item" id="npcTrialTicket" value="3"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier1_fetch']">
+		<reward type="Item" id="npcTrialTicket" value="4"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier1_clear']">
+		<reward type="Item" id="npcTrialTicket" value="5"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier2_buried_supplies']">
+		<reward type="Item" id="npcTrialTicket" value="6"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier2_fetch']">
+		<reward type="Item" id="npcTrialTicket" value="7"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier2_clear']">
+		<reward type="Item" id="npcTrialTicket" value="8"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier2_fetch_clear']">
+		<reward type="Item" id="npcTrialTicket" value="9"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier2_clear_infested']">
+		<reward type="Item" id="npcTrialTicket" value="10"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier2_restore_power']">
+		<reward type="Item" id="npcTrialTicket" value="11"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier3_buried_supplies']">
+		<reward type="Item" id="npcTrialTicket" value="12"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier3_fetch']">
+		<reward type="Item" id="npcTrialTicket" value="13"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier3_clear']">
+		<reward type="Item" id="npcTrialTicket" value="14"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier3_fetch_clear']">
+		<reward type="Item" id="npcTrialTicket" value="15"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier3_clear_infested']">
+		<reward type="Item" id="npcTrialTicket" value="16"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier3_restore_power']">
+		<reward type="Item" id="npcTrialTicket" value="17"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier4_fetch']">
+		<reward type="Item" id="npcTrialTicket" value="18"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier4_clear']">
+		<reward type="Item" id="npcTrialTicket" value="19"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier4_fetch_clear']">
+		<reward type="Item" id="npcTrialTicket" value="20"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier4_clear_infested']">
+		<reward type="Item" id="npcTrialTicket" value="21"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier4_restore_power']">
+		<reward type="Item" id="npcTrialTicket" value="22"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier5_fetch']">
+		<reward type="Item" id="npcTrialTicket" value="23"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier5_clear']">
+		<reward type="Item" id="npcTrialTicket" value="24"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier5_fetch_clear']">
+		<reward type="Item" id="npcTrialTicket" value="25"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier5_clear_infested']">
+		<reward type="Item" id="npcTrialTicket" value="26"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier6_fetch']">
+		<reward type="Item" id="npcTrialTicket" value="27"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier6_clear']">
+		<reward type="Item" id="npcTrialTicket" value="28"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier6_fetch_clear']">
+		<reward type="Item" id="npcTrialTicket" value="29"/>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier6_clear_infested']">
+		<reward type="Item" id="npcTrialTicket" value="30"/>
+	</append>
+</configs>

@@ -1,0 +1,1056 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<configs>
+	<append xpath="/buffs">
+		<!-- ===== きつね関連 ===== -->
+		<buff name="buffSummonSnowtail">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="snowtail_summon_message" sound="ui_challenge_complete" />
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionEffectActionSummonSnowtail, MyNPCSummonUtility" />
+			</effect_group>
+		</buff>
+
+		<buff name="buffSummonSnowtailRevive">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="snowtail_revive_message" sound="ui_challenge_complete"/>
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionEffectActionSummonSnowtail, MyNPCSummonUtility"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🦊 Fox Support Lv.1 -->
+		<buff name="buffFoxSupport1" name_key="FoxSupportLv1" description_key="buffFoxSupport1Desc" icon="ui_fox_support">
+			<display_value_key value="FoxSupportLv1"/>
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="0.05"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="0.08"/>
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.2" tags="running"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.05"/>
+				<passive_effect name="RecipeTagUnlocked" tags="fox_support_lv1_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="letter_welcome_cook" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="letter_welcome_tinkerer" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="letter_welcome_medic" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="letter_welcome_forgeguard" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntCompanionDesk" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemFoxSupportActivator1" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🦊 Fox Support Lv.2 -->
+		<buff name="buffFoxSupport2" name_key="FoxSupportLv2" description_key="buffFoxSupport2Desc" icon="ui_fox_support">
+			<display_value_key value="FoxSupportLv2"/>
+			<stack_type value="ignore"/>
+			<effect_group tiered="false">
+				<passive_effect name="WalkSpeed" operation="perc_add" value="0.05"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="0.08"/>
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.2" tags="running"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.05"/>
+				<passive_effect name="HealthMax" operation="base_add" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.5"/>
+				<passive_effect name="StaminaMax" operation="base_add" value="15"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="1.0"/>
+				<passive_effect name="RecipeTagUnlocked" tags="fox_support_lv2_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemFoxSupportActivator2" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🦊 Fox Support Lv.3 -->
+		<buff name="buffFoxSupport3" name_key="FoxSupportLv3" description_key="buffFoxSupport3Desc" icon="ui_fox_support">
+			<display_value_key value="FoxSupportLv3"/>
+			<stack_type value="ignore"/>
+			<effect_group tiered="false">
+				<passive_effect name="WalkSpeed" operation="perc_add" value="0.05"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="0.08"/>
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.2" tags="running"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.05"/>
+				<passive_effect name="HealthMax" operation="base_add" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.5"/>
+				<passive_effect name="StaminaMax" operation="base_add" value="15"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="1.0"/>
+				<passive_effect name="LootDropProb" operation="perc_add" value="0.25"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-0.30"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value="-0.1">
+					<requirement name="HoldingItemHasTags" tags="tool,weapon"/>
+				</passive_effect>
+				<passive_effect name="RecipeTagUnlocked" tags="fox_support_lv3_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemFoxSupportActivator3" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🦊 Fox Support Lv.4 -->
+		<buff name="buffFoxSupport4" name_key="FoxSupportLv4" description_key="buffFoxSupport4Desc" icon="ui_fox_support">
+			<display_value_key value="FoxSupportLv4"/>
+			<stack_type value="ignore"/>
+			<effect_group tiered="false">
+				<passive_effect name="WalkSpeed" operation="perc_add" value="0.05"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="0.08"/>
+				<passive_effect name="StaminaLoss" operation="perc_subtract" value="0.2" tags="running"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.05"/>
+				<passive_effect name="HealthMax" operation="base_add" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.5"/>
+				<passive_effect name="StaminaMax" operation="base_add" value="15"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="1.0"/>
+				<passive_effect name="LootDropProb" operation="perc_add" value="0.25"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-0.30"/>
+				<passive_effect name="DegradationPerUse" operation="perc_add" value="-0.1">
+					<requirement name="HoldingItemHasTags" tags="tool,weapon"/>
+				</passive_effect>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.1"/>
+				<effect_group>
+					<requirement name="IsNight"/>
+					<passive_effect name="EntityDamage" operation="perc_add" value="0.1"/>
+				</effect_group>
+				<passive_effect name="RecipeTagUnlocked" tags="fox_support_lv4_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modFoxClawCharmEX" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modFoxClawCharm" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemFoxSupportActivator4" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFoxTrial1Complete" name_key="buffFoxTrial1Complete" description_key="buffFoxTrial1CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffFoxTrial2Complete" name_key="buffFoxTrial2Complete" description_key="buffFoxTrial2CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffFoxTrial3Complete" name_key="buffFoxTrial3Complete" description_key="buffFoxTrial3CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffFoxTrial4Complete" name_key="buffFoxTrial4Complete" description_key="buffFoxTrial4CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+		</buff>
+
+		<!-- ===== 料理係関連 ===== -->
+		<buff name="buffSummonCoco">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="coco_summon_message" sound="ui_challenge_complete" />
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionEffectActionSummonCoco, MyNPCSummonUtility" />
+			</effect_group>
+		</buff>
+
+		<buff name="buffSummonCocoRevive">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="coco_revive_message" sound="ui_challenge_complete"/>
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionEffectActionSummonCoco, MyNPCSummonUtility"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffCocoLootBoost" name_key="buffCocoLootBoost" description_key="buffCocoLootBoostDesc" icon="iconCocoEggOmelette">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffCocoLootBoostDisplay"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffCocoLootBoostDuration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffCocoLootBoostDisplay" operation="set" value="@$buffCocoLootBoostDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffCocoLootBoostDisplay" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCocoLootBoost">
+					<requirement name="CVarCompare" cvar="$buffCocoLootBoostDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffCocoLootBoostDisplay,$buffCocoLootBoostDuration"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="LootStage" operation="base_add" value="5"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffCocoEggSoupBoost" name_key="buffCocoEggSoupBoost" description_key="buffCocoEggSoupBoostDesc" icon="iconCocoEggSoup">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffCocoEggSoupBoostDisplay"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffCocoEggSoupBoostDuration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffCocoEggSoupBoostDisplay" operation="set" value="@$buffCocoEggSoupBoostDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffCocoEggSoupBoostDisplay" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCocoEggSoupBoost">
+					<requirement name="CVarCompare" cvar="$buffCocoEggSoupBoostDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffCocoEggSoupBoostDisplay,$buffCocoEggSoupBoostDuration"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value="0.1" tags="oreWoodHarvest"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value="0.2" tags="buffCocoEggSoupBoost"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffCocoFrenchToastBoost" name_key="buffCocoFrenchToastBoost" description_key="buffCocoFrenchToastBoostDesc" icon="iconCocoFrenchToast">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffCocoFrenchToastBoostDisplay"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffCocoFrenchToastBoostDuration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffCocoFrenchToastBoostDisplay" operation="set" value="@$buffCocoFrenchToastBoostDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffCocoFrenchToastBoostDisplay" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCocoFrenchToastBoost">
+					<requirement name="CVarCompare" cvar="$buffCocoFrenchToastBoostDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffCocoFrenchToastBoostDisplay,$buffCocoFrenchToastBoostDuration"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0.4"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="0.2"/>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="0.2"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffCocoGoldenOmelette" name_key="buffCocoGoldenOmelette" description_key="buffCocoGoldenOmeletteDesc" icon="iconCocoGoldenOmelette">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffCocoGoldenOmeletteDisplay"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffCocoGoldenOmeletteDuration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffCocoGoldenOmeletteDisplay" operation="set" value="@$buffCocoGoldenOmeletteDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffCocoGoldenOmeletteDisplay" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCocoGoldenOmelette">
+					<requirement name="CVarCompare" cvar="$buffCocoGoldenOmeletteDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffCocoGoldenOmeletteDisplay,$buffCocoGoldenOmeletteDuration"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.4" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkArchery,admin"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.4"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffChickenTrial1Complete" name_key="buffChickenTrial1Complete" description_key="buffChickenTrial1CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffChickenTrial2Complete" name_key="buffChickenTrial2Complete" description_key="buffChickenTrial2CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffChickenTrial3Complete" name_key="buffChickenTrial3Complete" description_key="buffChickenTrial3CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffChickenTrial4Complete" name_key="buffChickenTrial4Complete" description_key="buffChickenTrial4CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<!-- ===== 職人関連 ===== -->
+		<buff name="buffSummonLapin">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="lapin_summon_message" sound="ui_challenge_complete" />
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionEffectActionSummonLapin, MyNPCSummonUtility" />
+			</effect_group>
+		</buff>
+
+		<buff name="buffSummonLapinRevive">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="lapin_revive_message" sound="ui_challenge_complete"/>
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionEffectActionSummonLapin, MyNPCSummonUtility"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐇 Rabbit Support Lv.1 -->
+		<buff name="buffRabbitSupport1" name_key="RabbitSupportLv1" description_key="buffRabbitSupport1Desc" icon="ui_rabbit_support">
+			<display_value_key value="RabbitSupportLv1"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="perc_add" value="0.1"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="0.1"/>
+				<passive_effect name="RecipeTagUnlocked" tags="rabbit_support_lv1_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemRabbitSupportActivator1" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐇 Rabbit Support Lv.2 -->
+		<buff name="buffRabbitSupport2" name_key="RabbitSupportLv2" description_key="buffRabbitSupport2Desc" icon="ui_rabbit_support">
+			<display_value_key value="RabbitSupportLv2"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="perc_add" value="0.2"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="0.2"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-0.2"/>
+				<passive_effect name="ScrappingTime" operation="perc_add" value="-0.25"/>
+				<passive_effect name="RecipeTagUnlocked" tags="rabbit_support_lv2_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemRabbitSupportActivator2" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐇 Rabbit Support Lv.3 -->
+		<buff name="buffRabbitSupport3" name_key="RabbitSupportLv3" description_key="buffRabbitSupport3Desc" icon="ui_rabbit_support">
+			<display_value_key value="RabbitSupportLv3"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="perc_add" value="0.3"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="0.3"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-0.3"/>
+				<passive_effect name="ScrappingTime" operation="perc_add" value="-0.5"/>
+				<passive_effect name="RecipeTagUnlocked" tags="rabbit_support_lv3_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemRabbitSupportActivator3" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐇 Rabbit Support Lv.4 -->
+		<buff name="buffRabbitSupport4" name_key="RabbitSupportLv4" description_key="buffRabbitSupport4Desc" icon="ui_rabbit_support">
+			<display_value_key value="RabbitSupportLv4"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="buffRabbitSupport4"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value="0.6"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="0.75"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-0.5"/>
+				<passive_effect name="ScrappingTime" operation="perc_add" value="-0.9"/>
+				<passive_effect name="RecipeTagUnlocked" tags="rabbit_support_lv4_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntLapinBuilderBench" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemRabbitSupportActivator4" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffRabbitTrial1Complete" name_key="buffRabbitTrial1Complete" description_key="buffRabbitTrial1CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffRabbitTrial2Complete" name_key="buffRabbitTrial2Complete" description_key="buffRabbitTrial2CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffRabbitTrial3Complete" name_key="buffRabbitTrial3Complete" description_key="buffRabbitTrial3CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffRabbitTrial4Complete" name_key="buffRabbitTrial4Complete" description_key="buffRabbitTrial4CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+
+		<!-- ===== 医療係関連 ===== -->
+		<buff name="buffSummonHoney">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="honey_summon_message" sound="ui_challenge_complete" />
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionEffectActionSummonHoney, MyNPCSummonUtility" />
+			</effect_group>
+		</buff>
+
+		<buff name="buffSummonHoneyRevive">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="honey_revive_message" sound="ui_challenge_complete"/>
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionEffectActionSummonHoney, MyNPCSummonUtility"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐻 Bear Support Lv.1 -->
+		<buff name="buffBearSupport1" tags="buffBearSupportAll" name_key="BearSupportLv1" description_key="buffBearSupport1Desc" icon="ui_bear_support">
+			<display_value_key value="BearSupportLv1" />
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.50" tags="buffPoisonedMinor"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="buffBearSupport1"/>
+				<passive_effect name="HealthMax" operation="base_add" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.25"/>
+				<passive_effect name="RecipeTagUnlocked" tags="bear_support_lv1_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemBearSupportActivator1" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐻 Bear Support Lv.2 -->
+		<buff name="buffBearSupport2" tags="buffBearSupportAll" name_key="BearSupportLv2" description_key="buffBearSupport2Desc" icon="ui_bear_support">
+			<display_value_key value="BearSupportLv2" />
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.70" tags="buffPoisonedMinor"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.35" tags="buffPoisonedElite"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="buffBearSupport2"/>
+				<passive_effect name="HealthMax" operation="base_add" value="15"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.4"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.1" tags="buffInjuryBleeding,buffLaceration,buffInfectionCatch"/>
+				<passive_effect name="RecipeTagUnlocked" tags="bear_support_lv2_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntBearCouchRecovery" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemBearSupportActivator2" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffBearRestRegen" name_key="BearRestRegen" description_key="buffBearRestRegenDesc" icon="ui_bear_care">
+			<duration value="2"/>
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.5"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐻 Bear Support Lv.3 -->
+		<buff name="buffBearSupport3" tags="buffBearSupportAll" name_key="BearSupportLv3" description_key="buffBearSupport3Desc" icon="ui_bear_support">
+			<display_value_key value="BearSupportLv3" />
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.85" tags="buffPoisonedMinor"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.60" tags="buffPoisonedElite"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.25" tags="buffPoisonedTarget"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="buffBearSupport3"/>
+				<passive_effect name="HealthMax" operation="base_add" value="20"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.5"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.15" tags="buffInjuryBleeding,buffLaceration,buffInfectionCatch"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="0.3"/>
+				<passive_effect name="RecipeTagUnlocked" tags="bear_support_lv3_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntBearHerbMat" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemBearSupportActivator3" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐻 Bear Support Lv.4 -->
+		<buff name="buffBearSupport4" tags="buffBearSupportAll" name_key="BearSupportLv4" description_key="buffBearSupport4Desc" icon="ui_bear_support">
+			<display_value_key value="BearSupportLv4" />
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.95" tags="buffPoisonedMinor"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.80" tags="buffPoisonedElite"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.50" tags="buffPoisonedTarget"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="buffBearSupport4"/>
+				<passive_effect name="HealthMax" operation="base_add" value="25"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="1.0"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.25" tags="buffInjuryBleeding,buffLaceration,buffInfectionCatch,buffAbrasionCatch"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="0.3"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="0.1"/>
+				<passive_effect name="RecipeTagUnlocked" tags="bear_support_lv4_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemBearSupportActivator4" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntBearEmergencyKit" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemBearReviveDrug" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemBearEmergencyDrug" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorPoisonWard" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffBeeManualRead" name_key="buffBeeManualRead" description_key="buffBeeManualReadDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffBearTrial1Complete" name_key="buffBearTrial1Complete" description_key="buffBearTrial1CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffBearTrial2Complete" name_key="buffBearTrial2Complete" description_key="buffBearTrial2CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffBearTrial3Complete" name_key="buffBearTrial3Complete" description_key="buffBearTrial3CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffBearTrial4Complete" name_key="buffBearTrial4Complete" description_key="buffBearTrial4CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffBearMatRecovery" name_key="BearMatRecovery" description_key="buffBearMatRecoveryDesc" icon="ui_bear_care">
+			<property name="IconTint" value="FFCCCC"/>
+			<duration value="2"/>
+			<stack_type value="replace"/>
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.5"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.1" tags="buffInjuryBleeding,buffLaceration,buffInfectionCatch,buffAbrasionCatch"/>
+			</effect_group>
+		</buff>
+	
+		<buff name="buffPoisonedTarget" name_key="buffPoisonedTarget" description_key="buffPoisonedTargetDesc" icon="ui_buff_poison_target">
+			<property name="Tags" value="poison"/>
+			<stack_type value="replace"/>
+			<display_value_format value="time"/>
+			<!-- 毒持続時間を仮変数でカウント -->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffPoisonBombDuration" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffPoisonBombDuration"/>
+			</effect_group>
+
+			<!-- 毒効果が新規または再付与されたとき、持続時間をセット -->
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffPoisonBombDuration" operation="LT" value="10"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffPoisonBombDuration" operation="set" value="10"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffPoisonBombDuration" operation="set" value="10"/>
+			</effect_group>
+
+			<!-- 毒持続時間が0以下になったらバフ終了 -->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPoisonedTarget">
+					<requirement name="CVarCompare" cvar="$buffPoisonBombDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffPoisonBombDuration"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="10"/>
+				<passive_effect name="WalkSpeed" operation="base_add" value="-0.5"/>
+				<passive_effect name="RunSpeed" operation="base_add" value="-0.5"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="vomit_attack"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPoisonedFX"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_bleeding" local_offset="0,0,0" parent_transform=".body"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffPoisonedFX" duration="1" hidden="true">
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_smokePuff"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_bleeding"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_bleeding"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_bleeding"/>
+			</effect_group>
+		</buff>
+
+		<!-- ★ Minor：軽毒（6秒） -->
+		<buff name="buffPoisonedMinor" name_key="buffPoisonedTarget" description_key="buffPoisonedTargetDesc" icon="ui_buff_poison_target">
+			<stack_type value="replace"/>
+			<display_value_format value="time"/>
+			<property name="Tags" value="poison"/>
+			<!-- 残り時間CVar（6秒） -->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$poisonMinorDur" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$poisonMinorDur"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$poisonMinorDur" operation="LT" value="6"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$poisonMinorDur" operation="set" value="6"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$poisonMinorDur" operation="set" value="6"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPoisonedMinor">
+					<requirement name="CVarCompare" cvar="$poisonMinorDur" operation="LTE" value="0"/>
+				</triggered_effect>
+			</effect_group>
+			<!-- 効果（軽め） -->
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="3"/>
+				<passive_effect name="WalkSpeed" operation="base_add" value="-0.15"/>
+				<passive_effect name="RunSpeed" operation="base_add" value="-0.15"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="vomit_attack"/>
+			</effect_group>
+			<!-- VFXはさらに低く -->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPoisonedFX"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffPoisonedFX"/>
+			</effect_group>
+		</buff>
+
+		<!-- ★ Elite：中毒（8秒） -->
+		<buff name="buffPoisonedElite" name_key="buffPoisonedTarget" description_key="buffPoisonedTargetDesc" icon="ui_buff_poison_target">
+			<stack_type value="replace"/>
+			<display_value_format value="time"/>
+			<property name="Tags" value="poison"/>
+			<!-- 残り時間CVar（8秒） -->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$poisonEliteDur" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$poisonEliteDur"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$poisonEliteDur" operation="LT" value="8"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$poisonEliteDur" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$poisonEliteDur" operation="set" value="8"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPoisonedElite">
+					<requirement name="CVarCompare" cvar="$poisonEliteDur" operation="LTE" value="0"/>
+				</triggered_effect>
+			</effect_group>
+			<!-- 効果（中間） -->
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="6"/>
+				<passive_effect name="WalkSpeed" operation="base_add" value="-0.30"/>
+				<passive_effect name="RunSpeed" operation="base_add" value="-0.30"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="vomit_attack"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPoisonedFX"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffPoisonedFX"/>
+			</effect_group>
+		</buff>
+
+		<!-- 解毒バフ：付与→すぐ毒を外す→自分も消える -->
+		<buff name="buffAntidote">
+			<stack_type value="ignore"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffPoisonedTarget"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="twitch_bad_buff_ended"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffZombiePoisonClaws">
+			<stack_type value="ignore"/>
+			<duration value="600"/>
+
+			<!-- 自分に毒耐性もつける -->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPoisonImmune"/>
+			</effect_group>
+
+			<effect_group>
+				<!-- プレイヤーを攻撃したら毒バフを付与 -->
+				<triggered_effect trigger="onSelfAttackedOther" target="other" action="AddBuff" buff="buffPoisonedTarget">
+					<requirement name="EntityTagCompare" target="other" tags="player"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group>
+				<!-- 手に毒エフェクト（見た目） -->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_left" parent_transform="LeftHand"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_right" parent_transform="RightHand"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_radiation_left"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_radiation_right"/>
+			</effect_group>
+		</buff>
+
+		<!-- Minor が付ける “軽毒” 爪 -->
+		<buff name="buffZombiePoisonClawsMinor">
+			<stack_type value="ignore"/>
+			<duration value="600"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPoisonWard"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" target="other" action="AddBuff" buff="buffPoisonedMinor">
+					<requirement name="EntityTagCompare" target="other" tags="player"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_left" parent_transform="LeftHand"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_right" parent_transform="RightHand"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_radiation_left"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_radiation_right"/>
+			</effect_group>
+		</buff>
+
+		<!-- Elite が付ける “中毒” 爪 -->
+		<buff name="buffZombiePoisonClawsElite">
+			<stack_type value="ignore"/>
+			<duration value="600"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPoisonWard"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" target="other" action="AddBuff" buff="buffPoisonedElite">
+					<requirement name="EntityTagCompare" target="other" tags="player"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_left" parent_transform="LeftHand"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_right" parent_transform="RightHand"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_radiation_left"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_radiation_right"/>
+			</effect_group>
+		</buff>
+
+		<!-- Boss が付ける “強毒” 爪（=従来の挙動と同等） -->
+		<buff name="buffZombiePoisonClawsBoss">
+			<stack_type value="ignore"/>
+			<duration value="600"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPoisonWard"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" target="other" action="AddBuff" buff="buffPoisonedTarget">
+					<requirement name="EntityTagCompare" target="other" tags="player"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_left" parent_transform="LeftHand"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_radiation_right" parent_transform="RightHand"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_radiation_left"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_radiation_right"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffPoisonWard" hidden="true">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<!-- 100%耐性（= 実質無効） -->
+				<passive_effect name="BuffResistance" operation="base_add" value="1.0" tags="buffPoisonedMinor,buffPoisonedElite,buffPoisonedTarget"/>
+			</effect_group>
+
+			<!-- 装備した瞬間、残っている毒を剥がす（保険） -->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffPoisonedMinor"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffPoisonedElite"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffPoisonedTarget"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffPoisonImmune" description_key="buffPoisonImmuneDesc">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<hidden value="true"/>
+		</buff>
+
+		<buff name="buffToxicZombieMinor" duration="0" stack_type="ignore" hidden="true">
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="1500"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.2"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffZombiePoisonClawsMinor"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffToxicZombieElite" duration="0" stack_type="ignore" hidden="true">
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="3000"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.4"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffZombiePoisonClawsElite"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffToxicZombieBoss" duration="0" stack_type="ignore" hidden="true">
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.6"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffZombiePoisonClawsBoss"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="zombieRadiatedStart"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetScale" scale="1.25"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Particles.unity3d?ToxicAura"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffBearEmergencyReady" name_key="buffBearEmergencyReady" description_key="buffBearEmergencyReadyDesc" icon="ui_bear_care" is_debuff="false" duration="0" remove_on_death="true">
+			<stack_type value="ignore"/>
+		</buff>
+
+		<buff name="buffBearEmergencyHeal" description_key="buffBearEmergencyHealDesc" icon="ui_bear_emergency_heal">
+			<stack_type value="ignore"/>
+			<duration value="3"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="twitch_insta_regen"/>
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="999"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="1.0" tags="buffInjuryBleeding,buffLaceration,buffInfectionCatch,buffAbrasionCatch"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" target="self" buff="buffBearEmergencyCooldown"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="bear_healeffect"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffBearEmergencyCooldown" name_key="buffBearEmergencyCooldown" description_key="buffBearEmergencyCooldownDesc" icon="ui_bear_revive_cooldown">
+			<duration value="60"/>
+			<hidden value="false"/>
+		</buff>
+
+		<buff name="buffBearAutoReviveReady" duration="0" icon="ui_bear_revive_ready" name_key="buffBearAutoReviveReady" description_key="buffBearAutoReviveReadyDesc">
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_add" value="0"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffBearAutoReviveActive" icon="ui_bear_revive_active" name_key="buffBearAutoReviveActive" description_key="buffBearAutoReviveReadyDesc">
+			<stack_type value="ignore"/>
+			<duration value="10"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_add" value="0"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffAutoReviveInvincible" icon="ui_bear_revive_invincible" name_key="buffAutoReviveInvincible" description_key="buffAutoReviveInvincibleDesc">
+			<stack_type value="ignore"/>
+			<duration value="10"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="auto_revive_success" />
+				<passive_effect name="GeneralDamageResist" operation="base_add" value="999"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="1.0" tags="buffInjuryBleeding,buffLaceration,buffInfectionCatch,buffAbrasionCatch"/>
+			</effect_group>
+		</buff>
+
+		<!-- ===== 鍛冶屋関連 ===== -->
+		<buff name="buffSummonGrumble">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="grumble_summon_message" sound="ui_challenge_complete" />
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionEffectActionSummonGrumble, MyNPCSummonUtility" />
+			</effect_group>
+		</buff>
+
+		<buff name="buffSummonGrumbleRevive">
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message_key="grumble_revive_message" sound="ui_challenge_complete"/>
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionEffectActionSummonGrumble, MyNPCSummonUtility"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffBigHeadOnly" tags="bigheadtarget" hidden="false" remove_on_death="false">
+			<stack_type value="replace"/>
+			<duration value="60"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="SetBigHead" enabled="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="SetBigHead" enabled="false"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffTracBoarKill" name_key="buffTracBoarKill" description_key="buffTracBoarKillDesc" tags="permanent" hidden="true">
+			<property name="remove_on_death" value="false"/>
+			<property name="stack_type" value="replace"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfKilledOther" action="CallGameEvent" target="self" event="boar_kill_proof" allow_client_call="true">
+					<requirement name="HasBuff" target="other" buff="buffBigHeadOnly"/>
+					<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+
+		<buff name="buffTracBoarGunKill" name_key="buffTracBoarGunKill" description_key="buffTracBoarGunKillDesc" tags="permanent" hidden="true">
+			<property name="remove_on_death" value="false"/>
+			<property name="stack_type" value="replace"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfKilledOther" action="CallGameEvent" target="self" event="boar_gun_kill_proof" allow_client_call="true">
+					<requirement name="HoldingItemHasTags" tags="gunMysticHeadshot"/>
+					<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+
+		<!-- 🐗 Boar Support Lv.1 -->
+		<buff name="buffBoarSupport1" name_key="buffBoarSupport1" description_key="buffBoarSupport1Desc" icon="ui_boar_support">
+			<display_value_key value="BoarSupportLv1"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="base_set" value="1" tags="buffBoarSupport1"/>
+				<passive_effect name="RecipeTagUnlocked" tags="boar_support_lv1_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemBoarSupportActivator1" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntMysticForge" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceMysticSteel" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐗 Boar Support Lv.2 -->
+		<buff name="buffBoarSupport2" name_key="buffBoarSupport2" description_key="buffBoarSupport2Desc" icon="ui_boar_support">
+			<display_value_key value="BoarSupportLv2"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="base_set" value="1.5" tags="buffBoarSupport2"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-0.4" tags="MysticForgeCrafting"/>
+				<passive_effect name="RecipeTagUnlocked" tags="boar_support_lv2_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemBoarSupportActivator2" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="trapBigHead" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐗 Boar Support Lv.3 -->
+		<buff name="buffBoarSupport3" name_key="buffBoarSupport3" description_key="buffBoarSupport3Desc" icon="ui_boar_support">
+			<display_value_key value="BoarSupportLv3"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="base_set" value="2" tags="buffBoarSupport3"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-0.4" tags="MysticForgeCrafting"/>
+				<passive_effect name="RecipeTagUnlocked" tags="boar_support_lv3_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemBoarSupportActivator3" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunMysticHeadshot" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<!-- 🐗 Boar Support Lv.4 -->
+		<buff name="buffBoarSupport4" name_key="buffBoarSupport4" description_key="buffBoarSupport4Desc" icon="ui_boar_support">
+			<display_value_key value="BoarSupportLv4"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="base_set" value="2.5" tags="buffBoarSupport4"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-0.4" tags="MysticForgeCrafting"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0.25" tags="Head"/>
+				<passive_effect name="RecipeTagUnlocked" tags="boar_support_lv4_recipes"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="itemBoarSupportActivator4" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunBotPoisonSledge" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffBoarTrial1Complete" name_key="buffBoarTrial1Complete" description_key="buffBoarTrial1CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffBoarTrial2Complete" name_key="buffBoarTrial2Complete" description_key="buffBoarTrial2CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+		</buff>
+
+		<buff name="buffBoarTrial3Complete" name_key="buffBoarTrial3Complete" description_key="buffBoarTrial3CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffTracBoarKill"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffBoarTrial4Complete" name_key="buffBoarTrial4Complete" description_key="buffBoarTrial4CompleteDesc" remove_on_death="false" hidden="true">
+			<stack_type value="ignore" />
+			<duration value="0"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffTracBoarGunKill"/>
+			</effect_group>
+		</buff>
+
+		<!-- ===== その他 ===== -->
+		<buff name="buffEquippedFoxClaw" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<requirement name="!HasBuff" buff="buffFoxClawCooldown"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="4" target_tags="zombie,animal" buff="debuffFoxClawBleed"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="4" target_tags="zombie,animal" buff="buffTwitchShocked"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="4" target_tags="zombie,animal" buff="debuffFoxNightVuln"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="self" buff="buffFoxClawCooldown"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffEquippedFoxClawEX" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+
+			<!-- 昼（12秒クールダウン） -->
+			<effect_group>
+				<requirement name="IsDay"/>
+				<requirement name="!HasBuff" buff="buffFoxClawCooldown"/>
+				<!-- 攻撃ヒット時の効果 -->
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="otherAOE" range="4" target_tags="zombie,animal" buff="debuffFoxClawBleed"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="otherAOE" range="4" target_tags="zombie,animal" buff="buffTwitchShocked"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="otherAOE" range="4" target_tags="zombie,animal" buff="debuffFoxNightVuln"/>
+				<!-- クールダウン付与 -->
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffFoxClawCooldown"/>
+			</effect_group>
+
+			<!-- 夜（6秒クールダウン） -->
+			<effect_group>
+				<requirement name="IsNight"/>
+				<requirement name="!HasBuff" buff="buffFoxClawCooldownNight"/>
+				<!-- 攻撃ヒット時の効果 -->
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="otherAOE" range="4" target_tags="zombie,animal" buff="debuffFoxClawBleed"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="otherAOE" range="4" target_tags="zombie,animal" buff="buffTwitchShocked"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="otherAOE" range="4" target_tags="zombie,animal" buff="debuffFoxNightVuln"/>
+				<!-- 夜用クールダウン付与 -->
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffFoxClawCooldownNight"/>
+			</effect_group>
+		</buff>
+
+		<buff name="debuffFoxNightVuln" icon="ui_game_symbol_electric_power">
+			<stack_type value="replace"/>
+			<duration value="6"/>
+
+			<!-- 昼/共通：軽い鈍足だけ（安全運用） -->
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.10"/>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.10"/>
+			</effect_group>
+
+			<!-- 夜ブースト：被ダメ増＋さらに減速 -->
+			<effect_group>
+				<requirement name="IsNight"/>
+				<!-- 受けるダメージに倍率をかける（+20%想定） -->
+				<passive_effect name="DamageModifier" operation="perc_add" value="0.20"/>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.20"/>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.20"/>
+			</effect_group>
+		</buff>
+
+		<buff name="debuffFoxClawBleed" name_key="buffFoxClawBleedName"  icon="ui_fox_claw_bleed" icon_color="255,0,0">
+			<damage_type value="bloodloss"/>
+			<damage_source value="Internal"/>
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value="varFoxClawBleedDuration"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFoxClawBleedDuration" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="varFoxClawBleedDuration" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFoxClawBleedDuration" operation="add" value="-1"/>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="debuffFoxClawBleed">
+					<requirement name="CVarCompare" cvar="varFoxClawBleedDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="varFoxClawBleedDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="debuffFoxClawBleed"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_bleeding" local_offset="0,.25,0" parent_transform="Hips"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_bleeding"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_bleeding"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFoxClawCooldown" name_key="buffFoxClawCooldownName" description_key="buffFoxClawCooldownDesc" icon="ui_buff_foxclaw_cooldown" icon_color="100,100,255">
+			<stack_type value="replace"/>
+			<duration value="12"/>
+			<display_value value=".varFoxClawCooldown"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".varFoxClawCooldown" operation="set" value="12"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFoxClawCooldown" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".varFoxClawCooldown" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFoxClawCooldownNight" name_key="buffFoxClawCooldownNightName" description_key="buffFoxClawCooldownNightDesc" icon="ui_buff_foxclaw_cooldown" icon_color="150,100,255">
+			<stack_type value="replace"/>
+			<duration value="6"/>
+			<!-- 夜は6秒 -->
+			<display_value value=".varFoxClawCooldownNight"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".varFoxClawCooldownNight" operation="set" value="6"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFoxClawCooldownNight" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".varFoxClawCooldownNight" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+	</append>
+</configs>

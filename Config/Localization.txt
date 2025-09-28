@@ -1,0 +1,667 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context,japanese
+npcTrialTicket,items,Resources,,,Support Ticket,,サポートチケット
+npcTrialTicketDesc,items,Resources,,,A special ticket that lets you trade for quest letters and rare items tied to animal friends.,,このチケットを使って特別なアイテムをクラフトしたり、新しい仲間と出会うための手紙クエストを受け取ることができる。
+resourceMysticOre,items,Resources,,,Mystic Ore,,神秘の鉱石
+resourceMysticOreDesc,items,Resources,,,"A mysterious and luminous ore,treasured by skilled craftsmen.","","熟練の職人たちに重宝される、謎めいた光を放つ鉱石。"
+resourceMysticSteel,items,Resources,,,Mystic Steel,,神秘の合金
+resourceMysticSteelDesc,items,Resources,,,"A forged alloy infused with Mystic Ore. Unmatched in durability.","","神秘の鉱石を鍛えて作られた合金。比類なき強度を誇る。"
+materialMmysticSteel_shapes,blocks,Block,,,Mystic Steel Block,,神秘の合金ブロック
+mysticSteelShapes:VariantHelper,blocks,Building,,,Mystic Steel Block,,神秘の合金ブロック
+mysticSteelBlockGroupDesc,blocks,Building,,,"Blocks forged from Mystic Steel. Provides exceptional durability and resilience.","","Mystic Steel で作られた建築ブロック。非常に高い耐久性と強度を誇る。"
+cntFoxLetterDesk,blocks,Blocks,,,Letter Crafting Desk,,手紙作成机
+foxLetterDeskDesc,blocks,Blocks,,,A simple desk where you can craft special letters for quest requests.,,クエスト用の特別な手紙を作るための木製の机。
+cntCompanionDesk,blocks,Blocks,,,Companion Desk,,動物たちの作業台
+companionDeskDesc,blocks,Blocks,,,A desk used to craft items related to animal companions.,,動物の仲間に関するアイテムを作るための机。
+# ===== きつね関連 =====,,,,,,,
+npcMyFoxCompanion,entityclasses,Entity Name,,,Snowtail,,Snowtail
+letter_welcome_fox,items,Quest,,,Mysterious Letter,,不思議な手紙
+letter_welcome_foxDesc,items,Quest,,,A weathered letter with faded ink. It seems to hold a message for you.,,インクが薄れている古びた手紙。何かのメッセージが書かれているようだ。
+quest_welcome_fox_title,items,Quest,,,Prepare the Letter Desk,,仲間を迎える準備をしよう
+quest_welcome_fox_subtitle,items,Quest,,,Your First Step Begins Here,,ここから冒険が始まる
+quest_welcome_foxDesc,items,Quest,,,Craft and place the Letter Crafting Desk to begin your journey.,,手紙作成机をクラフトして設置し、旅の第一歩を踏み出そう。
+quest_welcome_fox_offer,Quests,Statement,,, "Will you craft a Fox Letter Desk to welcome the white fox?",,白いきつねを迎えるために手紙作成机を作ってみよう。
+snowtail_summon_message,buffs,Buff,,,Snowtail has arrived to help you!,,Snowtailが助けに来たよ!
+snowtail_revive_message,buffs,Buff,,,Snowtail has risen from the grave... again.,,Snowtailが墓から蘇った…ふたたび。
+npc_revive_warning,GameEvents,Tooltip,,,Something has awakened nearby…,,何かが目覚めたようだ…
+reviveStoneSnowtail,Blocks,Block,,,Snowtail's grave marker.,,Snowtailの墓標
+itemFoxSupportActivator1,items,Item,,,Fox Charm I,,フォックスチャームⅠ(いち)
+itemFoxSupportActivator1Desc,items,Item,,,"A charm imbued with the blessing of a white fox.\nTeaches the recipes:\n Worn Letters ,and the Companion Desk.\n[99FFFF]If you ever lose the fox's blessing,this charm may help restore it.",,白いきつねの加護が宿ったチャーム。\n以下のレシピが解放されます:\n古びた手紙、動物たちの作業台\n[99FFFF]もし加護を失ってしまったときは、このチャームをもう一度手にしてみてください。
+itemFoxSupportActivator2,items,Item,,,Fox Charm II,,フォックスチャームⅡ(に)
+itemFoxSupportActivator2Desc,items,Item,,,"A charm with stronger blessing of the white fox.\n[FFCC66]If you ever lose the fox's blessing,this charm may help restore it.",,"白いきつねの加護がさらに強まったチャーム。\n[FFCC66]もし加護を失ってしまったときは、このチャームをもう一度手にしてみてください。"
+itemFoxSupportActivator3,items,Item,,,Fox Charm III,,フォックスチャームⅢ(さん)
+itemFoxSupportActivator3Desc,items,Item,,,"A charm blessed by the wise fox spirit.\nTeaches the recipes:\nFox Charm: Claw \n[FF9999]If you ever lose the fox's blessing,this charm may help restore it.",,"賢ききつねの精霊に祝福されたチャーム。\n以下のレシピが解放されます:\nきつねのチャーム:爪\n[FF9999]もし加護を失ってしまったときは、このチャームをもう一度手にしてみてください。"
+itemFoxSupportActivator4,items,Item,,,Fox Charm IV,,フォックスチャームⅣ(よん)
+itemFoxSupportActivator4Desc,items,Item,,,"A charm that carries the might of the ancient fox guardian.\nUnlocks powerful crafting knowledge:\nFox Charm: Claw EX \n[66CCFF]If you ever lose the fox's blessing,this charm may help restore it.",,"古のきつねの守護者の力を宿すチャーム。\n特別なクラフト知識が解放されます:\nきつねのチャーム:爪・改\n[66CCFF]もし加護を失ってしまったときは、このチャームをもう一度手にしてみてください。"
+FoxSupportLv1,buffs,Buff,,,Lv1,,レベル1
+buffFoxSupport1Desc,buffs,Buff,,,The fox's blessing grants better mobility and stamina efficiency.,,きつねの加護で移動とスタミナ効率が少し上がっています。
+FoxSupportLv2,buffs,Buff,,,Lv2,,レベル2
+buffFoxSupport2Desc,buffs,Buff,,,The fox's blessing allows natural recovery of health and stamina for longer journeys.,,きつねの加護で体力とスタミナが自然に回復し、長く活動できるようになります。
+FoxSupportLv3,buffs,Buff,,,Lv3,,レベル3
+buffFoxSupport3Desc,buff,Buff,,,"The fox's blessing enhances crafting speed,loot quality,and item durability.",,きつねの加護でクラフトが早くなり、敵からの戦利品や道具の耐久性にも恵まれます。
+FoxSupportLv4,buffs,Buff,,,Lv4,,レベル4
+buffFoxSupport4Desc,buffs,Buff,,,The guardian fox's ultimate blessing grants powerful abilities at night and boosts experience gain.,,守護きつねの最上位の加護により、夜間に強くなり、経験値の取得量も増加します。
+schematic_fox_trial_2,items,Item,,,Fox Trial Craft Schematic,,きつねの試練の手紙クラフト図面
+schematic_fox_trial_2Desc,items,Item,,,Unlocks the recipe for the second trial letter.,,試練の手紙(Ⅱ)のクラフト方法を解放します。
+schematic_fox_trial_3,items,Item,,,Fox Trial Craft Schematic,,きつねの試練の手紙クラフト図面
+schematic_fox_trial_3Desc,items,Item,,,Unlocks the recipe for the third trial letter.,,試練の手紙(Ⅲ)のクラフト方法を解放します。
+schematic_fox_trial_4,items,Item,,,Fox Trial Craft Schematic,,きつねの試練の手紙クラフト図面
+schematic_fox_trial_4Desc,items,Item,,,Unlocks the recipe for the fourth trial letter.,,試練の手紙(Ⅳ)のクラフト方法を解放します。
+letter_fox_trial_1,items,Quest,,,Fox Trial Letter I,,きつねの試練の手紙Ⅰ
+letter_fox_trial_1Desc,items,Quest,,,This letter begins a support trial for the white fox.,,白いきつねの支援の試練が始まる手紙です。
+letter_fox_trial_2,items,Quest,,,Fox Trial Letter II,,きつねの試練の手紙Ⅱ
+letter_fox_trial_2Desc,items,Quest,,,This letter begins the second support trial for the white fox.,,白いきつねの支援の試練・第二段階が始まる手紙です。
+letter_fox_trial_3,items,Quest,,,Fox Trial Letter III,,きつねの試練の手紙Ⅲ
+letter_fox_trial_3Desc,items,Quest,,,This letter begins the third support trial for the white fox.,,白いきつねの支援の試練・第三段階が始まる手紙です。
+letter_fox_trial_4,items,Quest,,,Fox Trial Letter IV,,きつねの試練の手紙Ⅳ
+letter_fox_trial_4Desc,items,Quest,,,This letter begins the fourth support trial for the white fox.,,白いきつねの支援の試練・第四段階が始まる手紙です。
+quest_fox_support_trial_1_title,quests,Quest,,,Fox Support Trial I,,きつねの支援試練 レベル1
+quest_fox_support_trial_1_subtitle,quests,Quest,,,Face the snake trial!,,ヘビとの試練に挑もう!
+quest_fox_support_trial_1Desc,quests,Quest,,,"Prove your courage by defeating one of the snakes summoned by the fox. Be careful—your companions may try to finish them off first.","","きつねが呼び出したヘビを倒して、勇気を示そう。仲間が先に討伐してしまわないよう注意してください。"
+quest_fox_support_trial_1_offer,quests,Quest,,,The fox wants to see if you're ready. Can you face... snakes?,,きつねはあなたが支援を受ける準備ができているか試そうとしている。相手は…ヘビ。大丈夫?
+buffFoxTrial1Complete,buffs,Name,,,,Fox Trial I Complete,試練I達成済み
+buffFoxTrial1CompleteDesc,buffs,Description,,,,Used to track completion of Fox Trial I.,きつねの試練Ⅰの達成状況を記録します。
+quest_fox_support_trial_2_title,quests,Quest,,,Fox Support Trial II,,きつねの支援試練 レベル2
+quest_fox_support_trial_2_subtitle,quests,Quest,,,Face the zombie dog trial!,,ゾンビ犬との試練に挑もう!
+quest_fox_support_trial_2Desc,quests,Quest,,,"This trial pits you against zombie dogs. Keep your companions from taking the kill. If you fall, the trial does not immediately fail—you can clear it by hunting down and defeating a wild zombie dog, or spend a ticket to retake the trial and summon another foe.","","今回の試練の相手はゾンビ犬です。仲間が先に討伐してしまわないよう注意してください。倒されても試練は即失敗にはなりません――野生のゾンビ犬を見つけて討伐するか、チケットを消費して試練を再受注(再出現)することができます。"
+quest_fox_support_trial_2_offer,quests,Quest,,,The fox senses your growing strength. Are you ready for what comes next?,,きつねはあなたの成長を感じている。次の試練を受ける準備……できてるかな?
+quest_fox_support_trial_3_title,quests,Quest,,,Fox Support Trial III,,きつねの支援試練 レベル3
+quest_fox_support_trial_3_subtitle,quests,Quest,,,Face the zombie bear.,,ゾンビクマとの試練に挑もう!
+quest_fox_support_trial_3Desc,quests,Quest,,,"This trial pits you against a powerful zombie bear. Keep your companions from taking the kill. If you are defeated, the trial doesn't immediately fail—you can clear it by hunting down and defeating a wild zombie bear, or spend a ticket to retake the trial and summon another foe. ","","今回の試練は、強大なゾンビクマが相手です。仲間が先に討伐してしまわないよう注意してください。倒されても試練は即失敗にはなりません――野生のゾンビクマを見つけて討伐するか、チケットを消費して試練を再受注(再出現)することができます。"
+quest_fox_support_trial_3_offer,quests,Quest,,,The fox senses your growing resilience. A greater challenge awaits.,,きつねは、あなたのたくましさを感じ取っている。さらなる試練が、あなたを待っています。
+quest_fox_support_trial_4_title,quests,Quest,,,Fox Support Trial IV,,きつねの支援試練 レベル4
+quest_fox_support_trial_4_subtitle,quests,Quest,,,Defeat the fox guardian.,,きつねの守護者を打ち倒せ!
+quest_fox_support_trial_4Desc,quests,Quest,,,"A formidable guardian fox spirit stands in your way. Keep your companions from taking the kill. If you are defeated, the trial doesn't immediately fail—you can clear it by hunting down and defeating a wild guardian fox spirit, or spend a ticket to retake the trial and summon another foe.","","あなたの前に立ちはだかるのは、きつねの強大な守護霊。この試練でも仲間が先に討伐してしまわないよう注意してください。倒されても試練は即失敗にはなりません――野生の守護霊を見つけて討伐するか、チケットを消費して試練を再受注(再出現)することができます。"
+quest_fox_support_trial_4_offer,quests,Quest,,,The fox's spirit watches closely. Your final challenge is at hand.,,きつねの精霊が、あなたを静かに見守っている。最後の試練が、いま始まろうとしています。
+quest_fox_support_trial_4_completion,quests,Quest,,,You have earned the guardian's trust. The fox's path is now yours.,,守護者の信頼を得て、あなたはきつねの道を受け継ぎました。
+modFoxClawCharm,item_modifiers,Mod,,,"Fox Charm: Claw",,"フォックスチャーム:爪"
+modFoxClawCharmDesc,item_modifiers,Mod,,,"A legendary fox claw charm. Socket into Hand Armor to activate its power.\nOn power attack,causes nearby enemies to bleed and shock.","","伝説のきつねの爪チャーム。手防具に装着すると力を解放する。\nパワーアタック時、周囲の敵に出血と電撃を与える。"
+modFoxClawCharmEX,item_modifiers,Mod,,,"Fox Charm: Claw EX",,"フォックスチャーム:爪・改"
+modFoxClawCharmEXDesc,item_modifiers,Mod,,,"An enhanced fox claw charm. Socket into Hand Armor to unleash its full potential.\nAny successful attack will cause nearby enemies to bleed and shock.\nAt night,the cooldown is halved.","","強化されたきつねの爪チャーム。手防具に装着すると真価を発揮する。\nあらゆる攻撃命中時に周囲の敵へ出血と電撃を与える。\n夜間はクールダウンが半分になる。"
+buffFoxClawCooldownNightName,buffs,Buff,,,Fox Claw Night Cooldown,,きつねの爪 夜間クールダウン
+buffFoxClawCooldownNightDesc,buffs,Buff,,,"Cooldown between activations,shortened during the night.","","夜間に発動する際の短縮クールダウン。"
+buffFoxClawCooldownName,buffs,Buff,,,"Fox Claw Cooldown",,"きつねの爪 クールダウン"
+buffFoxClawCooldownDesc,buffs,Buff,,,"The claw cannot activate again until the cooldown ends.",,"クールダウンが終了するまで、きつねの爪は再び発動できない。"
+buffFoxClawBleedName,buffs,Buff,,,"Fox Claw Bleed",,"きつねの爪 出血"
+dialog_fox_greeting,Dialogue,Fox,,,"There you are.",,"やあ"
+dialog_fox_followme,Dialogue,Fox,,,Follow Me,,ついてきて!
+dialog_fox_pickup,Dialogue,Fox,,,Hop in!,,バッグに入って!
+dialog_fox_pickup_ref,Dialogue,Fox,,,Let's head home!,,帰ろうか!
+dialog_fox_showpack,Dialogue,Fox,,,What's in your pack?,,なに持ってる?
+dialog_fox_stayhere,Dialogue,Fox,,,Stay right there,,ここで待ってて
+dialog_fox_guardhere,Dialogue,Fox,,,Stay over here,,この辺見張ってて
+dialog_fox_wander,Dialogue,Fox,,,Go play around here,,ちょっと遊んできて
+dialog_fox_loot,Dialogue,Fox,,,Loot around here,,アイテム拾ってきて
+dialog_fox_dismiss,Dialogue,Fox,,,Abandon,,自由にしてあげるね
+dialog_fox_hire,Dialogue,Fox,,,"'You've come far… Shall we walk together from here?'",,"「ここまで来たんだね…これからは一緒に歩こうか?」"
+dialog_fox_menu_trials,dialog,Fox,,,"Tell me about the fox trials.",,きつねの試練について教えて
+dialog_fox_start_trial_1,dialog,Fox,,,"I want to begin the first fox trial.",,最初のきつねの試練に挑戦したい
+dialog_fox_confirm_start_trial_1,dialog,Fox,,,"'This trial will summon five snakes.They're sneaky—watch your step!Ready to begin?'",,「この試練ではヘビが5体現れるよ。見えにくいから足元には注意してね!準備はいい?」
+dialog_fox_start_confirm,dialog,Fox,,,"Yeah,I'm ready. Let's do this!",,うん、準備できてるよ。行こう!
+dialog_fox_trial2_entry,dialog,Fox,,,"I want to take the second fox trial.",,2つ目のきつねの試練に挑戦したい
+dialog_fox_trial2_require_info,dialog,Fox,,,"Could you remind me what the second trial needs?",,2つ目の試練に何が必要か教えてくれる?
+dialog_fox_trial2_explain,dialog,Fox,,,"'To take on the second trial,you'll need 10 Support Tickets.Once you've got them,I'll set things up for you!'",,「2つ目の試練に挑戦するには、サポートチケットが10枚必要だよ。そろったら声をかけてね!」
+dialog_fox_trial2_entry_text,dialog,Fox,,,"Let's see if I'm ready...",,挑戦できるかな…
+dialog_fox_start_trial_2,dialog,Fox,,,"I'm ready. Let's start the second fox trial! (Needs 10 Support Tickets)",,準備はできてる。2つ目のきつねの試練、始めよう!(チケット10枚必要)
+dialog_fox_confirm_start_trial_2,dialog,Fox,,,"'This trial will pit you against two zombie dogs.They're fast,so stay alert!Use 10 Support Tickets to begin?'",,「今回の試練ではゾンビ犬2体と戦うことになるよ。すばやいから気をつけてね!チケット10枚で始める?」
+dialog_fox_trial3_entry,dialog,Fox,,,"I want to take the third fox trial.",,"3つ目のきつねの試練に挑戦したい"
+dialog_fox_trial3_entry_text,dialog,Fox,,,"Let's see if I'm ready for the next challenge...",,"次の挑戦、できるかな…"
+dialog_fox_trial3_require_info,dialog,Fox,,,"What do I need for the third trial?",,"3つ目の試練に必要なもの教えて?"
+dialog_fox_trial3_explain,dialog,Fox,,,"'To take on the third trial,you'll need 20 Support Tickets.Once you've got them,let me know!'",,"「3つ目の試練には、サポートチケットが20枚必要だよ。そろったら声をかけてね!」"
+dialog_fox_start_trial_3,dialog,Fox,,,"I'm ready. Let's start the third fox trial! (Needs 20 Support Tickets)",,"準備できたよ。3つ目のきつねの試練、始めよう!(チケット20枚必要)"
+dialog_fox_confirm_start_trial_3,dialog,Fox,,,"'This time,you'll face a zombie bear.It's tough,so be on your guard!Use 20 Support Tickets to begin?'",,"「今回の試練ではゾンビベアと戦うことになるよ。かなり手強いから気をつけてね!チケット20枚で始める?」"
+dialog_fox_trial4_entry,dialog,Fox,,,"I want to take the final fox trial.",,"最後のきつねの試練に挑戦したい"
+dialog_fox_trial4_entry_text,dialog,Fox,,,"Can I handle the final challenge…?",,"最後の挑戦…乗り越えられるかな?"
+dialog_fox_trial4_require_info,dialog,Fox,,,"What do I need for the final trial?",,"最後の試練には何が必要なの?"
+dialog_fox_trial4_explain,dialog,Fox,,,"'You'll need 30 Support Tickets for the last fox trial.Let me know when you're ready!'",,"「最後のきつねの試練には、試練チケットが30枚必要だよ。準備ができたら教えてね!」"
+dialog_fox_start_trial_4,dialog,Fox,,,"I'm ready. Let's begin the final fox trial! (Needs 30 Support Tickets)",,"準備万端だよ。最後のきつねの試練、始めよう!(チケット30枚必要)"
+dialog_fox_confirm_start_trial_4,dialog,Fox,,,"'This time,your opponent is the guardian beast.It's fierce and relentless—be ready.Shall we begin with 30 Tickets?'",,"「今回の相手は守護の獣。凶暴で容赦ないよ。覚悟はできてる?チケット30枚で始める?」"
+dialog_fox_menu_explain,Dialogue,Fox,,,Tell me more about your support.,,君の支援について詳しく教えて
+dialog_fox_menu_support,dialog,Fox,,,"Tell me about the support you offer.",,君の支援について教えてほしい
+dialog_fox_explain_support1,Dialogue,Fox,,,Support Level 1 Effects,,支援レベル1の効果
+dialog_fox_support1_text,Dialogue,Fox,,,"'You'll move faster,get tired slower,and take less damage.And gain access to new allies.'",,"「移動が速くなり、スタミナ消費が減って、ダメージも軽減されるよ。新しい仲間とも出会えるようになるよ。」"
+dialog_fox_explain_support2,Dialogue,Fox,,,Support Level 2 Effects,,支援レベル2の効果
+dialog_fox_support2_text,Dialogue,Fox,,,"'You'll also recover health and stamina over time.'",,"「前より体力やスタミナが少しずつ回復していくよ」"
+dialog_fox_explain_support3,Dialogue,Fox,,,Support Level 3 Effects,,支援レベル3の効果
+dialog_fox_support3_text,Dialogue,Fox,,,"'You'll find more loot,craft faster,your tools last longer.'",,"「アイテムが見つかりやすくなって、クラフトも早くなるし、道具も長持ちするようになるよ。」"
+dialog_fox_explain_support4,Dialogue,Fox,,,Support Level 4 Effects,,支援レベル4の効果
+dialog_fox_support4_text,Dialogue,Fox,,,"'At night,your attacks grow stronger,and you'll gain more experience overall.'",,"「夜になると攻撃力が上がって、経験値の取得量も増えるよ。」"
+dialog_fox_hint_root,Dialogue,Fox,,,'What do you want to know about?',,「何について知りたい?」
+dialog_fox_hint_root_text,Dialogue,Fox,,,'I've gathered some useful tips. Take your pick!',,「役に立ちそうな情報をいくつか持ってるよ。気になるものを選んで!」
+dialog_fox_hint_rare_enemy,Dialogue,Fox,,,Special enemies,,特別な敵
+dialog_fox_hint_poison_zombie,Dialogue,Fox,,,Poison zombies,,毒持ちゾンビ
+dialog_fox_hint_ticket,Dialogue,Fox,,,Support Tickets,,サポートチケット
+dialog_fox_enemy_hint_text,Dialogue,Fox,,,"'They say strange creatures walk the wastelands after dark… though you might glimpse them elsewhere too.'",,"「夜の荒地では、奇妙な獣たちが歩いているらしいよ……他の場所でも、まれに見かけることはあるかもしれないね。」"
+dialog_fox_hint_poison_zombie_text,Dialogue,Fox,,,"'Some zombies are surrounded by a green mist at night. If they hit you,you'll be poisoned. It's best to sneak around them.'",,"「夜になると、手に緑色のもやをまとったゾンビが現れるよ。殴られると毒状態になるから、見かけたらそっと避けるのが吉だね。」"
+dialog_fox_hint_ticket_text,Dialogue,Fox,,,"'You might earn special Support tickets by completing trader quests. '",,"「トレーダーのクエストをこなすと、特別な『サポートチケット』が手に入るよ。」"
+dialog_fox_menu_support_explain,Dialogue,Fox,,,I want to know about your support.,,君の支援について知りたい
+# ===== 料理人関連 =====,,,,,,,
+npcCookChicken,entityclasses,Entity Name,,,Coco,,Coco
+npcCookChickenName,entityclasses,Entity Name,,,Coco the Cook,,料理係Coco
+chickenPickUpNPC,items,Item,,,Chicken Companion Totem,,Cocoを呼び出すお守り
+chickenPickUpNPCDesc,items,Item,,,"A totem that lets you summon your cheerful chef,Coco.","","陽気な料理係・Cocoを呼び出せるお守り。"
+letter_welcome_cook,items,Quest,,,Worn Letter - Cook,,古びた手紙 - 料理係
+letter_welcome_cookDesc,items,Quest,,,A weathered letter with food stains. It smells faintly delicious.,,料理のしみがついた古い手紙。おいしそうな香りがする。
+schematic_cook_letter,items,Item,,,Cook's Letter Craft Schematic,,料理係の手紙クラフト図面
+schematic_cook_letterDesc,items,Item,,,Unlocks the recipe for the cook's welcome letter.,,料理係の仲間を呼ぶ手紙のクラフト方法を解放します。
+quest_welcome_cook_title,quests,Quest,,,Welcome the Cook,,料理係の仲間入り
+quest_welcome_cook_subtitle,quests,Quest,,,A task to welcome Coco,,Cocoを迎える準備
+quest_welcome_cookDesc,quests,Quest,,,You've found a letter mentioning a culinary companion. Perhaps a tool of their trade will catch their attention.,,料理にまつわる仲間のことが書かれた手紙を見つけた。仕事道具を用意すれば呼び出せるかもしれない。
+coco_summon_message,buffs,Buff,,,Coco has arrived to help you!,,Cocoが助けに来たよ!
+coco_revive_message,buffs,Buff,,,Coco has risen from the grave... again.,,Cocoが墓から蘇った…ふたたび。
+reviveStoneCoco,Blocks,Block,,,Coco's grave marker.,,Cocoの墓標
+cookSummonItem,items,Quest,,,Letter of Summoning - Cook,,料理係を召喚する手紙
+desc_cookSummonItem,items,Quest,,,Read this to summon your culinary companion. Talk to them when they appear.,,これを読んで現れた料理係に話しかけてみよう。
+letter_specialbirdnest,items,Quest,,,A Request from Coco,,Cocoからのお願い
+letter_specialbirdnestDesc,items,Quest,,,A note from Coco about gathering materials to build a new nest. It smells faintly of feathers.,,Cocoからのお願い。新しい巣を作るための素材について書かれている。ほんのり羽のにおいがする。
+letter_soupstove,items,Quest,,,A Request from Coco,,Cocoからのお願い
+letter_soupstoveDesc,items,Quest,,,A note from Coco about building a stove to prepare soup base. It smells faintly of spices.,,Cocoからのお願い。スープの素を作るためのコンロについて書かれている。ほのかにスパイスの香りがする。
+letter_floursack,items,Quest,,,A Request from Coco,,Cocoからのお願い
+letter_floursackDesc,items,Quest,,,A note from Coco about preparing a sack to produce precious flour. It smells faintly of bread.,,Cocoからのお願い。特製小麦粉を作る袋について書かれている。ふわっとパンのようなにおいがする。
+letter_goldenfridge,items,Quest,,,A Request from Coco,,Cocoからのお願い
+letter_goldenfridgeDesc,items,Quest,,,A note from Coco about crafting a golden fridge to make golden butter. It feels cool to the touch.,,Cocoからのお願い。黄金のバターを作る特製冷蔵庫について書かれている。触るとひんやり冷たい。
+quest_specialbirdnest_title,quests,Quest,,,Special Bird Nest Request,,特別な巣づくりのお願い
+quest_specialbirdnest_subtitle,quests,Quest,,,Could you help me gather materials for a special bird nest?,,特別なたまごが採れる巣を作るための材料、集めてもらえるかな?
+quest_specialbirdnestDesc,quests,Quest,,,'Could you help me gather materials for a special bird nest?',,「特別なたまごが採れる巣を作るための材料、集めてもらえるかな?」
+quest_specialbirdnest_offer,quests,Quest,,,'I'm planning to place a special nest to collect eggs. I need some help gathering materials.',,「たまごが採れる特別な巣を用意したいんだ。材料を集めるの、手伝ってくれる?」
+quest_completion_specialbirdnest,quests,Quest,,,'Thanks! With this,you'll be able to place the nest and collect eggs from it. Here's the schematic.',「助かったよ!これで巣を置いて、たまごが採れるようになるはず。設計図、渡しておくね。」
+quest_soupstove_title,quests,Quest,,,Soup Stove Request,,スープコンロのお願い
+quest_soupstove_subtitle,quests,Quest,,,Could you help me gather materials for a soup stove?,,スープコンロを作るための材料を集めてもらえるかな?
+quest_soupstoveDesc,quests,Quest,,,'Could you help me gather materials for a soup stove?',,「スープコンロを作るための材料を集めてもらえるかな?スープの素を作れるようになるよ!」
+quest_soupstove_offer,quests,Quest,,,'I want to make a stove to prepare warm meals. It will produce soup base!',,「あたたかいスープを作るために、スープの素を作れるコンロを用意したいんだ。手伝ってくれる?」
+quest_completion_soupstove,quests,Quest,,,'Thanks! With this,you'll be able to produce soup base. Here's the schematic.',「助かったよ!これでスープの素が作れるようになるよ。設計図、渡しておくね。」
+quest_floursack_title,quests,Quest,,,Flour Sack Request,,小麦粉袋のお願い
+quest_floursack_subtitle,quests,Quest,,,Could you help me gather materials for a flour sack?,,小麦粉袋を作るための材料を集めてもらえるかな?
+quest_floursackDesc,quests,Quest,,,'Could you help me gather materials for a flour sack?',,「小麦粉袋を作るための材料を集めてもらえるかな?特製小麦粉が作れるようになるよ!」
+quest_floursack_offer,quests,Quest,,,'We'll need flour for many dishes. This one makes precious flour!',,「いろんな料理に使う特製小麦粉が必要なんだ。ちゃんとした袋を作るために手伝って!」
+quest_completion_floursack,quests,Quest,,,'Great! Now you can produce precious flour. Here's the schematic.',,「やったね!これで特製小麦粉が作れるようになるよ。設計図、渡しておくね。」
+quest_goldenfridge_title,quests,Quest,,,Golden Fridge Request,,特製冷蔵庫のお願い
+quest_goldenfridge_subtitle,quests,Quest,,,Could you help me gather materials for a golden fridge?,,特製冷蔵庫を作るための材料を集めてもらえるかな?
+quest_goldenfridgeDesc,quests,Quest,,,'Could you help me gather materials for a golden fridge?',,「特製冷蔵庫を作るための材料を集めてもらえるかな?黄金のバターが作れるようになるよ!」
+quest_goldenfridge_offer,quests,Quest,,,'I want to keep ingredients cool and make golden butter. Let's build a fridge!',,「食材を冷やして黄金のバターを作れる冷蔵庫を用意したいんだ。一緒に作ろう!」
+quest_completion_goldenfridge,quests,Quest,,,'Thanks! Now you'll be able to make golden butter. Here's the schematic.',,「ありがとう!これで黄金のバターが作れるようになるよ。設計図を受け取ってね。」
+dialog_coco_greeting,Dialogue,Coco,,,"Hey there.",,やあ
+dialog_coco_followme,Dialogue,Coco,,,Follow Me,,ついてきて!
+dialog_coco_pickup,Dialogue,Coco,,,Hop in!,,バッグに入って!
+dialog_coco_pickup_ref,Dialogue,Coco,,,Let's head home!,,帰ろうか!
+dialog_coco_showpack,Dialogue,Coco,,,What's in your pack?,,なに持ってる?
+dialog_coco_stayhere,Dialogue,Coco,,,Stay right there,,ここで待ってて
+dialog_coco_guardhere,Dialogue,Coco,,,Stay over here,,この辺見張ってて
+dialog_coco_wander,Dialogue,Coco,,,Go play around here,,ちょっと遊んできて
+dialog_coco_loot,Dialogue,Coco,,,Loot around here,,アイテム拾ってきて
+dialog_coco_dismiss,Dialogue,Coco,,,Abandon,,自由にしてあげるね
+dialog_coco_hire,Dialogue,Coco,,,"'You must be hungry. Let's cook something together!'","","「お腹すいたでしょ?いっしょに料理しようよ!」"
+dialog_coco_request_kitchen,Dialog,Coco,,,"Let's work on the kitchen.","",キッチンのことをお願い
+dialog_coco_kitchen_request,Dialog,Coco,,,"What would you like to ask for?","","何する?"
+dialog_coco_requestfood,Dialog,Coco,,,"Cooking","","料理"
+dialog_coco_quest_select,Dialog,Coco,,,"Equipment Quest","","設備クエスト"
+dialog_coco_upgrade_select,Dialog,Coco,,,"Upgrade Equipment","","設備アップグレード"
+dialog_coco_quest_birdnest,Dialog,Coco,,,"'I want to make a special nest that gives really good eggs. '","","「特別なたまごが採れる巣を作りたいんだ。」"
+dialog_coco_confirm_start_kitchen1,Dialog,Coco,,,"'Let me explain what I need.'","","「必要なものを説明するね。」"
+dialog_coco_start_confirm,Dialog,Coco,,,"Okay,I'll do it!","","わかった、やってみる!"
+dialog_coco_quest_soupstove,Dialog,Coco,,,"'I want to make a stove for soup.'",,「スープ用のコンロを作りたいんだ。」
+dialog_coco_confirm_start_kitchen2,Dialog,Coco,,,"'I'll tell you what I need.'",,「必要なもの、説明するね」
+dialog_coco_quest_floursack,Dialog,Coco,,,"'If I had a flour sack,I could make much fluffier bread.'",,「小麦粉袋があれば、ふわふわのパンが作れるんだけど。」
+dialog_coco_confirm_start_kitchen3,Dialog,Coco,,,"'Here's what we'll need.'",,「必要な材料を教えるね」
+dialog_coco_quest_goldenfridge,Dialog,Coco,,,"'I've been dreaming of a golden fridge!'",,「ずっと黄金の冷蔵庫に憧れてたんだ!」
+dialog_coco_confirm_start_kitchen4,Dialog,Coco,,,"'Let's make it shiny!'",,「ぴかぴかに仕上げよう!」
+dialog_coco_grow_nest,Dialog,Coco,,,"Grow the Nest","",巣を育てる
+dialog_coco_upgrade_soupstove,Dialog,Coco,,,"Upgrade the Stove","",コンロを強化する
+dialog_coco_upgrade_floursack,Dialog,Coco,,,"Upgrade the Flour Sack","",小麦粉袋を強化する
+dialog_coco_upgrade_goldenfridge,Dialog,Coco,,,"Upgrade the Fridge","",冷蔵庫を強化する
+dialog_coco_cook_request,Dialogue,Coco,,,"'What would you like me to cook?'","","「何を作ってほしい?」"
+dialog_coco_cook_boiledegg,Dialogue,Coco,,,Make boiled egg,,ゆで卵を作って
+dialog_coco_confirm_boiledegg,Dialogue,Coco,,,"'Do you want to try making a boiled egg?'","","「ゆで卵を作る?」"
+dialog_coco_cook_confirm,Dialogue,Coco,,,"Yes,let's cook!",,うん、作って!
+dialog_coco_recipe_boiledegg,Dialogue,Coco,,,"'You'll need one regular Egg to make this.'",,"「普通の卵がひとつあれば作れるよ。」"
+dialog_coco_cook_omelette,Dialogue,Coco,,,Make tamagoyaki,,卵焼きを作って
+dialog_coco_confirm_omelette,Dialogue,Coco,,,"'Do you want to try making an omelette?'","","「卵焼きを作る?」"
+dialog_coco_cook_confirm,Dialogue,Coco,,,"Yes,let's cook!",,うん、作って!
+dialog_coco_recipe_omelette,Dialogue,Coco,,,"'You'll need a Special Egg and some Animal Fat to make this.'",,"「特別な卵と動物性油脂があれば作れるよ。」"
+dialog_coco_cook_soup,Dialogue,Coco,,,Make egg soup,,卵スープを作って
+dialog_coco_confirm_soup,Dialogue,Coco,,,"'Do you want to try making egg soup?'","","「卵スープを作る?」"
+dialog_coco_cook_confirm,Dialogue,Coco,,,"Yes,let's cook!",,うん、作って!
+dialog_coco_recipe_soup,Dialogue,Coco,,,"'You'll need a Special Egg,Soup Base,and some Mushrooms to make this.'",,"「特別な卵とスープの素、それにキノコが必要だよ。」"
+dialog_coco_cook_toast,Dialogue,Coco,,,Make French Toast,,フレンチトーストを作って
+dialog_coco_confirm_toast,Dialogue,Coco,,,"'Do you want to try making French Toast?'","","「フレンチトーストを作る?」"
+dialog_coco_cook_confirm,Dialogue,Coco,,,"Yes,let's cook!",,うん、作って!
+dialog_coco_recipe_toast,Dialogue,Coco,,,"'You'll need a Special Egg,Special Flour,and some Honey to make this.'",,"「特別な卵と特製小麦粉、それに蜂蜜の瓶詰めが必要だよ。」"
+dialog_coco_cook_golden,Dialogue,Coco,,,Make Golden Omelette,,黄金のオムレツを作って
+dialog_coco_confirm_golden,Dialogue,Coco,,,"'Do you want to try making the Golden Omelette?'","","「黄金のオムレツを作る?」"
+dialog_coco_cook_confirm,Dialogue,Coco,,,"Yes,let's cook!",,うん、作って!
+dialog_coco_recipe_golden,Dialogue,Coco,,,"'You'll need a Special Egg,Golden Butter,and Super Corn to make this.'","","「特別な卵と黄金バター、それにスーパーコーンが必要だよ。」"
+foodCocoBoiledEgg,items,Food,,,Coco's Special Boiled Egg,,Cocoの特製ゆで卵
+foodCocoBoiledEggDesc,items,Food,,,"A gently warm and tender boiled egg,infused with Coco's care. Coco says it's perfect when you just need a little comfort.",,"ほんのり温かい、優しい味のゆで卵。Cocoの気持ちがこもっている。"
+foodCocoEggOmelette,items,Food,,,Coco's Fluffy Tamagoyaki,,Cocoのほかほか卵焼き
+foodCocoEggOmeletteDesc,items,Food,,,"A warm,fluffy omelette made with care. Increases your luck when looting for 5 minutes.",,"ふわふわであったかい卵焼き。5分間だけ探索運がちょっとアップ。"
+buffCocoLootBoost,buffs,Buff,,,Coco's Egg Surprise,,Cocoのたまごのおたのしみ
+buffCocoLootBoostDesc,buffs,Buff,,,"Increases your luck when looting for 5 minutes. Coco says you never know what you'll find!",,"5分間だけ探索運がちょっとアップ。"
+foodCocoEggSoup,items,Food,,,Coco's Signature Egg Soup,,Cocoの直伝卵スープ
+foodCocoEggSoupDesc,items,Food,,,"A nourishing soup of eggs and mushrooms. Keeps you warm and slightly boosts your resource gathering for 5 minutes.",,"卵とキノコのやさしいスープ。体がぽかぽか温まって、資源採集量が少しアップ(5分間)。"
+buffCocoEggSoupBoost,buffs,Buff,,,Coco's Warming Egg Soup,,Cocoのぽかぽか卵スープ
+buffCocoEggSoupBoostDesc,buffs,Buff,,,"Keeps you warm and slightly boosts your resource gathering for 5 minutes.",,"体がぽかぽか温まって、資源採集量が少しアップ(5分間)。"
+foodCocoFrenchToast,items,Food,,,Coco's Forest French Toast,,Cocoの森のフレンチトースト
+foodCocoFrenchToastDesc,items,Food,,,"A sweet,syrupy dish with healing honey. Helps cure infection — made for adventurers who need a little comfort. Speeds up your attacks and movement slightly for 5 minutes.",,"甘い香りと癒しのはちみつ。感染症も少しよくなる、旅人のためのCoco特製フレンチトースト。5分間だけ攻撃と移動がちょっと速くなる。"
+buffCocoFrenchToastBoost,buffs,Buff,,,Coco's Energizing French Toast,,Cocoの元気になるフレンチトースト
+buffCocoFrenchToastBoostDesc,buffs,Buff,,,"Speeds up your attacks and movement slightly for 5 minutes. Coco says it's like a jump-start for your adventure!",,"5分間だけ攻撃と移動がちょっと速くなる。"
+foodCocoGoldenOmelette,items,Food,,,Coco's Golden Omelette,,Cocoの金のオムレツ
+foodCocoGoldenOmeletteDesc,items,Food,,,"A luxurious omelette made with rare ingredients and a golden sauce. Grants a boost to ranged damage and reduces incoming damage for 30 minutes. Coco says it might help you win any battle...",,"希少な素材と金色のソースで仕上げた、贅沢なオムレツ。食べると遠距離ダメージが上昇し、受けるダメージが軽減される(30分間)。"
+buffCocoGoldenOmelette,buffs,Buff,,,Coco's Golden Feast,,Cocoの金色ごちそう
+buffCocoGoldenOmeletteDesc,buffs,Buff,,,"Boosts ranged damage and defense for 30 minutes. Coco says this feast brings victory to your adventure!",,"30分間遠距離ダメージと防御力がアップ。これを食べれば冒険に勝てる!"
+resourceSpecialEgg,items,Item,,,"Special Egg",,"特別な卵"
+resourceSoupBase,items,Item,,,"Soup Base",,"スープの素"
+resourceSpecialFlour,items,Item,,,"Special Flour",,"特製小麦粉"
+resourceGoldenButter,items,Item,,,"Golden Butter",,"金色のバター"
+resourceSpecialEggDesc,items,Item,,,"A rare and precious egg,full of flavor and perfect for all kinds of dishes.",,"風味豊かで、さまざまな料理にぴったりな貴重なたまご。"
+resourceSoupBaseDesc,items,Item,,,"The heart of any good soup,simmered to perfection.",,"すべての良いスープの素、じっくり煮込まれた素材。"
+resourceSpecialFlourDesc,items,Item,,,"A soft,fine flour ideal for creating delicious breads.",,"美味しいパン作りに最適な、やわらかくきめ細かい小麦粉。"
+resourceGoldenButterDesc,items,Item,,,"An exquisite butter with a rich,creamy taste and a golden hue.",,"豊かなクリーム風味と金色の輝きを持つ極上のバター。"
+cntSpecialBirdnest,blocks,Block,,,"Special Bird Nest",,"特別な鳥の巣"
+cntSpecialBirdnestDesc,blocks,Block,,,"A carefully tended bird nest,providing rare and precious eggs. ※Requires 7 blocks of open space above to place.","","大切に手入れされた鳥の巣。貴重な特製たまごを提供してくれる。※設置には頭上7ブロック分の空間が必要です。"
+cntSpecialBirdnestLv2,blocks,Block,,,"Special Bird Nest Lv2",,"特別な鳥の巣Lv2"
+cntSpecialBirdnestLv2Desc,blocks,Block,,,"An upgraded bird nest,producing special eggs at a faster pace. ※Requires 7 blocks of open space above to place.","","特別な卵の生産スピードが上がった鳥の巣。※設置には頭上7ブロック分の空間が必要です。"
+xuiDewCollector,UI,XUI,false,false,Production Unit,,生産設備
+dewCollectorEmpty,UI,Use Prompt,false,false,{0} Open {1} ([888888]Empty[-]),,{0}で{1}を開く(空)
+dewCollectorHasDirtyWater,UI,Use Prompt,false,false,{0} Open {1} ([FFAA00]Ready[-]),,{0}で{1}を開く(完了)
+toolNestWarmer,items,Item,,,"Special Mat",,"特製マット"
+toolNestWarmerDesc,items,Item,,,"Used to upgrade a Special Bird Nest,increasing the speed of egg production.Bring this item to Coco and she will trade it for the upgraded facility.",,"鳥の巣をアップグレードし、卵の生産速度を高めるために使用する。このアイテムを持ってCocoに話しかけてアップグレードした設備と交換しよう。"
+cntSoupStove,blocks,Block,,,"Soup Stove","",スープコンロ
+cntSoupStoveDesc,blocks,Block,,,"A warm stove that slowly produces Soup Base. ※Requires 7 blocks of open space above to place.","","スープの素をゆっくり生成する温かなコンロ。※設置には頭上7ブロック分の空間が必要です。"
+cntSoupStoveLv2,blocks,Block,,,"Soup Stove Lv2","",スープコンロLv2
+cntSoupStoveLv2Desc,blocks,Block,,,"An upgraded stove that speeds up Soup Base production. ※Requires 7 blocks of open space above to place.","","スープの素の生産速度が上がるアップグレードコンロ。※設置には頭上7ブロック分の空間が必要です。"
+toolGoldenLadle,items,Item,,,"Golden Ladle",,"黄金のレードル"
+toolGoldenLadleDesc,items,Item,,,"Used to upgrade a Soup Stove.Bring this item to Coco and she will trade it for the upgraded facility.",,"スープコンロをアップグレードする。このアイテムを持ってCocoに話しかけてアップグレードした設備と交換しよう。"
+cntFlourSack,blocks,Block,,,"Flour Sack",,"特製小麦粉袋"
+cntFlourSackDesc,blocks,Block,,,"A sack filled with precious flour,slowly producing special wheat powder. ※Requires 7 blocks of open space above to place.","","特別な小麦粉がゆっくりと作られる袋。※設置には頭上7ブロック分の空間が必要です。"
+cntFlourSackLv2,blocks,Block,,,"Flour Sack Lv2",,"特製小麦粉袋Lv2"
+cntFlourSackLv2Desc,blocks,Block,,,"An upgraded sack,producing special flour at a faster pace. ※Requires 7 blocks of open space above to place.","","特製小麦粉の生産スピードが上がった袋。※設置には頭上7ブロック分の空間が必要です。"
+toolGoldenSifter,items,Item,,,"Golden Sifter",,"黄金のふるい"
+toolGoldenSifterDesc,items,Item,,,"Used to upgrade a Flour Sack,improving the speed of special flour production.Bring this item to Coco and she will trade it for the upgraded facility.","","粉袋をアップグレードし、特製小麦粉の生産速度を高めるために使用する。このアイテムを持ってCocoに話しかけてアップグレードした設備と交換しよう。"
+cntGoldenFridge,blocks,Block,,,"Golden Fridge",,"特製冷蔵庫"
+cntGoldenFridgeDesc,blocks,Block,,,"A chilled container that produces golden butter over time. ※Requires 7 blocks of open space above to place.","","時間をかけて黄金のバターを生み出す冷蔵庫。※設置には頭上7ブロック分の空間が必要です。"
+cntGoldenFridgeLv2,blocks,Block,,,"Golden Fridge Lv2",,"特製冷蔵庫Lv2"
+cntGoldenFridgeLv2Desc,blocks,Block,,,"An upgraded fridge that produces golden butter faster. ※Requires 7 blocks of open space above to place.","","特製バターの生産スピードが上がった冷蔵庫。※設置には頭上7ブロック分の空間が必要です。"
+toolGoldenCoolant,items,Item,,,"Golden Coolant",,"黄金の冷却材"
+toolGoldenCoolantDesc,items,Item,,,"Used to upgrade a Golden Fridge,increasing the speed of golden butter production.Bring this item to Coco and she will trade it for the upgraded facility.","","特製バター冷蔵庫をアップグレードし、黄金のバターの生産速度を高めるために使用する。このアイテムを持ってCocoに話しかけてアップグレードした設備と交換しよう。"
+schematic_specialbirdnest,items,Item,,,"Special Bird Nest Schematic",,"特別なたまごの巣の設計図"
+schematic_specialbirdnestDesc,items,Item,,,"A blueprint that teaches you how to craft a special bird nest.","","特別なたまごを育む鳥の巣の作成方法が学べる設計図。"
+schematic_soupstove,items,Item,,,"Soup Stove Schematic",,"スープコンロの設計図"
+schematic_soupstoveDesc,items,Item,,,"A blueprint for building a soup stove.","","スープの素を生成するコンロの作り方が学べる設計図。"
+schematic_floursack,items,Item,,,"Flour Sack Schematic",,"特製小麦粉袋の設計図"
+schematic_floursackDesc,items,Item,,,"A blueprint for crafting a flour sack.","","特製小麦粉を生み出す袋の作り方が学べる設計図。"
+schematic_goldenfridge,items,Item,,,"Golden Fridge Schematic",,"特製冷蔵庫の設計図"
+schematic_goldenfridgeDesc,items,Item,,,"A blueprint for building a golden butter-producing fridge.","","黄金のバターを生み出す冷蔵庫の作り方が学べる設計図。"
+# ===== 職人関連 =====,,,,,,,
+npcTinkererRabbit,entityclasses,Entity Name,,,Lapin,,Lapin
+npcTinkererRabbitName,entityclasses,Entity Name,,,Lapin the Tinkerer,,職人Lapin
+rabbitPickUpNPC,items,Item,,,Rabbit Companion Totem,,Lapinを呼び出すお守り
+rabbitPickUpNPCDesc,items,Item,,,"A totem that lets you summon your skilled tinkerer,Lapin.","","器用な職人・Lapinを呼び出せるお守り。"
+letter_welcome_tinkerer,items,Quest,,,Worn Letter - Tinkerer,,古びた手紙 - 職人
+letter_welcome_tinkererDesc,items,Quest,,,A letter smudged with grease and blueprints. It sparks your curiosity.,,設計図と油のしみがついた手紙。何か面白そうなことが書いてある。
+schematic_tinkerer_letter,items,Item,,,Tinkerer's Letter Craft Schematic,,職人の手紙クラフト図面
+schematic_tinkerer_letterDesc,items,Item,,,Unlocks the recipe for the tinkerer's welcome letter.,,職人の仲間を呼ぶ手紙のクラフト方法を解放します。
+quest_welcome_tinkerer_title,quests,Quest,,,Welcome the Tinkerer,,整備士の仲間入り
+quest_welcome_tinkerer_subtitle,quests,Quest,,,A task to welcome Lapin,,Lapinを迎える準備
+quest_welcome_tinkererDesc,quests,Quest,,,You've found a letter referencing a skilled tinkerer. Craft a useful tool that might attract their attention.,,整備の得意な仲間のことが書かれた手紙を見つけた。役立つ道具を作れば呼び出せるかもしれない。
+lapin_summon_message,buffs,Buff,,,Lapin has arrived to help you!,,Lapinが助けに来たよ!
+lapin_revive_message,buffs,Buff,,,Lapin has risen from the grave... again.,,Lapinが墓から蘇った…ふたたび。
+reviveStoneLapin,Blocks,Block,,,Lapin's grave marker.,,Lapinの墓標
+tinkererSummonItem,items,Quest,,,Letter of Summoning - Tinkerer,,職人を召喚する手紙
+desc_tinkererSummonItem,items,Quest,,,Read this to summon your clever tinkerer. Talk to them when they appear.,,これを読んで現れた職人に話しかけてみよう。
+itemRabbitSupportActivator1,items,Item,,,Rabbit Charm I,,ラビットチャームⅠ(いち)
+itemRabbitSupportActivator1Desc,items,Item,,,"A charm imbued with the skill of a nimble mechanic.\n[99FFFF]If you ever lose Lapin's support,this charm may help restore it.",,"器用な整備士の技が宿ったチャーム。\n[99FFFF]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+itemRabbitSupportActivator2,items,Item,,,Rabbit Charm II,,ラビットチャームⅡ(に)
+itemRabbitSupportActivator2Desc,items,Item,,,"The charm hums with greater craftsmanship.\n[FFCC66]If you ever lose Lapin's support,this charm may help restore it.",,"熟練の技がさらに高まったチャーム。\n[FFCC66]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+itemRabbitSupportActivator3,items,Item,,,Rabbit Charm III,,ラビットチャームⅢ(さん)
+itemRabbitSupportActivator3Desc,items,QuItemest,,,"A finely tuned charm radiating energy.\n[FF9999]If you ever lose Lapin's support,this charm may help restore it.",,"磨き上げられた技術が感じられるチャーム。\n[FF9999]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+itemRabbitSupportActivator4,items,Item,,,Rabbit Charm IV,,ラビットチャームⅣ(よん)
+itemRabbitSupportActivator4Desc,items,Item,,,"An exquisite charm,fit for a master builder.\nUnlocks powerful crafting knowledge:\nLapin's Builder Bench\n[66CCFF]If you ever lose Lapin's support,this charm may help restore it.",,"熟練の建築職人にふさわしい至高のチャーム。\n特別なクラフト知識が解放されます:\nLapinの建築ベンチ\n[66CCFF]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+RabbitSupportLv1,buffs,Buff,,,Lv1,,レベル1
+buffRabbitSupport1Desc,buffs,Buff,,,"Slightly boosts resource gathering and block damage.",,"資源採取量とブロックダメージが少し上昇する"
+RabbitSupportLv2,buffs,Buff,,,Lv2,,レベル2
+buffRabbitSupport2Desc,buffs,Buff,,,"Adds crafting and scrapping speed boosts.",,"クラフトとスクラップの速度が上昇する"
+RabbitSupportLv3,buffs,Buff,,,Lv3,,レベル3
+buffRabbitSupport3Desc,buffs,Buff,,,"Further increases productivity across all fields.",,"全体的な作業効率がさらにアップする"
+RabbitSupportLv4,buffs,Buff,,,Lv4,,レベル4
+buffRabbitSupport4Desc,buffs,Buff,,,"Master-level support for building and crafting.",,"建築・クラフトにおける熟練職人の支援を受けられる"
+letter_rabbit_trial_1,items,Quest,,,Rabbit Trial Letter I,,Lapinの試練の手紙Ⅰ
+letter_rabbit_trial_1Desc,items,Quest,,,This letter begins the first support trial for the handy rabbit.,,器用なLapinの支援の試練・第一段階が始まる手紙です。
+letter_rabbit_trial_2,items,Quest,,,Rabbit Trial Letter II,,Lapinの試練の手紙Ⅱ
+letter_rabbit_trial_2Desc,items,Quest,,,This letter begins the second support trial for the handy rabbit.,,器用なLapinの支援の試練・第二段階が始まる手紙です。
+letter_rabbit_trial_3,items,Quest,,,Rabbit Trial Letter III,,Lapinの試練の手紙Ⅲ
+letter_rabbit_trial_3Desc,items,Quest,,,This letter begins the third support trial for the handy rabbit.,,器用なLapinの支援の試練・第三段階が始まる手紙です。
+letter_rabbit_trial_4,items,Quest,,,Rabbit Trial Letter IV,,Lapinの試練の手紙Ⅳ
+letter_rabbit_trial_4Desc,items,Quest,,,This letter begins the fourth support trial for the handy rabbit.,,器用なLapinの支援の試練・第四段階が始まる手紙です。
+quest_rabbit_support_trial_1_title,quests,Quest,,,Rabbit Support Trial I,,Lapinの支援試練 レベル1
+quest_rabbit_support_trial_1_subtitle,quests,Quest,,,Craft your first essential tool,,最初の必須ツールをクラフトしよう
+quest_rabbit_support_trial_1Desc,quests,Quest,,,Lapin wants to see your potential as a tinkerer. Start by crafting a simple reliable tool.,,整備士としての資質を試すために、Lapinは簡単で信頼できる道具を作るよう求めてきた。
+quest_rabbit_support_trial_1_offer,quests,Quest,,,Can you handle the basics? Lapin is watching.,,基本ができてこそ一人前。Lapinが見ているよ。
+quest_rabbit_support_trial_2_title,quests,Quest,,,Rabbit Support Trial II,,Lapinの支援試練 レベル2
+quest_rabbit_support_trial_2_subtitle,quests,Quest,,,Scavenge key parts for a vehicle,,乗り物の中核部品を探そう
+quest_rabbit_support_trial_2Desc,quests,Quest,,,Lapin challenges you to recover essential components from the wreckage. A true tinkerer must learn the art of salvage.,,Lapinは壊れた車から大事なパーツを取り出す力を試そうとしている。真の整備士は、回収の達人でなければならない。
+quest_rabbit_support_trial_2_offer,quests,Quest,,,Ready to get your hands dirty? Find the heart and spark of a machine.,,手を汚す覚悟はある?機械の心臓と電源を見つけてこよう。
+quest_rabbit_support_trial_3_title,quests,Quest,,,Rabbit Support Trial III,,Lapinの支援試練 レベル3
+quest_rabbit_support_trial_3_subtitle,quests,Quest,,,Craft the bones of your future ride,,次なる乗り物の骨組みを作ろう
+quest_rabbit_support_trial_3Desc,quests,Quest,,,Lapin believes you're ready to take a leap forward. Build the chassis and handlebars — the skeleton of your machine.,,Lapinは、次の一歩を踏み出す準備ができたと信じている。車体のシャーシとハンドルバーを作り上げよう。
+quest_rabbit_support_trial_3_offer,quests,Quest,,,Can you shape the frame of a true vehicle?,,本物の乗り物のフレーム、形作れるかな?
+quest_rabbit_support_trial_4_title,quests,Quest,,,Rabbit Support Trial IV,,Lapinの支援試練 レベル4
+quest_rabbit_support_trial_4_subtitle,quests,Quest,,,Complete your machine!,,ついに完成、君だけの乗り物!
+quest_rabbit_support_trial_4Desc,quests,Quest,,,Lapin watches as you attempt your greatest feat yet. Build the complete Minibike — proof of your skill and determination.,,Lapinは見守っている。これまでで最も難しい試練、ミニバイクの完成に挑もう。それは君の技術と意志の証となる。
+quest_rabbit_support_trial_4_offer,quests,Quest,,,It's time to roll. Are you ready to ride?,,さあ走り出そう。君は準備できているか?
+dialog_lapin_greeting,Dialogue,Lapin,,,"There you are.",,"やあ"
+dialog_lapin_followme,Dialogue,Lapin,,,Follow Me,,ついてきて!
+dialog_lapin_pickup,Dialogue,Lapin,,,Hop in!,,バッグに入って!
+dialog_lapin_pickup_ref,Dialogue,Lapin,,,Let's head home!,,帰ろうか!
+dialog_lapin_showpack,Dialogue,Lapin,,,What's in your pack?,,なに持ってる?
+dialog_lapin_stayhere,Dialogue,Lapin,,,Stay right there,,ここで待ってて
+dialog_lapin_guardhere,Dialogue,Lapin,,,Stay over here,,この辺見張ってて
+dialog_lapin_wander,Dialogue,Lapin,,,Go play around here,,ちょっと遊んできて
+dialog_lapin_loot,Dialogue,Lapin,,,Loot around here,,アイテム拾ってきて
+dialog_lapin_dismiss,Dialogue,Lapin,,,Abandon,,自由にしてあげるね
+dialog_lapin_hire,Dialogue,Lapin,,,"'Looking for someone handy? I've got tools and time.'",,"「手先の器用な仲間が欲しい?工具と時間ならあるよ」"
+dialog_lapin_menu_main,Dialogue,Lapin,,,Let's go over the workshop stuff.,,整備のことを話そうか
+dialog_lapin_menu_trials,dialog,Lapin,,,"I want to try a Rabbit Trial.",,Lapinの試練に挑戦したい
+dialog_rabbit_start_trial_1,dialog,Lapin,,,"I want to take on the first rabbit trial.",,最初のLapinの試練に挑戦したい
+dialog_rabbit_confirm_start_trial_1,dialog,Lapin,,,"'This trial requires you to craft a wrench.It's a good test of your hands-on skills! Ready to try?'",,「この試練ではレンチを作る必要があるよ。実践的なスキルのテストになるね。準備はいい?」
+dialog_rabbit_start_confirm,dialog,Lapin,,,"Yes,I'm ready. Let's begin!",,うん、準備できてるよ。始めよう!
+dialog_rabbit_trial2_entry,dialog,Lapin,,,"I'm ready for the second rabbit trial.",,2つ目のLapinの試練に挑戦したい
+dialog_rabbit_trial2_require_info,dialog,Lapin,,,"Can you remind me what the second trial needs?",,2つ目の試練に必要なものを教えてもらえる?
+dialog_rabbit_trial2_explain,dialog,Lapin,,,"'To proceed with the second trial,you'll need 10 Support Tickets.Once you have them,come talk to me again!'",,「2つ目の試練に挑戦するにはサポートチケットが10枚必要だよ。そろったら声をかけてね!」
+dialog_rabbit_trial2_entry_text,dialog,Lapin,,,"Let me see if I'm ready…",,挑戦できるかな…
+dialog_rabbit_start_trial_2,dialog,Lapin,,,"I've got the tickets. Let's start the second rabbit trial! (Needs 10 Support Tickets)",,チケットはあるよ。2つ目のLapinの試練、始めよう!(チケット10枚必要)
+dialog_rabbit_confirm_start_trial_2,dialog,Lapin,,,"'This trial needs a car battery and a small engine.Find and bring them back to complete it.Shall we begin with 10 Support Tickets?'",,「この試練ではカーバッテリーと小型エンジンが必要になるよ。それらを集めて届けてね。チケット10枚で始めてもいいかな?」
+dialog_rabbit_trial3_entry,dialog,Lapin,,,"I'm ready for the third rabbit trial.",,3つ目のLapinの試練に挑戦したい
+dialog_rabbit_trial3_require_info,dialog,Lapin,,,"What do I need for the third trial?",,3つ目の試練に必要なものは?
+dialog_rabbit_trial3_explain,dialog,Lapin,,,"'For this trial,you'll need 20 Support Tickets.Bring them to start the challenge!'",,「この試練にはサポートチケットが20枚必要だよ。集まったら挑戦してね!」
+dialog_rabbit_trial3_entry_text,dialog,Lapin,,,"Let's see if I'm ready for it…",,挑戦できるかな…
+dialog_rabbit_start_trial_3,dialog,Lapin,,,"I've got the tickets! Let's start the third rabbit trial. (Needs 20 Support Tickets)",,チケットはあるよ!3つ目のLapinの試練を始めよう(チケット20枚必要)
+dialog_rabbit_confirm_start_trial_3,dialog,Lapin,,,"'You'll need to craft both a minibike chassis and handlebars.This trial tests your engineering skills!Shall we begin?'",,「この試練ではミニバイクのシャーシとハンドルを作ってもらうよ。エンジニアとしての腕の見せ所だね!始めてもいい?」
+dialog_rabbit_trial4_entry,dialog,Lapin,,,"Time for the fourth rabbit trial.",,4つ目のLapinの試練に挑戦したい
+dialog_rabbit_trial4_require_info,dialog,Lapin,,,"What's the final trial about?",,最後の試練って何をするの?
+dialog_rabbit_trial4_explain,dialog,Lapin,,,"'You'll need to assemble a complete placeable minibike.Bring 30 Support Tickets when you're ready!'",,「この試練では完成したミニバイクを作る必要があるよ。チケット30枚を持ってきてね!」
+dialog_rabbit_trial4_entry_text,dialog,Lapin,,,"It's time… I think I'm ready.",,いよいよだね…準備はできてる
+dialog_rabbit_start_trial_4,dialog,Lapin,,,"Let's start the final rabbit trial! (Needs 30 Support Tickets)",,最後のLapinの試練、始めよう!(チケット30枚必要)
+dialog_rabbit_confirm_start_trial_4,dialog,Lapin,,,"'Show me your craftsmanship and build the whole minibike.A true test of your tinkering.Shall we start now?'",,「君のクラフト技術を見せてもらうよ。ミニバイクを組み上げてね。さあ、始めようか?」
+dialog_lapin_menu_support,Dialogue,Lapin,,,Tell me about your support.,,支援について知りたい
+dialog_lapin_explain_support1,Dialogue,Lapin,,,Support Level 1 Effects,,支援レベル1の効果
+dialog_lapin_support1_text,Dialogue,Lapin,,,"'You'll break things faster and gather more materials.'",,"「ブロックを早く壊せて、材料も多く集まるようになるよ。」"
+dialog_lapin_explain_support2,Dialogue,Lapin,,,Support Level 2 Effects,,支援レベル2の効果
+dialog_lapin_support2_text,Dialogue,Lapin,,,"'Your crafting and scrapping will be much faster.'",,"「クラフトと分解がかなり早くなるよ。」"
+dialog_lapin_explain_support3,Dialogue,Lapin,,,Support Level 3 Effects,,支援レベル3の効果
+dialog_lapin_support3_text,Dialogue,Lapin,,,"'You'll be even more efficient in building,with improved tool performance.'",,"「建築作業がもっと効率的になって、道具の性能もアップするよ。」"
+dialog_lapin_explain_support4,Dialogue,Lapin,,,Support Level 4 Effects,,支援レベル4の効果
+dialog_lapin_support4_text,Dialogue,Lapin,,,"'Maximum building speed and strength—no bolt left behind.'",,"「建築のスピードもパワーも最大に取りこぼしなしの完璧サポートだよ。」"
+dialog_lapin_exchange_menu,dialog,Dialog,,,"'Need parts or upgrades? I've got just the thing!'","","「改造パーツを探してる?ちょうどいいのがあるよ!」"
+dialog_lapin_mod_lv1,Dialogue,Lapin,,,Pedal Booster (Bike Speed Upgrade),,ペダルブースター(自転車速度アップ)
+dialog_lapin_confirm_mod_lv1,Dialogue,Lapin,,,"'You want the Pedal Booster? Let's see if you've got the parts.'",,"「ペダルブースターが欲しいんだね?素材を確認するよ。」"
+dialog_lapin_exchange_confirm,Dialogue,Lapin,,,"'Here you go!'",,どうぞ!
+dialog_lapin_recipe_mod_lv1,Dialogue,Lapin,,,"'I'll need 10 Mechanical Parts and 5 Forged Iron.'",,「機械部品10個と錬鉄5個が必要だよ。」
+dialog_lapin_mod_lv2,Dialogue,Lapin,,,Wrench Booster (Salvage Upgrade),,レンチブースター(解体効率アップ)
+dialog_lapin_confirm_mod_lv2,Dialogue,Lapin,,,"'You want the Wrench Booster? Let's see if you've got the parts.'",,「レンチブースターが欲しいんだね?素材を確認するよ。」
+dialog_lapin_recipe_mod_lv2,Dialogue,Lapin,,,"'I'll need 15 Mechanical Parts and 10 Forged Iron.'",,「機械部品15個と錬鉄10個が必要だよ。」
+dialog_lapin_mod_lv3,Dialogue,Lapin,,,Multi-Link Booster (Speed Upgrade),,マルチリンクブースター(作業速度アップ)
+dialog_lapin_confirm_mod_lv3,Dialogue,Lapin,,,"'You want the Multi-Link Booster? Let's see if you've got the parts.'",,「マルチリンクブースターが欲しいんだね?素材を確認するよ。」
+dialog_lapin_recipe_mod_lv3,Dialogue,Lapin,,,"'I'll need 20 Mechanical Parts and 15 Forged Iron.'",,「機械部品20個と錬鉄15個が必要だよ。」
+dialog_lapin_mod_lv4,Dialogue,Lapin,,,Lapin's Turbo Booster,,Lapinのターボブースター
+dialog_lapin_confirm_mod_lv4,Dialogue,Lapin,,,"'You want the Turbo Booster? Let's check your gear.'",,「ターボブースターが欲しいんだね?素材を確認するよ。」
+dialog_lapin_recipe_mod_lv4,Dialogue,Lapin,,,"'I'll need 30 Mechanical Parts,20 Forged Iron,and 10 Support Tickets.'",,「機械部品30個・錬鉄20個・サポートチケット10枚が必要だよ。」
+modLapinPedalBooster,item_modifiers,Mod,,,Lapin's Pedal Booster,,Lapinのペダルブースター
+modLapinPedalBoosterDesc,item_modifiers,Mod,,,"A lightweight speed-enhancer designed by Lapin. Perfect for quick rides across the wilds.","","Lapinが設計した軽量スピードブースター。荒野を素早く駆け抜けるための秘密兵器。"
+modLapinWrenchBooster,item_modifiers,Mod,,,Lapin's Wrench Booster,,Lapinのレンチブースター
+modLapinWrenchBoosterDesc,item_modifiers,Mod,,,"A sturdy enhancement grip engineered by Lapin. Boosts salvage efficiency with every turn.","","Lapinが設計した頑丈な強化グリップ。解体作業をより効率的にサポートしてくれる。"
+modLapinMultiLinkBooster,item_modifiers,Mod,,,Lapin's Multi-Link Booster,,Lapinのマルチリンクブースター
+modLapinMultiLinkBoosterDesc,item_modifiers,Mod,,,"A multi-gear booster by Lapin. Increases work speed,reduces wear and stamina use.","","Lapinが仕上げた多重ギアブースター。作業速度を高め、耐久とスタミナの消耗を抑える。"
+modLapinTurboBooster,item_modifiers,Mod,,,Lapin's Turbo Booster,,Lapinのターボブースター
+modLapinTurboBoosterDesc,item_modifiers,Mod,,,"An elite booster crafted by Lapin to maximize vehicle speed and fuel efficiency.","","Lapinが設計した最上級のブースター。速度と燃費の両立を実現する究極のチューン。"
+cntLapinBuilderBench,blocks,CraftingStation,,,Lapin's Builder Bench,,Lapinの建築ベンチ
+lapinBuilderBenchDesc,blocks,CraftingStation,,,"A specialized workbench designed for efficient crafting of building materials.","","建築資材の効率生産のために設計された専用作業台。"
+# ===== 医療係関連 =====,,,,,,,
+npcMedicBear,entityclasses,Entity Name,,,Honey,,Honey
+npcMedicBearName,entityclasses,Entity Name,,,Honey the Medic,,医療係Honey
+bearPickUpNPC,items,Item,,,Bear Companion Totem,,Honeyを呼び出すお守り
+bearPickUpNPCDesc,items,Item,,,"A totem that lets you summon your gentle medic,Honey.","","穏やかな医療係・Honeyを呼び出せるお守り。"
+letter_welcome_medic,items,Quest,,,Worn Letter - Medic,,古びた手紙 - 医療係
+letter_welcome_medicDesc,items,Quest,,,A gentle scent lingers on this letter. It feels oddly comforting.,,やさしい香りの残る手紙。不思議と心が落ち着く。
+schematic_medic_letter,items,Item,,,Medic's Letter Craft Schematic,,医療係の手紙クラフト図面
+schematic_medic_letterDesc,items,Item,,,Unlocks the recipe for the medic's welcome letter.,,医療係の仲間を呼ぶ手紙のクラフト方法を解放します。
+medicSummonItem,items,Quest,,,Letter of Summoning - Medic,,医療係を召喚する手紙
+desc_medicSummonItem,items,Quest,,,Read this to summon your gentle medic. Talk to them when they appear.,,これを読んで現れた医療係に話しかけてみよう。
+quest_welcome_medic_title,quests,Quest,,,Welcome the Medic,,癒やしの仲間入り
+quest_welcome_medic_subtitle,quests,Quest,,,A sweet offering to gain their trust,,甘い贈り物で信頼を得よう
+quest_welcome_medicDesc,quests,Quest,,,You found a note mentioning a gentle healer living nearby. They say she adores honey — perhaps it will help you meet her.,,近くに住む優しい癒やし手の噂が書かれた手紙を見つけた。蜂蜜が大好きらしい……それがあれば会えるかもしれない。
+honey_summon_message,buffs,Buff,,,Honey has arrived to help you!,,Honeyが助けに来たよ!
+honey_revive_message,buffs,Buff,,,Honey has risen from the grave... again.,,Honeyが墓から蘇った…ふたたび。
+reviveStoneHoney,Blocks,Block,,,Honey's grave marker.,,Honeyの墓標
+quest_bear_support_trial_1_title,quests,Quest,,,Bear Support Trial I,,Honeyの支援試練 レベル1
+quest_bear_support_trial_1_subtitle,quests,Quest,,,Mastering the Basics,,基本を身につけよう
+quest_bear_support_trial_1Desc,quests,Quest,,,"Find and destroy a tree stump in the forest.\nHoney will teach you how to collect honey more efficiently.",,森の中にある切り株を探して壊してみよう。\nHoneyが蜂蜜の採り方のコツを教えてくれるよ。
+quest_bear_support_trial_1_offer,quests,Quest,,,'Can you help me gather some honey the right way?',,「蜂蜜を集めるの、手伝ってくれる?」
+quest_bear_support_trial_2_title,quests,Quest,,,Bear Support Trial II,,Honeyの支援試練 レベル2
+quest_bear_support_trial_2_subtitle,quests,Quest,,,Craft a hive and harvest your first honey.,,養蜂箱を作り、はじめての蜂蜜を手に入れよう
+quest_bear_support_trial_2Desc,quests,Quest,,,"Gather flowers,build a hive,and craft honey from nectar.",,お花を集めて養蜂箱で蜜を精製しましょう。
+quest_bear_support_trial_2_offer,quests,Quest,,,Would you like to begin beekeeping with Honey?,,Honeyと一緒に養蜂をはじめてみませんか?
+quest_bear_support_trial_3_title,quests,Quest,,,Bear Support Trial III,,Honeyの支援試練 レベル3
+quest_bear_support_trial_3_subtitle,quests,Quest,,,Unearth the poison formula hidden underground.,,地中に眠る毒のレシピを掘り起こそう
+quest_bear_support_trial_3Desc,quests,Quest,,,"Retrieve the ancient poison recipe from a buried chest,guarded by the contaminated dead.",,汚染された死者たちに守られた、古代の毒薬のレシピを埋もれた宝箱から回収せよ。
+quest_bear_support_trial_3_offer,quests,Quest,,,I've heard rumors of a buried formula ... guarded by the contaminated dead. Do you have the courage to retrieve it?,,埋められた古代のレシピ……それを汚染された死者たちが守っているという噂があるの。取りに行ける勇気、あるかな?
+quest_bear_support_trial_4_title,quests,Quest,,,Bear's Trial IV,,Honeyの支援試練 レベル4
+quest_bear_support_trial_4_subtitle,quests,Quest,,,Defeat the Toxic Undead,,毒をまとうゾンビたちを倒せ
+quest_bear_support_trial_4Desc,quests,Quest,,,Prove your resilience by defeating the toxic zombies threatening the land.,,猛毒のゾンビを倒し、Honeyとの絆をさらに深めよう。
+quest_bear_support_trial_4_offer,quests,Quest,,,These toxic creatures are dangerous... But I believe in you. Can you defeat them?,,あの毒ゾンビたちは危険すぎる…でも、あなたならきっとやれる。お願い、倒してきて。
+itemBearSupportActivator1,items,Item,,,Bear Charm I,,ベアチャームⅠ(いち)
+itemBearSupportActivator1Desc,items,Item,,,"A charm filled with gentle healing power.\n[99FFFF]If you ever lose Honey's support,this charm may help restore it.",,"優しい癒しの力が込められたチャーム。\n[99FFFF]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+itemBearSupportActivator2,items,Item,,,Bear Charm II,,ベアチャームⅡ(に)
+itemBearSupportActivator2Desc,items,Item,,,"The charm glows warmly with stronger remedies.\nTeaches the recipes:\nHoney's Healing Couch\n[FFCC66]If you ever lose Honey's support,this charm may help restore it.",,"あたたかな力が強まり、頼もしくなったチャーム。\n以下のレシピが解放されます:\nHoneyの癒しのソファ\n[FFCC66]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+itemBearSupportActivator3,items,Item,,,Bear Charm III,,ベアチャームⅢ(さん)
+itemBearSupportActivator3Desc,items,Item,,,"Infused with medical expertise,it soothes pain with care.\nTeaches the recipes:\nHoney's Healing Mat\n[FF9999]If you ever lose Honey's support,this charm may help restore it.",,"熟練の癒しが宿るチャーム。痛みを優しく和らげます。\n以下のレシピが解放されます:\nHoneyの回復マット\n[FF9999]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+itemBearSupportActivator4,items,Item,,,Bear Charm IV,,ベアチャームⅣ(よん)
+itemBearSupportActivator4Desc,items,Item,,,"A masterful charm that unlocks advanced medicine.\nTeaches the recipes:\nHoney's Emergency Bench ,Bear Charm: Ward\n[66CCFF]If you ever lose Honey's support,this charm may help restore it.",,"高度な医療を解き放つ熟練のチャーム。\n以下のレシピが解放されます:\nHoneyの応急処置作業台、ベアチャーム:守護\n[66CCFF]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+BearSupportLv1,buffs,Buff,,,Lv1,,レベル1
+buffBearSupport1Desc,buffs,Buff,,,"Slightly increases max health and grants minor regeneration.\nAlso increases the chance to find honey from tree stumps.\nGrants partial resistance to minor poison effects.",,"最大体力が少し増加し、ゆるやかな再生効果が得られます。\nまた、切り株から蜂蜜が見つかりやすくなります。\n軽度の毒に対して一部の耐性が付きます。"
+BearSupportLv2,buffs,Buff,,,Lv2,,レベル2
+buffBearSupport2Desc,buffs,Buff,,,"Enhances max health and grants resistance to bleeding and laceration.\nAlso increases the chance to find honey from tree stumps.\nHas a chance to prevent injuries like bleeding or infection.\nAlso adds moderate resistance to poison (strong vs minor, some against elite).",,"最大体力がさらに増加し、出血や裂傷などのダメージに対する耐性がつきます。\nまた、切り株から蜂蜜が見つかりやすくなります。\n出血や感染などの異常状態を受けにくくなります。\n毒に対する耐性が向上します(軽度に強く、一部は中位の毒にも有効)。"
+BearSupportLv3,buffs,Buff,,,Lv3,,レベル3
+buffBearSupport3Desc,buffs,Buff,,,"Greatly enhances health recovery and stamina regeneration.\nFurther boosts resistance to bleeding,laceration,and infection.\nProvides reliable support for prolonged combat.\nProvides strong resistance to poison (effective against minor and elite; limited vs boss-level toxins).",,"体力の回復量とスタミナの回復速度が大きく向上します。\n出血・裂傷・感染などの異常状態への耐性がさらに強化されます。\n長期戦でも安定したサポートを発揮します。\n毒への耐性が大きく強化されます(軽度と中位に有効、ボス級の毒には一部有効)。"
+BearSupportLv4,buffs,Buff,,,Lv4,,レベル4
+buffBearSupport4Desc,buffs,Buff,,,"Massively boosts max health and all recovery effects.\nGreatly enhances resistance to critical injuries.\nUnlocks advanced survival tools,including emergency revival items.\nOffers very high resistance to poison, including some protection against boss-level toxins.\nAt this tier you can craft the Bear Charm: Ward for complete immunity while equipped.",,"最大体力とあらゆる回復効果が大幅に強化されます。\n致命的な異常状態への耐性も大きく向上します。\n蘇生用の緊急アイテムを含む高度な生存支援ツールが解放されます。\n毒に対する耐性が非常に高くなり、ボス級の毒にも一定の耐性を発揮します。\nこの段階で「ベアチャーム：守護」をクラフトでき、装備中は毒を完全無効化できます。"
+modBearPoisonWard,item_modifiers,Mod,,,"Bear Charm: Ward","","ベアチャーム:守護"
+modBearPoisonWardDesc,item_modifiers,Mod,,,"A bear ward charm for the chest. Socket into Chest Armor to nullify poison while equipped.","","胸防具に装着するベアチャーム(守護)。装備中は毒を無効化します。"
+dialog_honey_greeting,Dialog,Statement,,,"Hey there.",,やあ
+dialog_honey_menu_main,Dialog,Statement,,,Support & Healing Menu,,サポートと回復メニュー
+dialog_honey_menu_trials,Dialog,Statement,,,Trial Missions,,試練の依頼
+dialog_bear_start_trial_1,Dialog,Response,,,I want to start the first trial.,,最初の試練を始めたい
+dialog_bear_confirm_start_trial_1,Dialog,Statement,,,"'Alright,your first mission is honey gathering. Will you help me out?'",,「じゃあ、まずは蜂蜜集めからだね。わたしの頼み、聞いてくれる?」
+dialog_bear_start_confirm,Dialog,Response,,,"Yes,I'm ready.",,うん、やってみる
+dialog_bear_trial2_entry,Dialog,Response,,,Let's talk about the second trial.,,次の試練について話そう
+dialog_bear_trial2_entry_text,Dialog,Statement,,,"'Hmm... looks like you're ready to take the next step.'",,「ふむふむ、試練を進める気になったんだね?」
+dialog_bear_start_trial_2,Dialog,Response,,,I'll try the second trial.,,2つ目の試練に挑戦する
+dialog_bear_trial2_require_info,Dialog,Response,,,What do I need?,,必要なものは?
+dialog_bear_trial2_explain,Dialog,Statement,,,"'You'll need 10 Support tickets. Do you have them?'",,「チケットが10枚必要だよ。持ってるかな?」
+dialog_bear_confirm_start_trial_2,Dialog,Statement,,,"'Could you follow the manual and make one jar of honey for me?'",,「この手引きに従って蜂蜜を1つ作ってもらえる?」
+dialog_bear_trial3_entry,Dialog,Response,,,I'm ready for the third trial.,,次は3つ目の試練だね
+dialog_bear_trial3_entry_text,Dialog,Statement,,,"'Hehe... things are about to get serious!'",,「ふふ、ここからが本番かも?」
+dialog_bear_start_trial_3,Dialog,Response,,,I'll take the third trial.,,3つ目の試練を始める
+dialog_bear_trial3_require_info,Dialog,Response,,,What's required?,,必要な条件は?
+dialog_bear_trial3_explain,Dialog,Statement,,,"'You'll need 20 Support tickets.'",,「チケット20枚だよ」
+dialog_bear_confirm_start_trial_3,Dialog,Statement,,,"'Find this mysterious recipe for me... it might unlock something amazing!'",,「この不思議なレシピを見つけてきて。きっとすごいことに使えるんだ」
+dialog_bear_trial4_entry,Dialog,Response,,,Let's do the final trial.,,最後の試練に挑戦したい
+dialog_bear_trial4_entry_text,Dialog,Statement,,,"'At last... the final trial awaits you!'",,「ついに最後の試練だね…がんばって!」
+dialog_bear_start_trial_4,Dialog,Response,,,I'm ready for the final challenge.,,最後の挑戦、受けるよ
+dialog_bear_trial4_require_info,Dialog,Response,,,Do I need anything?,,必要なものある?
+dialog_bear_trial4_explain,Dialog,Statement,,,"Of course,you'll need 30 Support tickets!",,「もちろんチケット30枚だよ!」
+dialog_bear_confirm_start_trial_4,Dialog,Statement,,,"'This is the final trial. It's time to test the power to truly protect life.'",,「最後の試練だよ。命を守る、本当に大切な力を試す時なんだ。」
+dialog_honey_menu_support,Dialog,Statement,,,Support Explanation,,サポート説明
+dialog_honey_explain_support1,Dialog,Response,,,What does your support level 1 do?,,サポートレベル1って何してくれるの?
+dialog_honey_support1_text,Dialog,Statement,,,"'Your health and natural healing improve a bit—and you'll get more honey from tree stumps! Plus, a touch of resistance to minor poison.'",,"「体力と自然治癒力が少し上がって切り株から蜂蜜が多く取れるようになるよ。さらに、軽い毒に少し耐性がつくよ。」"
+dialog_honey_explain_support2,Dialog,Response,,,What does support level 2 add?,,レベル2で何ができるの?
+dialog_honey_support2_text,Dialog,Statement,,,"'You can craft the Healing Couch—Honey's special comfort seat. Place it and relax! Also tougher against poison—strong vs minor, some vs elite.'",,"「Honeyの癒しのソファがクラフトできるよ。設置して使ってね。毒にも強くなるよ。軽い毒にはかなり強くて、中位の毒にも少し効くの。」"
+dialog_honey_explain_support3,Dialog,Response,,,And support level 3?,,レベル3は?
+dialog_honey_support3_text,Dialog,Statement,,,"'Your health and stamina regenerate faster, and you'll gain access to a special mat. Plus, strong poison resistance—effective vs minor and elite; limited vs boss.'",,"「体力とスタミナがもっと回復しやすくなるよ。あと、特別なマットも作れるの。毒への耐性もぐっと強くなるよ。軽度と中位にはしっかり効いて、ボス級にも少し効くの。」"
+dialog_honey_explain_support4,Dialog,Response,,,What about support level 4?,,レベル4はどうなるの?
+dialog_honey_support4_text,Dialog,Statement,,,"'It's super recovery mode! You'll be able to make powerful medicine—really amazing stuff! Also, much higher poison resistance—and you can craft the Bear Charm: Ward for full immunity while equipped.'",,"「もうね、超回復モード！すごいお薬が作れるようになるよ！それと毒への耐性も大幅アップ。『ベアチャーム：守護』を作れば、装備中は毒を完全無効化できるよ。」"
+dialog_honey_followme,Dialog,Response,,,Come with me.,,ついてきて
+dialog_honey_pickup,Dialog,Response,,,Hop in!,,入って!
+dialog_honey_showpack,Dialog,Response,,,Show me what you've got.,,持ち物見せて
+dialog_honey_stayhere,Dialog,Response,,,Stay right here.,,ここで待ってて
+dialog_honey_guardhere,Dialog,Response,,,Guard this spot.,,ここを守って
+dialog_honey_wander,Dialog,Response,,,Take a walk around.,,自由に歩いてていいよ
+dialog_honey_hire,Dialog,Response,,,"'You want me on your team? Yay! I promise I'll take good care of you!'",,「仲間にしてくれるの?回復なら任せて!」
+dialog_honey_menu_util,Dialog,Statement,,,Item Exchange Menu,,アイテム交換のメニュー
+dialog_honey_unlock_poison_menu,Dialog,Response,,,Unlock poison bomb crafting (Requires Ancient Poison Formula),,毒の爆弾の製造メニューを解放する(古代の毒薬レシピが必要)
+dialog_honey_confirm_unlock_poison_menu,Dialog,Statement,False,False,"'With this recipe,I can craft poison bombs.'",,「このレシピがあれば毒の爆弾が作れるよ。」
+dialog_honey_unlock_confirm,Dialog,Response,,,"Here,take it",,はい、お願いね
+dialog_honey_poison_bomb_exchange_menu,Dialog,Response,,,Trade 10 Honey for 10 Poison Bombs,,蜂蜜10個と毒の爆弾10個を交換する
+dialog_honey_exchange_prompt,Dialog,Statement,,,"'Hmm... if you have 10 jars of honey,I could make them for you.'",,「蜂蜜が10個あれば…作ってあげられるけど?」
+dialog_honey_confirm_exchange,Dialog,Response,,,Please make them!,,毒の爆弾お願い!
+dialog_honey_return_menu,Dialog,Response,,,Back to Main Menu,,メインメニューに戻る
+cntBearCouchRecovery,blocks,Block,,,Honey's Healing Couch,,Honeyの癒しのソファ
+cntBearCouchRecoveryDesc,blocks,Block,,,"A cozy couch that grants gentle healing when rested upon.",,"そっと座ると、やさしく癒される特製ソファ。"
+BearRestRegen,buffs,Buff,,,Honey's Rest,,Honeyのやすらぎ
+buffBearRestRegenDesc,buffs,Buff,,,"Resting here grants gentle regeneration.",,"ここで休むと、やさしく回復します。"
+cntBearHerbMat,blocks,Block,,,Honey's Healing Mat,,Honeyの回復マット
+cntBearHerbMatDesc,blocks,Block,,,"A stained-glass healing mat designed by Honey.\nStanding on it grants slow regeneration and resistance.",,"Honeyが作ったステンドグラスの回復マット。\n上に立っている間、ゆっくり回復し、状態異常に強くなります。"
+buffBearMatRecovery,buffs,Buff,,,Honey's Healing Aura,,Honeyの癒しのオーラ
+buffBearMatRecoveryDesc,buffs,Buff,,,"Grants slow health regeneration and resistance to harmful effects while standing on the mat.",,"マットの上に立っている間、ゆっくり体力が回復し、有害な効果に対する耐性が上昇します。"
+itemBeeManual,items,Item,,,Beekeeping Manual,,養蜂入門の手引き
+itemBeeManualDesc,items,Item,,,Unlocks the secrets of flower nectar and hive crafting.,,蜜の素の作り方と養蜂箱の設置方法を学べます。
+cntBeeHiveBox,blocks,Blocks,,,Beehive Box,,養蜂箱
+cntbeeHiveBoxDesc,blocks,Blocks,,,A special workstation where flower essence is collected and transformed into honey.,,花のエッセンスを集めて蜂蜜に変える特別な作業台。
+resourceFlowerBlend,items,Item,,,Flower Blend,,フラワーブレンド
+resourceFlowerBlendDesc,items,Item,,,"A fragrant mixture of petals,ideal for extracting nectar in a beehive.",,香りのよい花びらの混合素材。養蜂箱に入れると蜜が採れます。
+itemPoisonRecipeFound,items,Item,,,Ancient Poison Formula,,古代の毒薬レシピ
+itemPoisonRecipeFoundDesc,items,Item,,,A weathered scroll describing how to brew toxins from rare herbs.Give this to Honey to unlock special item exchanges.,,希少な薬草から毒を精製する方法が記された古びた巻物。Honeyに渡すと、特別なアイテム交換ができる。
+cntTreasurePoisonChest,blocks,Block,,,Chest of the Contaminated Dead,,汚染された死者たちの宝箱
+cntTreasurePoisonChestDesc,blocks,Block,,,"An old,sealed chest buried deep underground. Strange green residue seeps from the cracks.",,地中深くに埋められた、封印された古い宝箱。隙間からは奇妙な緑色の液体がにじみ出ている。
+cntTreasurePoisonChestInsecure,blocks,Block,,,Chest of the Contaminated Dead,,汚染された死者たちの宝箱
+thrownAmmoPoisonBomb,items,Item,,,Poison Bomb,,毒の爆弾
+thrownAmmoPoisonBombDesc,items,Item,,,A volatile bomb that spreads poisonous gas.,,毒ガスを撒き散らす危険な爆弾。
+buffPoisonedTarget,buffs,Buff,,,Poisoned,,毒状態
+buffPoisonedTargetDesc,buffs,Buff,,,You're suffering from poison. Movement speed and health are slowly decreasing.,,毒に冒されている。移動速度と体力が徐々に低下する。
+cntBearEmergencyKit,blocks,Block,,,Honey's Emergency Bench,,Honeyの応急処置作業台
+bearEmergencyKitDesc,blocks,Block,,,"A special workstation for crafting emergency recovery items and critical support tools.",,"応急処置アイテムや、緊急支援用の道具をクラフトできる特製作業台。"
+itemBearReviveDrug,items,Item,,,Bear Miracle Pill,,ベア・ミラクルピル
+itemBearReviveDrugDesc,items,Item,,,An emergency drug that instantly heals all wounds.,,緊急時にすべての傷を瞬時に癒す秘密の薬
+itemBearEmergencyDrug,items,Item,,,Bear Emergency Pill,,ベア・エマージェンシーピル
+itemBearEmergencyDrugDesc,items,Item,,,An emergency drug that activates instant recovery in critical moments.,,危機的状況で瞬時の回復を引き起こす緊急用の薬
+buffBearEmergencyHeal,buff,Buff,,,Emergency Healing,,緊急治療
+buffBearEmergencyHealDesc,buff,Buff,,,"Restores a large amount of health and stamina,and grants brief invincibility.",,大量の体力とスタミナを回復し、短時間の無敵状態になります
+buffBearEmergencyCooldown,buff,Buff,,,Emergency Cooldown,,緊急回復のクールダウン
+buffBearEmergencyCooldownDesc,buff,Buff,,,Emergency healing is unavailable during this cooldown.,,このクールダウン中は緊急回復が発動できません。
+buffBearEmergencyReady,buff,Buff,,,Emergency Heal Ready,,緊急回復の準備状態
+buffBearEmergencyReadyDesc,buff,Buff,,,Will trigger an emergency heal when your health drops too low.,,体力が危険になると自動的に回復が発動します。
+buffBearAutoReviveReady,buffs,Buff,,,"Auto-Revive: Ready",,"自動蘇生:準備完了"
+buffBearAutoReviveReadyDesc,buffs,Buff,,,"A protective charm hums softly... Awaiting fatal impact.",,"護符が静かに共鳴している…… 致命的な一撃を待っている。"
+buffBearAutoReviveActive,buffs,Buff,,,"Auto-Revive: Triggered",,"自動蘇生:発動"
+buffBearAutoReviveActiveDesc,buffs,Buff,,,"The charm shatters in a brilliant light,pulling you back from the brink.",,"護符がまばゆい光を放って砕け、あなたを死の淵から呼び戻す。"
+buffAutoReviveInvincible,buffs,Buff,,,"Blessing of Invincibility",,"無敵の祝福"
+buffAutoReviveInvincibleDesc,buffs,Buff,,,"For a brief moment,no harm can touch you.",,"しばしの間、いかなる害もあなたに届かない。"
+auto_revive_success,buffs,Buff,,,Honey's Revive Ticket activated. You are back!,,Honeyの蘇生チケットが発動し、あなたは復活しました!
+# ===== 鍛冶屋関連 =====,,,,,,,
+npcForgeguardBoar,entityclasses,Entity Name,,,Grumble,,Grumble
+npcForgeguardBoarName,entityclasses,Entity Name,,,Grumble the Forgeguard,,鍛冶屋Grumble
+boarPickUpNPC,items,Item,,,Boar Companion Totem,,Grumbleを呼び出すお守り
+boarPickUpNPCDesc,items,Item,,,"A totem that lets you summon your trusty Forgeguard,Grumble.","","頼れる鍛冶屋・Grumbleを呼び出せるお守り。"
+letter_welcome_forgeguard,items,Quest,,,Worn Letter - Forgeguard,,古びた手紙 - 鍛冶屋
+letter_welcome_forgeguardDesc,items,Quest,,,It smells of metal and fire. A strong hand wrote this.,,金属と火の匂いがする手紙。力強い筆跡で書かれている。
+schematic_forgeguard_letter,items,Item,,,Forgeguard Letter Craft Schematic,,鍛冶屋の手紙クラフト図面
+schematic_forgeguard_letterDesc,items,Item,,,Unlocks the recipe for the forgeguard's welcome letter.,,鍛冶屋の仲間を呼ぶ手紙のクラフト方法を解放します。
+quest_welcome_forgeguard_title,quests,Quest,,,Welcome the Forgeguard,,鍛冶屋の仲間入り
+quest_welcome_forgeguard_subtitle,quests,Quest,,,A task to welcome Grumble,,Grumbleを迎える準備
+quest_welcome_forgeguardDesc,quests,Quest,,,You've discovered a letter that speaks of a steadfast forgeguard. Craft a solid tool to prove your strength and summon their aid.,,頼もしい鍛冶屋のことが書かれた手紙を見つけた。立派な道具を作って力を示せば、助けに来てくれるかもしれない。
+grumble_summon_message,buffs,Buff,,,Grumble has arrived to help you!,,Grumbleが助けに来たよ!
+grumble_revive_message,buffs,Buff,,,Grumble has risen from the grave... again.,,Grumbleが墓から蘇った…ふたたび。
+reviveStoneGrumble,Blocks,Block,,,Grumble's grave marker.,,Grumbleの墓標
+reviveStoneCommonDesc,Blocks,Block,,,"Perhaps,just perhaps... they might return.",,もしかすると――また戻ってきてくれるかもしれない。
+dialog_grumble_greeting,Dialogue,Grumble,,,"Hey there.",,"やあ"
+dialog_grumble_followme,Dialogue,Grumble,,,Follow Me,,ついてきて!
+dialog_grumble_pickup,Dialogue,Grumble,,,Hop in!,,バッグに入って!
+dialog_grumble_pickup_ref,Dialogue,Grumble,,,Let's head home!,,帰ろうか!
+dialog_grumble_showpack,Dialogue,Grumble,,,What's in your pack?,,なに持ってる?
+dialog_grumble_stayhere,Dialogue,Grumble,,,Stay right there,,ここで待ってて
+dialog_grumble_guardhere,Dialogue,Grumble,,,Stay over here,,この辺見張ってて
+dialog_grumble_wander,Dialogue,Grumble,,,Go play around here,,ちょっと遊んできて
+dialog_grumble_loot,Dialogue,Grumble,,,Loot around here,,アイテム拾ってきて
+dialog_grumble_dismiss,Dialogue,Grumble,,,Abandon,,自由にしてあげるね
+dialog_grumble_hire,Dialogue,Grumble,,,"'If you've got an iron pickaxe,I'll join you.'",,「鉄のつるはしを持ってるなら、仲間になろう。」
+dialog_grumble_menu_main,Dialogue,Grumble,,,Let's talk shop.,,鍛冶のことを話そうか
+dialog_grumble_menu_trials,Dialogue,Grumble,,,I'm ready for the Forge Trial.,,鍛冶屋の試練に挑戦したい
+dialog_boar_start_trial_1,dialog,Grumble,,,"I want to take on the first forge trial.",,最初の鍛冶の試練に挑戦したい
+dialog_boar_confirm_start_trial_1,dialog,Grumble,,,"'This trial's simple: dig up some Mystic Ore.If you've got the grit,you'll do fine. '",,「この試練はシンプルだ。神秘の鉱石を集めてほしい。根気があれば大丈夫さ。」
+dialog_boar_start_confirm,dialog,Grumble,,,"Yeah,I'm ready. Let's get to it!",,うん、準備できてるよ。始めよう!
+dialog_boar_trial2_entry,dialog,Grumble,,,"I'm ready for the second forge trial.",,2つ目の鍛冶の試練に挑戦したい
+dialog_boar_trial2_require_info,dialog,Grumble,,,"Can you remind me what the second trial needs?",,2つ目の試練に必要なものを教えてもらえる?
+dialog_boar_trial2_explain,dialog,Grumble,,,"'To take on this trial,you'll need 10 Support Tickets.Once you've got 'em,swing by again!'",,「この試練に挑むにはサポートチケットが10枚必要だ。集まったらまた来てくれよ!」
+dialog_boar_trial2_entry_text,dialog,Grumble,,,"Let's see if I've got what it takes…",,挑戦できるかな…
+dialog_boar_start_trial_2,dialog,Grumble,,,"I've got the tickets. Let's start the second forge trial! (Needs 10 Support Tickets)",,チケットはあるよ。2つ目の鍛冶の試練、始めよう!(チケット10枚必要)
+dialog_boar_confirm_start_trial_2,dialog,Grumble,,,"'Time to fire up the forge and craft some Mystic Steel.You ready to start the trial with 10 tickets?'",,「さあ、炉に火を入れて神秘の合金を鍛える時だ。チケット10枚で試練を始めようか?」
+dialog_boar_trial3_entry,dialog,Grumble,,,"I'm ready for the third trial.",,3つ目のGrumbleの試練に挑戦したい
+dialog_boar_trial3_require_info,dialog,Grumble,,,"What do I need for this trial?",,この試練に必要なものは?
+dialog_boar_trial3_explain,dialog,Grumble,,,"'You'll need 20 Support Tickets to get started.Bring them here when you're set.'",,「始めるにはサポートチケットが20枚必要だ。準備ができたら持ってきてくれ。」
+dialog_boar_trial3_entry_text,dialog,Grumble,,,"Let's see if I'm good to go…",,挑戦できるかな…
+dialog_boar_start_trial_3,dialog,Grumble,,,"I've got the tickets! Let's do this. (Needs 20 Support Tickets)",,チケットはあるよ!試練を始めよう(チケット20枚必要)
+dialog_boar_confirm_start_trial_3,dialog,Grumble,,,"'Your task this time is to craft a Big-Head Trap and put it to use.Let's see how you handle a bit of engineering and some zombie trouble.Shall we get started?'",,「今回はトラップを作って、それを使ってゾンビを倒してもらう。ちょっとした工作と実戦の組み合わせだな。始めようか?」
+dialog_boar_trial4_entry,dialog,Grumble,,,"Time for the fourth trial.",,4つ目のGrumbleの試練に挑戦したい
+dialog_boar_trial4_require_info,dialog,Grumble,,,"What's the final trial about?",,最後の試練って何をするの?
+dialog_boar_trial4_explain,dialog,Grumble,,,"'This one's about precision and power.You'll need 30 Support Tickets to get started.'",,「今度の試練は精密さと火力がカギになる。始めるにはサポートチケットが30枚必要だ。」
+dialog_boar_trial4_entry_text,dialog,Grumble,,,"It's time… I think I'm ready.",,いよいよだね…準備はできてる
+dialog_boar_start_trial_4,dialog,Grumble,,,"Let's start the final trial! (Needs 30 Support Tickets)",,最後のGrumbleの試練、始めよう!(チケット30枚必要)
+dialog_boar_confirm_start_trial_4,dialog,Grumble,,,"'Forge the Mystic Headshot Pistol yourself,then prove it works the way it should.One shot,one kill. Ready to show your skill?'",,「神秘の狙撃銃を自分の手で作って、それが本物だって証明してみな。一撃必殺だ。腕前、見せてもらおうか?」
+dialog_grumble_menu_support,Dialogue,Grumble,,,Tell me about your support.,,支援について教えて
+dialog_grumble_explain_support1,Dialogue,Grumble,,,Support Level 1 Effects,,支援レベル1の効果
+dialog_grumble_support1_text,Dialogue,Grumble,,,"'You'll start forging mystic materials and mine more Mystic Ore.'",,"「神秘の素材を精錬できるようになって、鉱石の採掘量も増えるぞ。」"
+dialog_grumble_explain_support2,Dialogue,Grumble,,,Support Level 2 Effects,,支援レベル2の効果
+dialog_grumble_support2_text,Dialogue,Grumble,,,"'Faster crafting in the Mystic Forge—and I'll teach you how to build the Big-Head Trap.'",,"「神秘の炉でのクラフトが速くなる。それに、でかあたまトラップの作り方も教えてやろう。」"
+dialog_grumble_explain_support3,Dialogue,Grumble,,,Support Level 3 Effects,,支援レベル3の効果
+dialog_grumble_support3_text,Dialogue,Grumble,,,"'Even better yield,same fast crafting,and I'll teach you how to build a headshot weapon.'",,"「鉱石の採掘効率がさらにアップ、クラフトも速いまま。ヘッドショット用の作り方も教えてやろう。」"
+dialog_grumble_explain_support4,Dialogue,Grumble,,,Support Level 4 Effects,,支援レベル4の効果
+dialog_grumble_support4_text,Dialogue,Grumble,,,"'Max ore yield,top forge speed,boosted headshot damage and I'll teach you how to build the Poison Sledge.'",,"「鉱石の採掘量が最大になって、クラフトも最速だ。ヘッドショットの威力も上がるし、毒ロボットスレッジの作り方も教えてやろう。」"
+quest_boar_support_trial_1_title,quests,Quest,,,Grumble Support Trial I,,Grumbleの支援試練 レベル1
+quest_boar_support_trial_1_subtitle,quests,Quest,,,Gather the mystic metal,,神秘の鉱石を集めよう
+quest_boar_support_trial_1Desc,quests,Quest,,,"Grumble has challenged you to collect a rare material. Prove your worth by gathering Mystic Ore,and perhaps you'll unlock the secrets of forging.",,Grumbleは貴重な素材を集めるように求めてきた。神秘の鉱石を集めてその価値を証明すれば、鍛冶の秘密に近づけるかもしれない。
+quest_boar_support_trial_1_offer,quests,Quest,,,Are you ready to delve into the earth and uncover its hidden power?,,大地に眠る力を掘り起こす覚悟はあるか?
+quest_boar_support_trial_2_title,quests,Quest,,,Grumble Support Trial II,,Grumbleの支援試練 レベル2
+quest_boar_support_trial_2_subtitle,quests,Quest,,,Forge the mystic alloy,,神秘の合金を鍛えよう
+quest_boar_support_trial_2Desc,quests,Quest,,,"Prove your command of the forge by refining Mystic Steel. With enough skill,Grumble may grant you access to even more powerful tools.",,神秘の合金を鍛えて鍛冶の腕前を示そう。十分な実力を示せば、Grumbleがさらなる力を貸してくれるかもしれない。
+quest_boar_support_trial_2_offer,quests,Quest,,,Ready to forge something stronger?,,より強きものを鍛える覚悟はできたか?
+quest_boar_support_trial_3_title,quests,Quest,,,Grumble Support Trial III,,Grumbleの支援試練 レベル3
+quest_boar_support_trial_3_subtitle,quests,Quest,,,Hunt Big-Headed Zombies and Claim Their Tokens,,でかあたまゾンビを討伐して、討伐の証を手に入れろ
+quest_boar_support_trial_3Desc,quests,Quest,,,Set the Big-Head Trap and defeat the swollen-headed undead. Grumble seeks sharpshooters with courage and precision.,,でかあたまトラップを設置し、頭が大きくなったゾンビたちを討伐せよ。Grumbleは、勇気と正確さを兼ね備えた射手を求めている。
+quest_boar_support_trial_3_offer,quests,Quest,,,Are you ready to prove your aim?,,その狙撃の腕、証明してみるか?
+quest_boar_support_trial_4_title,quests,Quest,,,Grumble Support Trial IV,,Grumbleの支援試練 レベル4
+quest_boar_support_trial_4_subtitle,quests,Quest,,,Use the special weapon to defeat zombies and claim their tokens,,特別な武器でゾンビを討伐して、討伐の証を手に入れろ
+quest_boar_support_trial_4Desc,quests,Quest,,,Use the Mystic Headshot gun to take down the undead. Grumble demands precision and mastery.,,神秘の狙撃銃を使ってゾンビを撃ち倒せ。Grumbleは、正確さと熟練を試している。
+quest_boar_support_trial_4_offer,quests,Quest,,,Can your bullets speak louder than words?,,その弾丸で証明できるか?
+itemBoarSupportActivator1,items,Item,,,Forge Charm I,,ボアチャームⅠ(いち)
+itemBoarSupportActivator1Desc,items,Item,,,"A charm infused with the strength of a steadfast forgeguard.\nTeaches the recipes:\nMystic Forge\n[99FFFF]If you ever lose Grumble's support,this charm may help restore it.",,"頼れる鍛冶屋の力が込められたチャーム。\n以下のレシピが解放されます:\n神秘の炉\n[99FFFF]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+itemBoarSupportActivator2,items,Item,,,Forge Charm II,,ボアチャームⅡ(に)
+itemBoarSupportActivator2Desc,items,Item,,,"The charm pulses with the power of refined forging.\nTeaches the recipes:\nBig-Head Trap\n[FFCC66]If you ever lose Grumble's support,this charm may help restore it.",,"洗練された鍛冶の力が脈打つチャーム。\n以下のレシピが解放されます:\nでかあたまトラップ\n[FFCC66]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+itemBoarSupportActivator3,items,Item,,,Forge Charm III,,ボアチャームⅢ(さん)
+itemBoarSupportActivator3Desc,items,Item,,,"The charm radiates intense forging energy.\nTeaches the recipes:\nMystic Headshot Pistol\n[FF9999]If you ever lose Grumble's support,this charm may help restore it.",,"強烈な鍛冶の力を放つチャーム。\n以下のレシピが解放されます:\n神秘の狙撃銃\n[FF9999]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+itemBoarSupportActivator4,items,Item,,,Forge Charm IV,,ボアチャームⅣ(よん)
+itemBoarSupportActivator4Desc,items,Item,,,"The charm hums with deadly accuracy.\nTeaches the recipes:\nPoison Robotic Sledge\n[66CCFF]If you ever lose Grumble's support,this charm may help restore it.",,"恐ろしいほどの正確さを秘めたチャーム。\n以下のレシピが解放されます:\n毒ロボットスレッジ\n[66CCFF]もし支援を失ってしまったら、このチャームをもう一度手にしてみてください。"
+buffBoarSupport1,buffs,Buff,,,Lv1,,レベル1
+buffBoarSupport1Desc,buffs,Buff,,,"Grants the ability to forge mystic materials and increases the amount of Mystic Ore you mine.",,"神秘の素材を精錬する力が開花し、神秘の鉱石の採掘量が増加する。"
+buffBoarSupport2,buffs,Buff,,,Lv2,,レベル2
+buffBoarSupport2Desc,buffs,Buff,,,"Boosts Mystic Ore yield,greatly reduces Mystic Forge crafting time,and unlocks the recipe for the Big-Head Trap.",,"神秘の鉱石の採掘量が増加し、神秘の炉でのクラフト時間が大幅に短縮される。さらに、でかあたまトラップのレシピが解放される。"
+buffBoarSupport3,buffs,Buff,,,Lv3,,レベル3
+buffBoarSupport3Desc,buffs,Buff,,,"Further boosts Mystic Ore yield,maintains fast Mystic Forge crafting,and unlocks a headshot-focused firearm.",,"神秘の鉱石の採掘量がさらに増加し、神秘の炉での高速クラフトが継続。さらに、ヘッドショットに特化した特別な銃のレシピが解放される。"
+buffBoarSupport4,buffs,Buff,,,Lv4,,レベル4
+buffBoarSupport4Desc,buffs,Buff,,,"Maximizes Mystic Ore yield,maintains fast Mystic Forge crafting,and slightly increases headshot damage. Also unlocks the Poison Robotic Sledge recipe.",,"神秘の鉱石の採掘量が最大になり、神秘の炉での高速クラフトが継続。ヘッドショット時のダメージもわずかに増加。さらに、『毒ロボットスレッジ』の設計図が解放される。"
+cntMysticForge,blocks,Workstation,,,Mystic Forge,,神秘の炉
+cntMysticForgeDesc,blocks,Workstation,,,"A specialized forge designed to refine Mystic Ore into a legendary alloy.","","神秘の鉱石を伝説の合金へと鍛え上げるための、特別な炉。"
+trapBigHead,blocks,Traps,,,Big-Head Trap,,でかあたまトラップ
+trapBigHeadDesc,blocks,Traps,,,"A mysterious plate that causes enemies to develop enormous heads. Perfect for precision shooting practice.","","踏んだ敵の頭が巨大化する、謎の仕掛け板。狙撃の腕を磨くにはうってつけ。"
+itemBoarKillProof,Items,Item,,,Hunt Token,,討伐の証
+itemBoarKillProofDesc,Items,Item,,,A token granted by Grumble for defeating marked zombies. Proof of your precision and valor.,,Grumbleが与える、印をつけられたゾンビを討伐した証。正確さと勇気の証明となる。
+gunMysticHeadshot,items,Weapons,,,Mystic Headshot Pistol,,神秘の狙撃銃
+gunMysticHeadshotDesc,items,Weapons,,,"A lightweight pistol enhanced to punish headshots. Weak against body shots.","","軽量なピストルにして、ヘッドショットで真価を発揮する一丁。胴体への攻撃は苦手。"
+junkTurretPoisonSledge,entityclasses,Entity,,,Poison Robotic Sledge,,毒ロボットスレッジ
+gunBotPoisonSledge,items,Item,,,Poison Robotic Sledge,,毒ロボットスレッジ
+gunBotPoisonSledgeDesc,items,Item,,,A toxic melee turret that weakens enemies over time.,,毒を与える近接タレット。敵をじわじわ弱らせて倒す。
+
+# ===== レア素材用の敵関連 =====,,,,,,,
+animalFoxWolfGuardian,entityclasses,Zombie,,,Fox Guardian,,きつねの守護者
+resourceFoxSoulCore,items,Resources,,,Fox Soul Core,,きつねの魂の核
+resourceFoxSoulCoreDesc,items,Resources,,,A crystal infused with ancient fox power.,,古代のきつねの力が宿る結晶
+resourceFoxFang,items,Resources,,,Fox Guardian Fang,,きつねの守護者の牙
+resourceFoxFangDesc,items,Resources,,,"A sharp fang from the Fox Guardian. It radiates a quiet,ancient strength.","","きつねの守護者から抜け落ちた鋭い牙。静かに、そして古より受け継がれる力を感じさせる。"
+EntityLootContainerFoxGuardian,entityclasses,Entity Info,,,Dropped Loot,,略奪品

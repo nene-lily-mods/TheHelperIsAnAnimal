@@ -1,0 +1,26 @@
+<configs>
+    <append xpath="/Sounds">
+        <SoundDataNode name="npc_ding1">
+            <AudioSource name="@:Sounds/Prefabs/AudioSource_Interact.prefab"/>
+            <Noise ID="3" noise="30" time="2" heat_map_strength="0.5" heat_map_time="60"/>
+            <AudioClip ClipName="@:Sounds/TriggeredEvents/elevator_ding1.wav"/>
+            <LocalCrouchVolumeScale value="1.0"/>
+            <CrouchNoiseScale value="0.5"/>
+            <NoiseScale value="1"/>
+            <MaxVoices value="10"/>
+            <MaxRepeatRate value="0"/>
+        </SoundDataNode>
+
+        <SoundDataNode name="bear_healeffect">
+            <AudioSource name="@:Sounds/Prefabs/AudioSource_Impact_Large.prefab"/>
+            <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+            <AudioClip ClipName="@:Sounds/Drone/drone_healeffect.wav"/>
+            <LocalCrouchVolumeScale value="0.3"/>
+            <CrouchNoiseScale value="0.5"/>
+            <NoiseScale value="1"/>
+            <MaxVoices value="5"/>
+            <MaxRepeatRate value="2.222"/>
+        </SoundDataNode>
+
+    </append>
+</configs>

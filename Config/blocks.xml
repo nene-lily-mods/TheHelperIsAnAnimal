@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <append xpath="//block[@name='steelShapes']">
+        <property class="UpgradeBlock">
+            <property name="ToBlock" value="mysticSteelShapes"/>
+            <property name="Item" value="resourceMysticSteel"/>
+            <property name="ItemCount" value="10"/>
+            <property name="UpgradeHitCount" value="1"/>
+        </property>
+    </append>
+
+    <append xpath="/blocks">
+        <block name="reviveStoneSnowtail">
+            <property name="Extends" value="graveStone01"/>
+            <property name="DescriptionKey" value="reviveStoneCommonDesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Class" value="GameEvent"/>
+            <property name="ActivateEvent" value="event_revive_snowtail"/>
+            <property name="DestroyOnEvent" value="false"/>
+            <property name="Model" value="@:Entities/OutdoorDecor/graveStone01Prefab.prefab"/>
+            <property name="CustomIcon" value="graveStone01"/>
+        </block>
+
+        <block name="reviveStoneCoco">
+            <property name="Extends" value="graveStone01"/>
+            <property name="DescriptionKey" value="reviveStoneCommonDesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Class" value="GameEvent"/>
+            <property name="ActivateEvent" value="event_revive_coco"/>
+            <property name="DestroyOnEvent" value="false"/>
+            <property name="Model" value="@:Entities/OutdoorDecor/graveStone01Prefab.prefab"/>
+            <property name="CustomIcon" value="graveStone01"/>
+        </block>
+
+        <block name="reviveStoneLapin">
+            <property name="Extends" value="graveStone01"/>
+            <property name="DescriptionKey" value="reviveStoneCommonDesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Class" value="GameEvent"/>
+            <property name="ActivateEvent" value="event_revive_lapin"/>
+            <property name="DestroyOnEvent" value="false"/>
+            <property name="Model" value="@:Entities/OutdoorDecor/graveStone01Prefab.prefab"/>
+            <property name="CustomIcon" value="graveStone01"/>
+        </block>
+
+        <block name="reviveStoneHoney">
+            <property name="Extends" value="graveStone01"/>
+            <property name="DescriptionKey" value="reviveStoneCommonDesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Class" value="GameEvent"/>
+            <property name="ActivateEvent" value="event_revive_honey"/>
+            <property name="DestroyOnEvent" value="false"/>
+            <property name="Model" value="@:Entities/OutdoorDecor/graveStone01Prefab.prefab"/>
+            <property name="CustomIcon" value="graveStone01"/>
+        </block>
+
+        <block name="reviveStoneGrumble">
+            <property name="Extends" value="graveStone01"/>
+            <property name="DescriptionKey" value="reviveStoneCommonDesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Class" value="GameEvent"/>
+            <property name="ActivateEvent" value="event_revive_grumble"/>
+            <property name="DestroyOnEvent" value="false"/>
+            <property name="Model" value="@:Entities/OutdoorDecor/graveStone01Prefab.prefab"/>
+            <property name="CustomIcon" value="graveStone01"/>
+        </block>
+
+        <block name="mysticSteelShapes" shapes="All">
+            <property name="DescriptionKey" value="mysticSteelBlockGroupDesc"/>
+            <property name="DisplayType" value="blockHardened"/>
+            <property name="Material" value="MmysticSteel_shapes"/>
+            <property name="MaxDamage" value="15000"/>
+            <property name="Shape" value="New"/>
+            <property name="Texture" value="267"/>
+            <property name="UiBackgroundTexture" value="267"/>
+            <property name="EconomicValue" value="30"/>
+            <property class="RepairItems">
+                <property name="resourceMysticSteel" value="8"/>
+            </property>
+            <drop event="Harvest" name="resourceMysticSteel" count="1" tag="allHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+            <property name="UpgradeSound" value="place_block_metal"/>
+            <property name="Group" value="Building,advBuilding"/>
+            <property name="FilterTags" value="MC_Shapes"/>
+        </block>
+
+        <block name="cntFoxLetterDesk" >
+            <property name="Class" value="Workstation"/>
+            <property class="Workstation">
+                <property name="Modules" value="output"/>
+                <property name="CraftingAreaRecipes" value="fox_letter_craft"/>
+            </property>
+            <property name="DescriptionKey" value="foxLetterDeskDesc"/>
+            <property name="DisplayType" value="blockMulti"/>
+            <property name="CustomIcon" value="cntDeskWoodFull"/>
+            <property name="WorkstationIcon" value="ui_game_symbol_letter"/>
+            <property name="Material" value="Mwood_weak"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/LootContainers/deskWoodFullPrefab.prefab"/>
+            <property name="MultiBlockDim" value="2,1,1"/>
+            <property name="Place" value="TowardsPlacerInverted"/>
+            <property name="AllowedRotations" value="No45"/>
+            <property name="StabilitySupport" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Group" value="Building"/>
+            <property name="FilterTags" value="MC_playerBlocks"/>
+            <property name="Tags" value="workstationSkill"/>
+            <property name="OpenSound" value="open_workbench"/>
+            <property name="CloseSound" value="close_workbench"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceWood" value="30"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Weight" value="0"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="ImposterDontBlock" value="true"/>
+        </block>
+
+        <block name="cntCompanionDesk" >
+            <property name="Class" value="Workstation"/>
+            <property class="Workstation">
+                <property name="Modules" value="output"/>
+                <property name="CraftingAreaRecipes" value="fox_companion_craft"/>
+            </property>
+            <property name="DescriptionKey" value="companionDeskDesc"/>
+            <property name="DisplayType" value="blockMulti"/>
+            <property name="CustomIcon" value="workbench"/>
+            <property name="Material" value="Mwood_weak"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Crafting/woodWorkBenchCollapsedEmptyPrefab.prefab"/>
+            <property name="MultiBlockDim" value="2,1,1"/>
+            <property name="Place" value="TowardsPlacerInverted"/>
+            <property name="AllowedRotations" value="No45"/>
+            <property name="StabilitySupport" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Group" value="Building"/>
+            <property name="FilterTags" value="MC_playerBlocks"/>
+            <property name="Tags" value="workstationSkill"/>
+            <property name="OpenSound" value="open_workbench"/>
+            <property name="CloseSound" value="close_workbench"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceWood" value="30"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Weight" value="0"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="ImposterDontBlock" value="true"/>
+        </block>
+
+        <block name="cntLapinBuilderBench" >
+            <property name="Class" value="Workstation"/>
+            <property class="Workstation">
+                <property name="Modules" value="output"/>
+                <property name="CraftingAreaRecipes" value="lapin_builder_bench"/>
+            </property>
+            <property name="DescriptionKey" value="lapinBuilderBenchDesc"/>
+            <property name="CustomIcon" value="cntShippingCrateHero"/>
+            <property name="Material" value="Mwood_weak"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/LootContainers/shippingCrateWorkingStiffPrefab.prefab"/>
+            <property name="MultiBlockDim" value="2,1,1"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="Place" value="TowardsPlacerInverted"/>
+            <property name="AllowedRotations" value="No45"/>
+            <property name="StabilitySupport" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Group" value="Building"/>
+            <property name="FilterTags" value="MC_playerBlocks"/>
+            <property name="Tags" value="workstationSkill"/>
+            <property name="OpenSound" value="open_workbench"/>
+            <property name="CloseSound" value="close_workbench"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceWood" value="30"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Weight" value="0"/>
+            <property name="EconomicValue" value="1500"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="ImposterDontBlock" value="true"/>
+        </block>
+
+        <block name="cntSpecialBirdnest">
+            <property name="Class" value="DewCollector"/>
+            <property name="CustomIcon" value="cntBirdnest"/>
+            <property name="UnlockedBy" value="schematic_specialbirdnest"/>
+            <property name="Material" value="MclothStable"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/LootContainers/birdnestPrefab.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="GndAlign" value="1"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="OpenSound" value="collector_open"/>
+            <property name="CloseSound" value="collector_close"/>
+            <property name="ConvertSound" value="collector_complete_item"/>
+            <property name="MinConvertTime" value="28800"/>
+            <property name="MaxConvertTime" value="28800"/>
+            <property name="ConvertToItem" value="resourceSpecialEgg"/>
+            <property name="ModdedConvertToItem" value="resourceSpecialEgg"/>
+            <property name="ModdedConvertSpeed" value="1"/>
+            <property name="ModdedConvertCount" value="1"/>
+            <property name="ModSlots" value="1"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceWood" value="30"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="DestroyFX" value="blockdestroy_plant,nest_destroy"/>
+            <property name="Group" value="Basics,Food/Cooking,Building"/>
+            <property name="CreativeMode" value="Player"/>
+        </block>
+
+        <block name="cntSpecialBirdnestLv2">
+            <property name="Class" value="DewCollector"/>
+            <property name="CustomIcon" value="cntBirdnest"/>
+            <property name="Material" value="MclothStable"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/LootContainers/birdnestPrefab.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="GndAlign" value="1"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="OpenSound" value="collector_open"/>
+            <property name="CloseSound" value="collector_close"/>
+            <property name="ConvertSound" value="collector_complete_item"/>
+            <property name="MinConvertTime" value="14400"/>
+            <property name="MaxConvertTime" value="14400"/>
+            <property name="ConvertToItem" value="resourceSpecialEgg"/>
+            <property name="ModdedConvertToItem" value="resourceSpecialEgg"/>
+            <property name="ModdedConvertSpeed" value="1"/>
+            <property name="ModdedConvertCount" value="1"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceWood" value="30"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="DestroyFX" value="blockdestroy_plant,nest_destroy"/>
+            <property name="Group" value="Basics,Food/Cooking,Building"/>
+            <property name="CreativeMode" value="Player"/>
+        </block>
+
+        <block name="cntSoupStove">
+            <property name="Class" value="DewCollector"/>
+            <property name="CustomIcon" value="cntStoveOldVer1Closed"/>
+            <property name="UnlockedBy" value="schematic_soupstove"/>
+            <property name="Material" value="MmetalNoGlue"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/LootContainers/stoveElectricRetro_01Prefab.prefab"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="OpenSound" value="collector_open"/>
+            <property name="CloseSound" value="collector_close"/>
+            <property name="ConvertSound" value="collector_complete_item"/>
+            <property name="MinConvertTime" value="28800"/>
+            <property name="MaxConvertTime" value="28800"/>
+            <property name="ConvertToItem" value="resourceSoupBase"/>
+            <property name="ModdedConvertToItem" value="resourceSoupBase"/>
+            <property name="ModdedConvertSpeed" value="1"/>
+            <property name="ModdedConvertCount" value="1"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceForgedIron" value="5"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="DestroyFX" value="blockdestroy_metal"/>
+            <property name="Group" value="Basics,Food/Cooking,Building"/>
+            <property name="CreativeMode" value="Player"/>
+        </block>
+
+        <block name="cntSoupStoveLv2">
+            <property name="Class" value="DewCollector"/>
+            <property name="CustomIcon" value="cntStoveOldVer1Closed"/>
+            <property name="Material" value="MmetalNoGlue"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/LootContainers/stoveElectricRetro_01Prefab.prefab"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="OpenSound" value="collector_open"/>
+            <property name="CloseSound" value="collector_close"/>
+            <property name="ConvertSound" value="collector_complete_item"/>
+            <property name="MinConvertTime" value="14400"/>
+            <property name="MaxConvertTime" value="14400"/>
+            <property name="ConvertToItem" value="resourceSoupBase"/>
+            <property name="ModdedConvertToItem" value="resourceSoupBase"/>
+            <property name="ModdedConvertSpeed" value="1"/>
+            <property name="ModdedConvertCount" value="1"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceForgedIron" value="5"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="DestroyFX" value="blockdestroy_metal"/>
+            <property name="Group" value="Basics,Food/Cooking,Building"/>
+            <property name="CreativeMode" value="Player"/>
+        </block>
+
+        <block name="cntFlourSack">
+            <property name="Class" value="DewCollector"/>
+            <property name="CustomIcon" value="palletBagFlourCapSml"/>
+            <property name="UnlockedBy" value="schematic_floursack"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Industrial/palletBagFlourCapSmlPrefab.prefab"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="OpenSound" value="collector_open"/>
+            <property name="CloseSound" value="collector_close"/>
+            <property name="ConvertSound" value="collector_complete_item"/>
+            <property name="MinConvertTime" value="28800"/>
+            <property name="MaxConvertTime" value="28800"/>
+            <property name="ConvertToItem" value="resourceSpecialFlour"/>
+            <property name="ModdedConvertToItem" value="resourceSpecialFlour"/>
+            <property name="ModdedConvertSpeed" value="1"/>
+            <property name="ModdedConvertCount" value="1"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceWood" value="30"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="DestroyFX" value="blockdestroy_plant"/>
+            <property name="Group" value="Basics,Food/Cooking,Building"/>
+            <property name="CreativeMode" value="Player"/>
+        </block>
+
+        <block name="cntFlourSackLv2">
+            <property name="Class" value="DewCollector"/>
+            <property name="CustomIcon" value="palletBagFlourCapSml"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Industrial/palletBagFlourCapSmlPrefab.prefab"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="OpenSound" value="collector_open"/>
+            <property name="CloseSound" value="collector_close"/>
+            <property name="ConvertSound" value="collector_complete_item"/>
+            <property name="MinConvertTime" value="14400"/>
+            <property name="MaxConvertTime" value="14400"/>
+            <property name="ConvertToItem" value="resourceSpecialFlour"/>
+            <property name="ModdedConvertToItem" value="resourceSpecialFlour"/>
+            <property name="ModdedConvertSpeed" value="1"/>
+            <property name="ModdedConvertCount" value="1"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceWood" value="30"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="DestroyFX" value="blockdestroy_plant"/>
+            <property name="Group" value="Basics,Food/Cooking,Building"/>
+            <property name="CreativeMode" value="Player"/>
+        </block>
+
+        <block name="cntGoldenFridge">
+            <property name="Class" value="DewCollector"/>
+            <property name="CustomIcon" value="cntRetroFridgeVer1Closed"/>
+            <property name="UnlockedBy" value="schematic_goldenfridge"/>
+            <property name="Material" value="Mmetal"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Appliances/fridgeRetroClosedPrefab.prefab" param1="main_mesh"/>
+            <property name="MultiBlockDim" value="1,2,1"/>
+            <property name="Place" value="TowardsPlacerInverted"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="OpenSound" value="collector_open"/>
+            <property name="CloseSound" value="collector_close"/>
+            <property name="ConvertSound" value="collector_complete_item"/>
+            <property name="MinConvertTime" value="28800"/>
+            <property name="MaxConvertTime" value="28800"/>
+            <property name="ConvertToItem" value="resourceGoldenButter"/>
+            <property name="ModdedConvertToItem" value="resourceGoldenButter"/>
+            <property name="ModdedConvertSpeed" value="1"/>
+            <property name="ModdedConvertCount" value="1"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceForgedIron" value="5"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="DestroyFX" value="blockdestroy_metal"/>
+            <property name="Group" value="Basics,Food/Cooking,Building"/>
+            <property name="CreativeMode" value="Player"/>
+        </block>
+
+        <block name="cntGoldenFridgeLv2">
+            <property name="Class" value="DewCollector"/>
+            <property name="CustomIcon" value="cntRetroFridgeVer1Closed"/>
+            <property name="Material" value="Mmetal"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Appliances/fridgeRetroClosedPrefab.prefab" param1="main_mesh"/>
+            <property name="MultiBlockDim" value="1,2,1"/>
+            <property name="Place" value="TowardsPlacerInverted"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="OpenSound" value="collector_open"/>
+            <property name="CloseSound" value="collector_close"/>
+            <property name="ConvertSound" value="collector_complete_item"/>
+            <property name="MinConvertTime" value="14400"/>
+            <property name="MaxConvertTime" value="14400"/>
+            <property name="ConvertToItem" value="resourceGoldenButter"/>
+            <property name="ModdedConvertToItem" value="resourceGoldenButter"/>
+            <property name="ModdedConvertSpeed" value="1"/>
+            <property name="ModdedConvertCount" value="1"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceForgedIron" value="5"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="DestroyFX" value="blockdestroy_metal"/>
+            <property name="Group" value="Basics,Food/Cooking,Building"/>
+            <property name="CreativeMode" value="Player"/>
+        </block>
+
+        <block name="cntBearCouchRecovery" >
+            <property name="DisplayType" value="blockMulti"/>
+            <property name="CustomIcon" value="couchModernSection"/>
+            <property name="CustomIconTint" value="FFCCCC"/>
+            <property name="TintColor" value="FFCCCC"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Furniture/sectionalMiddle_NewPrefab.prefab"/>
+            <property name="BuffsWhenWalkedOn" value="buffBearRestRegen"/>
+            <property name="Material" value="Mfurniture"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceWood" value="30"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="FilterTags" value="SC_decoration,MC_indoor"/>
+            <property name="DescriptionKey" value="cntBearCouchRecoveryDesc"/>
+        </block>
+
+        <block name="cntBearHerbMat">
+            <property name="Material" value="Mcloth"/>
+            <property name="Shape" value="New"/>
+            <property name="Model" value="@:Shapes/plate_glass.fbx"/>
+            <property name="Texture" value="596"/>
+            <property name="BuffsWhenWalkedOn" value="buffBearMatRecovery"/>
+            <property name="CustomIcon" value="cntBearHerbMat"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="DescriptionKey" value="cntBearHerbMatDesc"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceMysticSteel" value="1"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="DestroyFX" value="blockdestroy_plant"/>
+        </block>
+
+        <block name="cntBeeHiveBox" >
+            <property name="Class" value="Forge"/>
+            <property class="Workstation">
+                <property name="CraftingAreaRecipes" value="bee_forge"/>
+                <property name="Modules" value="material_input,output"/>
+                <property name="InputMaterials" value="nectar"/>
+            </property>
+            <property name="DescriptionKey" value="cntbeeHiveBoxDesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Material" value="Mwood"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Commercial/WoodenBearPrefab.prefab"/>
+            <property name="MultiBlockDim" value="1,2,1"/>
+            <property name="DisplayType" value="blockMulti"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="CustomIcon" value="woodenBear"/>
+            <property name="Tags" value="workstationSkill"/>
+            <property name="OpenSound" value="open_workbench"/>
+            <property name="CloseSound" value="close_workbench"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceWood" value="30"/>
+            </property>
+            <property name="TakeDelay" value="5"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="Stacknumber" value="1"/>
+        </block>
+
+        <block name="cntTreasurePoisonChest">
+            <property name="Extends" value="cntLootChestHero" />
+            <property name="CreativeMode" value="Player"/>
+            <property name="LootList" value="treasure_poison_recipe"/>
+            <property name="CustomIcon" value="cntLootChestHero"/>
+            <property name="CustomIconTint" value="6A3C7E"/>
+            <property name="TintColor" value="6A3C7E"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="DowngradeBlock" value="cntTreasurePoisonChestInsecure"/>
+            <property name="Tags" value="buriedTreasure,timecharge"/>
+            <property name="FilterTags" value="MC_helpers,SC_questblocks"/>
+        </block>
+
+        <block name="cntTreasurePoisonChestInsecure">
+            <property name="Extends" value="cntLootChestHeroInsecure" />
+            <property name="CreativeMode" value="None"/>
+            <property name="LootList" value="treasure_poison_recipe"/>
+            <property name="TintColor" value="6A3C7E"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="Tags" value="buriedTreasure"/>
+            <property name="FilterTags" value="MC_helpers,SC_questblocks"/>
+        </block>
+
+        <block name="cntBearEmergencyKit" >
+            <property name="Class" value="Workstation"/>
+            <property class="Workstation">
+                <property name="Modules" value="output"/>
+                <property name="CraftingAreaRecipes" value="bear_emergency_kit"/>
+            </property>
+            <property name="DescriptionKey" value="bearEmergencyKitDesc"/>
+            <property name="DisplayType" value="blockMulti"/>
+            <property name="CustomIcon" value="cntShippingCrateHero"/>
+            <property name="Material" value="Mwood_weak"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/LootContainers/shippingCratePopnPillsPrefab.prefab"/>
+            <property name="MultiBlockDim" value="2,1,1"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="Place" value="TowardsPlacerInverted"/>
+            <property name="AllowedRotations" value="No45"/>
+            <property name="StabilitySupport" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Group" value="Building"/>
+            <property name="FilterTags" value="MC_playerBlocks"/>
+            <property name="Tags" value="workstationSkill"/>
+            <property name="OpenSound" value="open_workbench"/>
+            <property name="CloseSound" value="close_workbench"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceWood" value="30"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Weight" value="0"/>
+            <property name="EconomicValue" value="1500"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="ImposterDontBlock" value="true"/>
+        </block>
+
+        <block name="cntMysticForge" >
+            <property name="Class" value="Forge"/>
+            <property class="Workstation">
+                <property name="CraftingAreaRecipes" value="mystic_forge"/>
+                <property name="Modules" value="material_input,output"/>
+                <property name="InputMaterials" value="mysticOre,clay"/>
+            </property>
+            <property name="DescriptionKey" value="cntMysticForgeDesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="Material" value="MmysticSteel"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/Industrial/controlPanelBase_01Prefab.prefab"/>
+            <property name="ImposterExchange" value="imposterBlock" param1="2"/>
+            <property name="Place" value="TowardsPlacerInverted"/>
+            <property name="Path" value="solid"/>
+            <property name="CustomIcon" value="controlPanelBase01"/>
+            <property name="CustomIconTint" value="4B2825"/>
+            <property name="TintColor" value="4B2825"/>
+            <property name="Tags" value="workstationSkill"/>
+            <property name="OpenSound" value="open_forge"/>
+            <property name="CloseSound" value="close_forge"/>
+            <property name="MaxDamage" value="1500"/>
+            <property class="RepairItems">
+                <property name="resourceForgedSteel" value="10"/>
+            </property>
+            <property name="TakeDelay" value="3"/>
+            <property name="SoundPickup" value="workbench_grab"/>
+            <property name="SoundPlace" value="workbench_place"/>
+            <property name="Stacknumber" value="1"/>
+        </block>
+
+        <block name="trapBigHead">
+            <property name="Extends" value="securityGateCTRPlate"/>
+            <property name="DescriptionKey" value="trapBigHeadDesc"/>
+            <property name="CustomIcon" value="securityGatePlate"/>
+            <property name="Model" value="@:Shapes/security_gate_plate.fbx"/>
+            <property name="ImposterExchange" value="imposterPlate" param1="144"/>
+            <property name="BuffsWhenWalkedOn" value="buffBigHeadOnly"/>
+            <property class="RepairItems">
+                <property name="resourceMysticSteel" value="5"/>
+            </property>
+        </block>
+    </append>
+
+    <!-- terrOreIron -->
+    <append xpath="/blocks/block[@name='terrOreIron']">
+        <drop event="Harvest" name="resourceMysticOre" prob=".1" count="10" tag="oreWoodHarvest"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".2" count="10" tag="oreWoodHarvest,artOfMiningLuckyStrikeHarvest"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="oreWoodHarvest,buffCocoEggSoupBoost"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".3" count="10" tag="oreWoodHarvest,buffRabbitSupport4"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="oreWoodHarvest,buffBoarSupport1"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".5" count="10" tag="oreWoodHarvest,buffBoarSupport2"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".6" count="10" tag="oreWoodHarvest,buffBoarSupport3"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".7" count="10" tag="oreWoodHarvest,buffBoarSupport4"/>
+    </append>
+
+    <!-- terrOreLead -->
+    <append xpath="/blocks/block[@name='terrOreLead']">
+        <drop event="Harvest" name="resourceMysticOre" prob=".1" count="10"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".2" count="10" tag="artOfMiningLuckyStrikeHarvest"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="buffCocoEggSoupBoost"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".3" count="10" tag="buffRabbitSupport4"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="buffBoarSupport1"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".5" count="10" tag="buffBoarSupport2"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".6" count="10" tag="buffBoarSupport3"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".7" count="10" tag="buffBoarSupport4"/>
+    </append>
+
+    <!-- terrOrePotassiumNitrate -->
+    <append xpath="/blocks/block[@name='terrOrePotassiumNitrate']">
+        <drop event="Harvest" name="resourceMysticOre" prob=".1" count="10"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".2" count="10" tag="artOfMiningLuckyStrikeHarvest"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="buffCocoEggSoupBoost"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".3" count="10" tag="buffRabbitSupport4"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="buffBoarSupport1"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".5" count="10" tag="buffBoarSupport2"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".6" count="10" tag="buffBoarSupport3"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".7" count="10" tag="buffBoarSupport4"/>
+    </append>
+
+    <!-- terrOreCoal -->
+    <append xpath="/blocks/block[@name='terrOreCoal']">
+        <drop event="Harvest" name="resourceMysticOre" prob=".1" count="10"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".2" count="10" tag="artOfMiningLuckyStrikeHarvest"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="buffCocoEggSoupBoost"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".3" count="10" tag="buffRabbitSupport4"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="buffBoarSupport1"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".5" count="10" tag="buffBoarSupport2"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".6" count="10" tag="buffBoarSupport3"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".7" count="10" tag="buffBoarSupport4"/>
+    </append>
+
+    <!-- terrStone -->
+    <append xpath="/blocks/block[@name='terrStone']">
+        <drop event="Harvest" name="resourceMysticOre" prob=".1" count="10"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".2" count="10" tag="artOfMiningLuckyStrikeHarvest"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="buffCocoEggSoupBoost"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".3" count="10" tag="buffRabbitSupport4"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="buffBoarSupport1"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".5" count="10" tag="buffBoarSupport2"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".6" count="10" tag="buffBoarSupport3"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".7" count="10" tag="buffBoarSupport4"/>
+    </append>
+
+    <!-- terrOreOilDeposit -->
+    <append xpath="/blocks/block[@name='terrOreOilDeposit']">
+        <drop event="Harvest" name="resourceMysticOre" prob=".1" count="10"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".2" count="10" tag="artOfMiningLuckyStrikeHarvest"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="buffCocoEggSoupBoost"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".3" count="10" tag="buffRabbitSupport4"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".4" count="10" tag="buffBoarSupport1"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".5" count="10" tag="buffBoarSupport2"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".6" count="10" tag="buffBoarSupport3"/>
+        <drop event="Harvest" name="resourceMysticOre" prob=".7" count="10" tag="buffBoarSupport4"/>
+    </append>
+
+    <append xpath="//block[@name='treeStump']">
+        <drop event="Harvest" name="foodHoney" prob=".7" count="1" tag="buffBearSupport1"/>
+        <drop event="Harvest" name="foodHoney" prob=".8" count="1" tag="buffBearSupport2"/>
+        <drop event="Harvest" name="foodHoney" prob=".9" count="1" tag="buffBearSupport3"/>
+        <drop event="Harvest" name="foodHoney" prob="1" count="1" tag="buffBearSupport4"/>
+    </append>
+
+    <append xpath="//block[@name='treeStumpPOI']">
+        <drop event="Harvest" name="foodHoney" prob=".7" count="1" tag="buffBearSupport1"/>
+        <drop event="Harvest" name="foodHoney" prob=".8" count="1" tag="buffBearSupport2"/>
+        <drop event="Harvest" name="foodHoney" prob=".9" count="1" tag="buffBearSupport3"/>
+        <drop event="Harvest" name="foodHoney" prob="1" count="1" tag="buffBearSupport4"/>
+    </append>
+</configs>

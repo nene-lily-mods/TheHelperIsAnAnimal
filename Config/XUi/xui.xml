@@ -1,0 +1,54 @@
+<configs>
+    <insertAfter xpath="/xui/ruleset/window_group[@name='workstation_chemistryStation']">
+        <window_group name="workstation_cntFoxLetterDesk" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutput" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_cntCompanionDesk" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutput" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_cntLapinBuilderBench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutput" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_cntBearEmergencyKit" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowOutput" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
+        <window_group name="workstation_cntBeeHiveBox" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowForgeInput"/>
+            <window name="windowOutput"/>
+            <window name="windowNonPagingHeader"/>
+        </window_group>
+
+        <window_group name="workstation_cntMysticForge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowForgeInput"/>
+            <window name="windowOutput"/>
+            <window name="windowNonPagingHeader"/>
+        </window_group>
+
+    </insertAfter>
+</configs>
