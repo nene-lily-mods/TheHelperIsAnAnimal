@@ -11,8 +11,8 @@
 必ず `TheHelperIsAnAnimal_v1.0.0.zip` を使用してください。
 
 ## 対応バージョン
-このModは **7 Days to Die v2.3** 用に作成されています。  
-それ以外のバージョンでは正常に動作しない可能性があります。
+- 7 Days to Die v2.3
+- 7 Days to Die v2.4 （動作確認済み）
 
 
 ---
